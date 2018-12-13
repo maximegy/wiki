@@ -1,4 +1,5 @@
 <!-- TITLE: Principes De L'écrit -->
-<!-- SUBTITLE: A quick summary of Principes De Lecrit -->
+<!-- SUBTITLE: Structure et construction du mémoire -->
 
-# Header
+# Principes Généraux
+Impression en Recto Verso de 50 à 80 pages hors annexes et la pagination commence à l'introduction. La police sera en 11 ou 12 avec 
