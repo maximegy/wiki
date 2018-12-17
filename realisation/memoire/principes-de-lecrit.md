@@ -2,36 +2,49 @@
 <!-- SUBTITLE: Structure et construction du mémoire -->
 
 # Principes Généraux
-Impression en Recto Verso de 50 à 80 pages hors annexes et la pagination commence à l'introduction. La police sera en 11 ou 12 avec 
+## Document
+Le document est de format A4 imprimé en Recto Verso de 50 à 80 pages sans annexes dont la section (pagination) commence au chapitre de l'introduction.
+La police doit être lisible et en 11 ou 12 avec un interligne de 1 à 1.25 maximum. Tous les paragraphes seront justifiés et agrémentés d'images de couleurs et de relief (gras, italique, etc).
+Il est apprécié des enquarts présentant des Synthèses partielles, résumés, "à noter que", etc.
+Les entêtes et pieds de pages seront utilisés et distingués par des séparateurs.
 
-
+## Ecriture
+Les paragraphes seront composés de phrases courtes présentant une à deux informations maximum et seront ponctués.
+Ils seront rythmés par des conjonction de coordinations et des liens logiques. (mais ou et donc or ni car - puis, par ailleurs, etc). Les phrases seront composées d'un mélange de "Je ma mon m'" (ma décision), "Nous" (l'équipe), et le mode impersonnel "il a été décidé que, il convient de faire, june réunion a eu lieu".
+Il faudra éviter le participe présent au début des phrases "ayant ...." ainsi que les formes négatives "je n'ai pas pu faire ça", utiliser plutôt "voilà ce que j'ai mis en place, voilà ce qu'il reste".
+Eviter les Verbes directeurs qui ont un sens trop large "avoir être faire gérer réaliser effectuer".
 
 # Contenu
 ## Page de Garde
-
-
+La page de garde est décorée aux goûts de chacun mais doit contenir au centre, le titre du projet et autour:
+- NOM Prénom,
+- Société / Logo,
+- CESI / Logo,
+- Formation / Année / Promotion,
+- Noms des tuteurs d'entreprise et du pilote de formation.
 
 ## Fiche de Confidentialité
-
-
+La fiche de confidentialité doit absolument comporter le mode de diffusion parmi:
+- Libre,
+- Limité,
+- Interdit.
 
 ## Remerciements
-
-
-
+La page de remerciements vous permet de remercier les personnes qui vous ont aidé, soutenu, etc.
 
 ## Glossaire
-
-
-
+Le glossaire peut être placé au début ou à la fin du document mais il peut aussi être présenté sous forme de document détaché. Son rôle est de présenter les termes par ordre alphabétique avec une définition.
 
 ## Sommaire
-
-
-
-
+Le sommaire doit figurer sur une page / une page et demie et doit présenter au maximum 3 niveaux de titres (par exemple I.A.1).
 
 ## Introduction
+L'introduction constitue déjà le début de la pagination. Elle est composée de quelques lignes sur :
+- les généralités du thème.
+	L'impact que ce dernier peut avoir sur les sociétés en général et par rapport à ça qu'est ce que vous faites dans votre société.
+- La société et le projet
+- L'annonce du plan
+
 
 
 
