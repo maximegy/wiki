@@ -47,7 +47,7 @@ L'introduction constitue déjà le début de la pagination. Elle est composée d
 - L'annonce du plan
    "Dans un premier temps, ensuite, enfin."
 
-## Société
+## Société;
 Ce chapitre représente environs 10 à 12 pages sur les 50.
 
 ### Société
@@ -80,6 +80,21 @@ Ce chapitre terminera par une synthèse présentant 5 points clés sur l'entrepr
 
 ## Projet
 ### Présentation
+Dans un premier temps il convient de présenter le contexte, l'origine du projet. Il faudra expliquer:
+- les éléments contextuels (qu'est ce qui fait qu'aujourd'hui je dois travailler sur ce projet).
+- Le contexte technique, juridique, stratégique, concurrentiel, social. Notre projet répond à l'ensemble de ces contextes.
+- Les conséquences et exigences, il faut détailler (stockage des logs, problèmes d'espace, débits, etc)
+Tous les éléments de contexte doivent permettre de formuler une problématique (comment mettre en place ceci qui permet celà ?). Cette question doit donc synthétiser tous les éléments contextuels ainsi que la problématique.
+Ensuite, il faudra énumérer les différents objectifs et livrables concernant votre travail et projet.
+Puis, il faudra renseigner:
+- Les enjeux et finalités
+	Gains et bénéfices que je vais pouvoir apporter grâce à mon projet
+- Les contraintes,
+	par exmple le fait que je consacre que 20% de mon temps sur le projet, je gère beaucoup de monde, j'ai des délais courts...
+- Les moyens,
+	Ce qui est nécessaire pour mener ce projet.
+Enfin, il faudra présenter les différents indicateurs permettant de mesurer les résultats et si le projet ou une partie du projet est réussi.
+
 ### Gestion
 ### Mise en oeuvre
 ### Bilan
