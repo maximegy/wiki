@@ -49,23 +49,33 @@ L'introduction constitue déjà le début de la pagination. Elle est composée d
 
 ## Société
 Ce chapitre représente environs 10 à 12 pages sur les 50.
+
 ### Société
 Dans un premier temps il faudra présenter le secteur d'activité ainsi que l'activité de l'entreprise. Cette partie est très globales et place les éléments rapides et essentiels concernant le groupe.
 Ensuite on va y renseigner la stratégie, la politique et les valeurs de cette entreprise et notamment les indicateurs clés (positionnement géograpique, clients, concurrents, chiffres d'affaires, fournisseurs, etc) mais aussi l'organigramme de l'entreprise.
 Enfin, il faudra dresser le schéma directeur / la politique sur le SI, concrètement à quoi sert l'informatique dans l'entreprise.
+
 ### Service
-Cette partie ser complétée des éléments suivants:
+Cette partie sera complétée des éléments suivants:
 - Les missions et activitées du service,
 - La composition de l'équipe,
 - Les projets anciens, passés, en cours et futurs,
 - Les relations internes et externes,
 - Ce que je fais dans cette équipe, mes missions, mon rattachement, ainsi que mes missions avant ce projet.
+
 ### Client
-
-
+Dans le cas où le projet concerne un client de l'entreprise, présenter ce dernier et ses interactions avec le service.
 
 ### Synthèse
-
+Ce chapitre terminera par une synthèse présentant 5 points clés sur l'entreprise, le service et les projets. Elle peut être complétée d'un SWOT:
+- Force
+	capacité de l'entreprise à racheter et s'organiser, innovation
+- Faiblesse
+	marché fortement concurrentiel
+- Menace
+	Concurrents
+- Opportunités
+	beaucoup de clientèle.
 
 
 ## Projet
