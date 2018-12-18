@@ -1,11 +1,14 @@
-# Réseau
-## Principes Généraux
+<!-- TITLE: Home -->
+<!-- SUBTITLE: A quick summary of Home -->
+
+# Network
+## General
 
 ## Cisco
 
 
 
-# Systèmes
+# Systems
 ## Windows
 
 
@@ -22,13 +25,6 @@
 ## PAAS
 
 
-# Sécurité
+# Security
 
-
-
-
-# Bureautique
-## Powerpoint
-
-## Word
 
