@@ -1,6 +1,7 @@
 <!-- TITLE: Home -->
 <!-- SUBTITLE: A quick summary of Home -->
-
+# English
+* [English](http://wiki.maximegy.ovh/english/home)
 # Réseau
 ## Principes Généraux
 
