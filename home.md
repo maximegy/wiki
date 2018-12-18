@@ -1,5 +1,5 @@
-<!-- TITLE: Home -->
-<!-- SUBTITLE: A quick summary of Home -->
+<!-- TITLE: Accueil -->
+<!-- SUBTITLE: Page d'accueil pour les articles en français -->
 # English
 * [English](http://wiki.maximegy.ovh/english/home)
 # Réseau
