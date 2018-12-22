@@ -7,8 +7,8 @@
 ## Cisco
 ## PFSense
 ### Général
-* [Introduction à PFSense](http://wiki.maximegy.ovh/french/reseau/pfsense/introduction_a_pfsense)
-* [Installation de PFSense](http://wiki.maximegy.ovh/french/reseau/pfsense/installation_de_pfsense)
+* [Introduction à PFSense](http://wiki.maximegy.ovh/french/reseau/pfsense/introduction-a-pfsense)
+* [Installation de PFSense](http://wiki.maximegy.ovh/french/reseau/pfsense/installation-de-pfsense)
 ### Services
 1. SQUID
 * [Mettre en place un reverse proxy SQUID HTTP](http://wiki.maximegy.ovh/french/reseau/pfsense/mettre_en_place_un_reverse_proxy_squid_http)
