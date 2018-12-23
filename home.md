@@ -5,6 +5,9 @@
 # Réseau
 ## Principes Généraux
 ## Cisco
+### CheatSheets
+[Cloud Packet](http://cloudpacket.net/cheat-sheets.html)
+[Packet Life](http://packetlife.net/library/cheat-sheets/)
 ## PFSense
 ### Général
 * [Introduction à PFSense](http://wiki.maximegy.ovh/french/reseau/pfsense/introduction-a-pfsense)
