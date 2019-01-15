@@ -9,7 +9,6 @@ Mettre un utilisateur dans un groupe:
 
 -----
 
-
 # Présentation
 ## Introduction
 Powershell est la volonté de Microsoft de fournir une platefoerme d'automatisation, de scripting et d'une variété d'autres fonctions afin de concurrencer les shells du marché:
@@ -44,7 +43,6 @@ Pour commencer à travailler avec PowerShell, il faut configurer la politique d'
 
 -----
 
-
 # Personnalisation du Shell
 | Personnalisation de Base | Personnalisation avancée |
 |--------------------------|--------------------------|
@@ -72,6 +70,11 @@ Terminologie:
 * **Cmdlets**: essentiellement des commandes qui interagissent avec du code .NET sr des fonctions définies par les comandes
 * **Scripts**: Les scripts dont des fichiers .ps1 executables qui contiennent une série de commandes Powershell
 * **Fonctions**: une fonction est une série de commandes groupées qui ensemble permettent de réaliser une certaine tâche.
+
+
+-----
+
+
 # Cmdlets
 ## A propos
 Une cmdlet est une commande PowerShell avec une fonction prédéfinie suivant la logique "Action" - "information".
@@ -170,6 +173,10 @@ Stop-Process -Name notepad
 spps -Name notepad
 ```
 
+
+-----
+
+
 # Commentaires
 Laisser des commentaires dans un script va vous permettre ainsi qu'aux différents utilisateurs du script de mieux comprendre ce que le script fait. Un commentaire peut être une ligne commençant par un dièze (#) ou un bloc sur plusieurs lignes commençant et finissant par des dièzes et des chevrons :
 
@@ -179,6 +186,10 @@ Laisser des commentaires dans un script va vous permettre ainsi qu'aux différen
 sur plusieurs
 lignes #>
 ```
+
+
+-----
+
 
 # Les Fonctions
 Rappel: les donctions sont des successions de commandes regroupées dans le but de réaliser certaines tâches
@@ -200,6 +211,10 @@ Affinez votre fonction afin qu'elle remonte les informations suivantes:
 - Le disque sur lequel est installé Windows et son chemin d'installation
 - Le langage du système
 Prenez soin de formater les résultats.
+
+
+-----
+
 
 # CMDlet-like
 Afin d'améliorer les fonctions, il est possible d'ajouter une fonctionnalité Powershell simple à cette dernière [cmdletbinding()]
@@ -240,6 +255,9 @@ Gestion des décimales
 Afficher des couleurs différentes pour un nombre de chiffres d'entiers différents devant la virgule (1 => Bleu, 2 => Rouge, 3 => Noir, etc)
 Intégrer des debug et des verboses, qui commentent les actions entreprises par le script au fur et à mesure
 elle ne doit pas se fermer tant que l'utilisateur ne l'a pas demandé
+
+
+-----
 
 
 # Les boucles
@@ -314,5 +332,9 @@ Do {
 
 ## La boucle Do Until
 Très similaire à Do While, 'utilisation est à déterminer au cas par cas.
+
+
+-----
+
 
 # Les Comparateurs
