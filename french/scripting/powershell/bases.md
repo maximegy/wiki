@@ -106,9 +106,9 @@ Les Alias (`Get-Alias`) Permettent de créer des raccourcis pour exécuter des c
 
 Appliquons l'utilisation d'une commande sur un exemple pratique:
 - `Get-Process` retourne les process
-- `Get-Process` | Format list permet d'avoir une liste séparatn chaque item
+- `Get-Process | Format list` permet d'avoir une liste séparant chaque item.
 
-Un petit mix de toutes les informations pour avoir par exmple les process qui consomment le plus de CPU
+Un petit mix de toutes les informations pour avoir, par exemple, les process qui consomment le plus de CPU
 - `Get-Process | Select-Object Name,CPU | Sort-Object CPU -Descending | Format-Table -Autosize`
 - Powershell est également en mesure d'afficher un tableau exporté en utilisant la commande Out-GridView
 
@@ -120,7 +120,12 @@ Start-Process .\processes.txt
 ```
 
 Rappel d'objet avec le pipe: le pipe permet d'utiliser un objet récupéré dans une commande précédente (`Select-Objet`, `Out-File`...)
-Un exemple pratique pour agir dur une machine: `Get-Process notepad | Stop-Process`
+Un exemple pratique pour agir sur une machine: `Get-Process notepad | Stop-Process`
+
+## Paramètres
+Chaque CMDlet possède de nombreux paramètres permettant de personnaliser son fonctionnement. PowerShell ISE et Visual Studio Code suggèrent tous les paramètres et leur types après avoir écrit la commande suivi d'un tiret.  
+
+![Parametres](/uploads/powershell/parametres.png "Parametres"){.align-center}
 
 ## Travaux Pratiques - les CMDlets
 Premier script:
