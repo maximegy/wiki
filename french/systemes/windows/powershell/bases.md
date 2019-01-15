@@ -25,10 +25,10 @@ Commandes la plus importante "| gm" pour "Get-Member"
 Personnalisation du Shell
 | Personnalisation de Base | Personnalisation avancée |
 |--------------------------|--------------------------|
-|![Personnalisation Powershell](/uploads/powershell/personnalisation-powershell.png "Personnalisation Powershell")|Le fichier de profil individuel est stocké dans la variable $profile.CurrentUserAllHosts
-Le fichier de profil global $profile.AllUsersAllHosts
-Les fichiers de profils sont chargés au lancement d'un shell, ils permettent de customiser les environnements utilisateurs et système.
-La function function Prompt { } permet de modifier les informations retournées par le prompt.|
+|![Personnalisation Powershell](/uploads/powershell/personnalisation-powershell.png "Personnalisation Powershell")|Le fichier de profil individuel est stocké dans la variable ||$profile.CurrentUserAllHosts|
+||Le fichier de profil global $profile.AllUsersAllHosts|
+||Les fichiers de profils sont chargés au lancement d'un shell, ils permettent de customiser les environnements utilisateurs et système.|
+||La function function Prompt { } permet de modifier les informations retournées par le prompt.|
 
 clic droit > personnaliser
 
@@ -57,3 +57,10 @@ Terminologie:
 Cmdlets: essentiellement des commandes qui interagissent avec du code .NET sr des fonctions définies par les comandes
 Scripts: Les scripts dont des fichiers .ps1 executables qui contiennent une série de commandes Powershell
 Fonctions: une fonction est une série de commandes groupées qui ensemble permettent de réaliser une certaine tâche.
+
+Cmdlets
+La structure est Verbe+Nom
+La commande Get-Verb permet d'avoir une vue sur l'ensemble des verbes utilisés dans le monde Powershell
+"Get-Command -CommandType Cmdlet | Group-Object Verb | Sort-Object Count -Descendig | Format-Table --Autosize"
+Les Alias (Get-Alias) Permettent de créer des raccourcis pour exécuter des commandes communes
+Get-Command: Permet de découvrir les commandes par exemple toutes les commandes relatives aux processus (Get-Command -Name "*process*")
