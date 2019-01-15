@@ -151,17 +151,17 @@ Output: set à envoyer des objets dans le 'pipeline' Ce qui veut dire que le pro
 Verbose: Permet d'afficher ou non le texte associé avec l'argument -Verbose
 
 Les types:
-array|liste
-bool|true or false
-byte nombre en 8 bits
-char suite de charactère en 16bits
-decimal nombre pouvant comprendre un point en 32 bits
-double nombre pouvant comprendre un point en 32 bits
-hashtable
-int
-single
-string
-xml
+|array|liste|
+|bool|true or false|
+|byte|nombre en 8 bits|
+|char|suite de charactère en 16bits|
+|decimal|nombre pouvant comprendre un point en 32 bits|
+|double|nombre pouvant comprendre un point en 32 bits|
+|hashtable||
+|int||
+|single||
+|string||
+|xml||
 
 ## Travaux pratiques 
 Créer une calculatrice:
@@ -175,7 +175,7 @@ elle ne doit pas se fermer tant que l'utilisateur ne l'a pas demandé
 
 # Les boucles
 Il y a plusieurs types de boucles en Powershell. Plusieurs peuvent servir le même but, mais il y a souvent une plus adaptée qu'une autre par cas.
-* La boucle ForEach
+## La boucle ForEach
 
 ```powershell
 ForEach ($element in $listeelement) {
@@ -191,6 +191,59 @@ $element vaut l'item de la liste d'element traité au niveau de la boucle:
 |tata|2|tata|
 |titi|3|titi|
 Liste element vient d'une source, par exemple récupérée lrs d'une autre commande.
+Exemple:
 
-* La boucle 
+```powershell
+$process = Get-Process
+$i = 1
+ForEach ($proc in $process)
+	Write-Host "le process numéro $i est $($process.Name)"
+	$i++
+}
+```
 
+
+ ## La boucle For
+ for (initialiser;condition;repetition) {
+ FaireQuelquechose
+ }
+ 
+ Par exemple
+
+```powershell
+ for ($i=1;$i -le 15; $i++ {
+	 Write-Host "Ceci est la couleur $i" -ForegroundColor $I
+}
+```
+
+
+Les conditions sont au choix pouvant créer une boucle infinie
+
+```powershell
+for () { Write-Host "Wheeeeeeeeeeee!"}
+```
+
+
+On privilégiera les boucles For lorsqu'on veut exécuter un même ensemble de code plusieurs fois, pour une raison ou une autre.
+
+## La boucle While
+les boucles While continuent tant qu'une condition est vraie
+
+While (condition)
+
+on peut par exemple ouvrir plusieurs instances d'un programme
+$notepad = Get-Process Notepad
+While ($notepad.Count -le 5)
+
+
+## La boucle Do While
+La différence avec la boucle While, l'action se fera systématiquement au moins une fois
+Do {
+
+}
+
+
+## La boucle Do Until
+Très similaire à Do While, 'utilisation est à déterminer au cas par cas.
+
+# Les Comparateurs
