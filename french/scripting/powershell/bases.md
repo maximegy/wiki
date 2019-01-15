@@ -19,8 +19,8 @@ PowerShell offre à la fois une console en ligne de commande et un environnement
 ![Console Powershell](/uploads/powershell/console-powershell.png "Console Powershell"){.align-center}
 * Pour lancer PowerShell ISE, tapez powershell_ise.exe dans le menu démarrer. Cet environnement est un bon moyen de travailler sur les scripts car il fournit notamment l'auto completion, la coloration du code et les fonctionnalités d'automatisation et de simplification de développement et test de code.{.align-left}
 ![Powershell Ise](/uploads/powershell/powershell-ise.png "Powershell Ise"){.align-center}
-* Un autre logiciel peut être pratique pour développer les scripts non seulement PowerShell mais aussi d'autres langages. Ce logiciel développé par Microsoft est disponible gratuitement en installation dure mais aussi sans droits administrateurs dans les dossiers de l'utilisateur. Visual Studio Code permet une reconnaissance du langage comme PowerShell_ISE. il propose aussi le débogage, l'autocompletion et l'explication des commandes tapées.
-
+* Un autre logiciel peut être pratique pour développer les scripts non seulement PowerShell mais aussi d'autres langages. Ce logiciel développé par Microsoft est disponible gratuitement en installation dure mais aussi sans droits administrateurs dans les dossiers de l'utilisateur. Visual Studio Code permet une reconnaissance du langage comme PowerShell_ISE. il propose aussi le débogage, l'autocompletion et l'explication des commandes tapées.{.align-left}
+![Visual Studio Code](/uploads/powershell/visual-studio-code.png "Visual Studio Code"){.align-center}
 
 
 ## Versions
