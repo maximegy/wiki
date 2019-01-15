@@ -75,8 +75,8 @@ Terminologie:
 -----
 
 
-# Cmdlets
-## A propos
+## Cmdlets
+### A propos
 Une cmdlet est une commande PowerShell avec une fonction prédéfinie suivant la logique "Action" - "information".
 * Il existe des applets de commande système, utilisateur et personnalisé,
 * Les résultats des CMDlets en sortie sont des objets ou des tableaux d'objets, il faut voir ça comme un conteneur qui contient des propriétés, imagé comme des poupées russes
@@ -89,7 +89,7 @@ exemple:
 * Les cmdlets sont insensibles à la casse, par exemple `Get-Aduser`, `get-aduser` ou encore `GeT-ADUseR` fonctionnent,
 * Dans une chaine, si on veut utiliser plusieurs cmdlets, il faut les séparer par un point-virgule (`;`).
 
-## Format
+### Format
 La structure d'une cmdlet consiste toujours à un **verbe** suivi d'un **nom**. Les verbes les plus connus sont:
 - `Get` : pour obtenir quelque-chose,
 - `Set` : pour définir quelque-chose,
@@ -125,12 +125,28 @@ Start-Process .\processes.txt
 Rappel d'objet avec le pipe: le pipe permet d'utiliser un objet récupéré dans une commande précédente (`Select-Objet`, `Out-File`...)
 Un exemple pratique pour agir sur une machine: `Get-Process notepad | Stop-Process`
 
-## Paramètres
+### Paramètres
 Chaque CMDlet possède de nombreux paramètres permettant de personnaliser son fonctionnement. PowerShell ISE et Visual Studio Code suggèrent tous les paramètres et leur types après avoir écrit la commande suivi d'un tiret.  
 
 ![Parametres](/uploads/powershell/parametres.png "Parametres"){.align-center}
 
-## Travaux Pratiques - les CMDlets
+### Alias
+On peut aussi créer des alias qui sont des noms de cmdlets raccourcis.
+Par exemple, à la place de `Get-Help`, on peut juste entrer `Help`
+
+```powershell
+Start-Process notepad
+start notepad
+```
+
+ou encore
+
+```powershell
+Stop-Process -Name notepad
+spps -Name notepad
+```
+
+### Travaux Pratiques - les CMDlets
 Premier script:
 Créez un script permettant :
 |Tâche|Bon ordre|Commande|
@@ -148,7 +164,6 @@ Créez un script permettant :
 
 # Utiliser l'ISE
 
-## 
 Créons un fichier de script, par exemple ISE_1.ps1:
 Ajouter Get-Date en ligne 1 et cliquer sur la fenêtre d'execution verte afin d'obtenir le résultat retourné par le script
 Ajouter un nouvelle commande ; `Get-WMIObject-Class Win32_LogicalDisk` et constater le résultat à nouveau
@@ -157,27 +172,13 @@ Essayons de personnaliser un peu ce script pour qu'il nous accueuille avec la da
 
 -----
 
-# Alias
-On peut aussi créer des alias qui sont des noms de cmdlets raccourcis.
-Par exemple, à la place de `Get-Help`, on peut juste entrer `Help`
 
-```powershell
-Start-Process notepad
-start notepad
-```
-
-ou encore
-
-```powershell
-Stop-Process -Name notepad
-spps -Name notepad
-```
 
 
 -----
 
 
-# Commentaires
+### Commentaires
 Laisser des commentaires dans un script va vous permettre ainsi qu'aux différents utilisateurs du script de mieux comprendre ce que le script fait. Un commentaire peut être une ligne commençant par un dièze (#) ou un bloc sur plusieurs lignes commençant et finissant par des dièzes et des chevrons :
 
 ```powershell
@@ -191,7 +192,13 @@ lignes #>
 -----
 
 
-# Les Fonctions
+### Pipes
+Les pipes ( "|" - barre verticale), renvoient les données d'une cmdlet à une autre.
+Par exemple :
+`Get-Service | Sort-Object -property Status`
+Le résultat de la commande `Get-Ser`vice`
+
+## Les Fonctions
 Rappel: les donctions sont des successions de commandes regroupées dans le but de réaliser certaines tâches
 Repronons un script blanc et créons une fonction vierge dan le fichier:
 
