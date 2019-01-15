@@ -73,6 +73,13 @@ Un petit mix de toutes les informations pour avoir par exmple les process qui co
 - `Get-Process | Select-Object Name,CPU | Sort-Object CPU -Descending | Format-Table -Autosize`
 - Powershell est également en mesure d'afficher un tableau exporté en utilisant la commande Out-GridView
 
-Les chevrons '>' et '>>' permettent respectivement d'exporter des résultats dans un fichier.
-Par exmple 'Get-Process > processes.txt
+Les chevrons '`>`' et '`>>`' permettent respectivement d'exporter des résultats dans un fichier.
+Par exemple:
+```powershell
+Get-Process > processes.txt
 Start-Process .\processes.txt
+```
+
+
+Rappel d'objet avec le pipe: le pipe permet d'utiliser un objet récupéré dans une commande précédente (`Select-Objet`, `Out-File`...)
+Un exemple pratique pour agir dur une machine: `Get-Process notepad | Stop-Process`
