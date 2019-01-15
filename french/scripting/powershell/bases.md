@@ -347,7 +347,17 @@ Les comparateurs permettent de specifier les conditions de comparaison des valeu
 ||`-lt`|plus petit que|
 ||`-le`|plus petit ou égal|
 |Correspondance|`-like`|Retourne Vrai si la chaine correspond au motif|
-||`notlike`|
+||`notlike`|Retourne Vrai si la chaine ne correpond pas au motif|
+||`match`|Retourne vrai si la chaine correspond à l'expression régulière|
+||`notmatch`|Retourne vrai si la chaine ne correspond pas à l'expression régulière
+|||`$match`contient la chaîne correspondant à l'expression régulière|
+|Contenant|`-contains`|Retourne vrai quand le motif de référence est contenu dans  le motif|
+||`-notcontains`|Retourne vrai quand le motif de référence n'est pas contenu dans  le motif|
+||`-in`|Retourne vrai quand la valeur testée est contenue dans le motif|
+||`-notin`|Retourne vrai quand la valeur testée n'est pas contenue dans le motif|
+|Type|`-is`|Retourne vrai si les deux objets sont de même type|
+||`-isnot`|Retourne vrai si les objets ne sont pas de même type|
+
 
 ## Travaux pratiques - Scripts
 Créer une calculatrice:
