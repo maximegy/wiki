@@ -19,13 +19,6 @@ Powershell est la volonté de Microsoft de fournir une platefoerme d'automatisat
 |--------------------------|--------------------------|
 |![Personnalisation Powershell](/uploads/powershell/personnalisation-powershell.png "Personnalisation Powershell")|Le fichier de profil individuel est stocké dans la variable `$profile.CurrentUserAllHosts` <br/> Le fichier de profil global `$profile.AllUsersAllHosts` <br/> Les fichiers de profils sont chargés au lancement d'un shell, ils permettent de customiser les environnements utilisateurs et système. <br/> La function function Prompt { } permet de modifier les informations retournées par le prompt.|
 
-clic droit > personnaliser
-
-Personnalisation avancée
-Le fichier de profil individuel est stocké dans la variable $profile.CurrentUserAllHosts
-Le fichier de profil global $profile.AllUsersAllHosts
-Les fichiers de profils sont chargés au lancement d'un shell, ils permettent de customiser les environnements utilisateurs et système.
-La function function Prompt { } permet de modifier les informations retournées par le prompt.
 
 ## Travaux Pratiques:
 Personnaliser son shel pour que chaque ligne retourne l'heure, l'emplacement actuel, l'utilisateur actuel...
