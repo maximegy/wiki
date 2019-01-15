@@ -172,3 +172,25 @@ Afficher des couleurs différentes pour un nombre de chiffres d'entiers différe
 Intégrer des debug et des verboses, qui commentent les actions entreprises par le script au fur et à mesure
 elle ne doit pas se fermer tant que l'utilisateur ne l'a pas demandé
 
+
+# Les boucles
+Il y a plusieurs types de boucles en Powershell. Plusieurs peuvent servir le même but, mais il y a souvent une plus adaptée qu'une autre par cas.
+* La boucle ForEach
+
+```powershell
+ForEach ($element in $listeelement) {
+Faire quelque chose
+}
+```
+
+L'élément peut être une dénomination de votre choix.
+$element vaut l'item de la liste d'element traité au niveau de la boucle:
+|liste|tour de boucle| valeur de `$element`|
+|----|----------------|----------------------|
+|toto|1|toto|
+|tata|2|tata|
+|titi|3|titi|
+Liste element vient d'une source, par exemple récupérée lrs d'une autre commande.
+
+* La boucle 
+
