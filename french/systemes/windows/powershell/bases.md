@@ -103,4 +103,10 @@ Return $osInfo
 }
 Get-OSInfo
 ```
-
+## Travaux Pratiques
+Affinez votre fonction afin qu'elle remonte les informations suivantes:
+- la version de Windows en cours sur votre machine
+- Tous les disques disponibles ainsi que l'espace disponible sur chaque disque
+- Le disque sur lequel est installé Windows et son chemin d'installation
+- Le langage du système
+Prenez soin de formater les résultats.
