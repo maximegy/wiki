@@ -144,3 +144,31 @@ param()
 Invoke-AdvancedFunctionality
 ```
 
+Les différents 'Write'
+Host: sert à présenter de la donnée lisible sous forme de texte.
+Utilie pour suivre le déroulement d'un script et présenter des menus
+Output: set à envoyer des objets dans le 'pipeline' Ce qui veut dire que le prochain objet dans le shell/script sera lisible.
+Verbose: Permet d'afficher ou non le texte associé avec l'argument -Verbose
+
+Les types:
+array|liste
+bool|true or false
+byte nombre en 8 bits
+char suite de charactère en 16bits
+decimal nombre pouvant comprendre un point en 32 bits
+double nombre pouvant comprendre un point en 32 bits
+hashtable
+int
+single
+string
+xml
+
+## Travaux pratiques 
+Créer une calculatrice:
+elle doit gérer les 4 opérations de base,
+Elle doit retourner une erreur si les valeurs renseignées par l'utilisateur ne sont pas valides,
+Gestion des décimales
+Afficher des couleurs différentes pour un nombre de chiffres d'entiers différents devant la virgule (1 => Bleu, 2 => Rouge, 3 => Noir, etc)
+Intégrer des debug et des verboses, qui commentent les actions entreprises par le script au fur et à mesure
+elle ne doit pas se fermer tant que l'utilisateur ne l'a pas demandé
+
