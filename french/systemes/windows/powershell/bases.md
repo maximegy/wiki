@@ -131,3 +131,16 @@ Affinez votre fonction afin qu'elle remonte les informations suivantes:
 - Le disque sur lequel est installé Windows et son chemin d'installation
 - Le langage du système
 Prenez soin de formater les résultats.
+
+# CMDlet-like
+Afin d'améliorer les fonctions, il est possible d'ajouter une fonctionnalité Powershell simple à cette dernière [cmdletbinding()]
+
+```powershell
+function Invoke-AdvancedFunctionality {
+[cmdletbinding()]
+param()
+	Write-Verbose "Cette fonction est maintenant avancée !"
+}
+Invoke-AdvancedFunctionality
+```
+
