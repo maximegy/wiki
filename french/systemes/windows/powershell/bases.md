@@ -4,6 +4,8 @@
 # Algorithmique de Base
 Mettre un utilisateur dans un groupe:
 ![Algorithmique](/uploads/powershell/algorithmique.png "Algorithmique"){.align-center}
+
+# Présentation
 Powershell est la volonté de Microsoft de fournir une platefoerme d'automatisation, de scripting et d'une variété d'autres fonctions afin de concurrencer les shells du marché:
 - Fournir une vraie interface robuste d'administration scriptée
 - Offrir une logique dans les commandes "verbe-nom"
