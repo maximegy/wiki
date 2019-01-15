@@ -88,9 +88,9 @@ Premier script:
 Créez un script permettant :
 |Tâche|Correction|
 |------|------------|
-|Exporter les process en cours sur votre machine sur un fichier texte, en triant par celui consommant le plus de ressources au choix. Si vous le souhaitez, n'affichez que des informations que vous jugez utiles.||
-|Ouvrir ce fichier texte après sa création||
-|de le fermer automatiquement après 30 secondes||
-|de supprimer ce fichier nouvellement créé||
-|de vérifier que le dossier où le fichier est créé existe et si non, le créer||
-|Bonus, laisser le choix à l'utilisateur de où est créé le fichier||
+|Exporter les process en cours sur votre machine sur un fichier texte, en triant par celui consommant le plus de ressources au choix. Si vous le souhaitez, n'affichez que des informations que vous jugez utiles.|laisser le choix à l'utilisateur de où est créé le fichier|
+|Ouvrir ce fichier texte après sa création|vérifier que le dossier où le fichier est créé existe et si non, le créer|
+|de le fermer automatiquement après 30 secondes|Exporter les process en cours sur votre machine sur un fichier texte, en triant par celui consommant le plus de ressources au choix. Si vous le souhaitez, n'affichez que des informations que vous jugez utiles|
+|de supprimer ce fichier nouvellement créé|Ouvrir ce fichier texte après sa création|
+|de vérifier que le dossier où le fichier est créé existe et si non, le créer|de le fermer automatiquement après 30 secondes|
+|Bonus, laisser le choix à l'utilisateur de où est créé le fichier|de supprimer ce fichier nouvellement créé|
