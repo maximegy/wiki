@@ -25,7 +25,7 @@ Commandes la plus importante "| gm" pour "Get-Member"
 Personnalisation du Shell
 | Personnalisation de Base | Personnalisation avancée |
 |--------------------------|--------------------------|
-|                          |                          |
+|![Personnalisation Powershell](/uploads/powershell/personnalisation-powershell.png "Personnalisation Powershell")|                          |
 |                          |                          |
 |                          |                          |
 clic droit > personnaliser
