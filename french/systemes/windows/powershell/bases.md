@@ -84,3 +84,9 @@ Créez un script permettant :
 |de supprimer ce fichier nouvellement créé|Ouvrir ce fichier texte après sa création|`notepad.exe $chemin`|
 |de vérifier que le dossier où le fichier est créé existe et si non, le créer|de le fermer automatiquement après 30 secondes|`Start-Sleep -Seconds 10 & Get-Process *notepad* | Stop-Process`|
 |Bonus, laisser le choix à l'utilisateur de où est créé le fichier|de supprimer ce fichier nouvellement créé|`Remove-Item $chemin`|
+
+# Utiliser l'ISE
+Créons un fichier de script, par exemple ISE_1.ps1:
+Ajouter Get-Date en ligne 1 et cliquer sur la fenêtre d'execution verte afin d'obtenir le résultat retourné par le script
+Ajouter un nouvelle commande ; Get-WMIObject-Class Win32_LogicalDisk et constater le résultat à nouveau
+Essayons de personnaliser un peu ce script pour qu'il nous accueuille avec la date et nous donne la taille disponible sur le disque C: uniquement.
