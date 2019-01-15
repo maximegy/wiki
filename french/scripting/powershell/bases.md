@@ -40,6 +40,10 @@ Par défaut et par sécurité la politique de Microsoft est de restreindre l'exe
 
 Pour commencer à travailler avec PowerShell, il faut configurer la politique d'execution de Restricted à RemoteSigned ou Unrestricted par la commande: `Set-ExecutionPolicy RemoteSigned`.
 
+Terminologie:
+* **Cmdlets**: essentiellement des commandes qui interagissent avec du code .NET sr des fonctions définies par les comandes
+* **Scripts**: Les scripts dont des fichiers .ps1 executables qui contiennent une série de commandes Powershell
+* **Fonctions**: une fonction est une série de commandes groupées qui ensemble permettent de réaliser une certaine tâche.
 
 -----
 
@@ -65,18 +69,11 @@ if (Test-Connection google.fr -Count 1) {Write-Host "Connection Google.fr OK"} e
 
 -----
 
-# Terminologie
-Terminologie:
-* **Cmdlets**: essentiellement des commandes qui interagissent avec du code .NET sr des fonctions définies par les comandes
-* **Scripts**: Les scripts dont des fichiers .ps1 executables qui contiennent une série de commandes Powershell
-* **Fonctions**: une fonction est une série de commandes groupées qui ensemble permettent de réaliser une certaine tâche.
 
 
------
 
-
-## Cmdlets
-### A propos
+# Cmdlets
+## A propos
 Une cmdlet est une commande PowerShell avec une fonction prédéfinie suivant la logique "Action" - "information".
 * Il existe des applets de commande système, utilisateur et personnalisé,
 * Les résultats des CMDlets en sortie sont des objets ou des tableaux d'objets, il faut voir ça comme un conteneur qui contient des propriétés, imagé comme des poupées russes
@@ -89,7 +86,7 @@ exemple:
 * Les cmdlets sont insensibles à la casse, par exemple `Get-Aduser`, `get-aduser` ou encore `GeT-ADUseR` fonctionnent,
 * Dans une chaine, si on veut utiliser plusieurs cmdlets, il faut les séparer par un point-virgule (`;`).
 
-### Format
+## Format
 La structure d'une cmdlet consiste toujours à un **verbe** suivi d'un **nom**. Les verbes les plus connus sont:
 - `Get` : pour obtenir quelque-chose,
 - `Set` : pour définir quelque-chose,
@@ -125,12 +122,12 @@ Start-Process .\processes.txt
 Rappel d'objet avec le pipe: le pipe permet d'utiliser un objet récupéré dans une commande précédente (`Select-Objet`, `Out-File`...)
 Un exemple pratique pour agir sur une machine: `Get-Process notepad | Stop-Process`
 
-### Paramètres
+## Paramètres
 Chaque CMDlet possède de nombreux paramètres permettant de personnaliser son fonctionnement. PowerShell ISE et Visual Studio Code suggèrent tous les paramètres et leur types après avoir écrit la commande suivi d'un tiret.  
 
 ![Parametres](/uploads/powershell/parametres.png "Parametres"){.align-center}
 
-### Alias
+## Alias
 On peut aussi créer des alias qui sont des noms de cmdlets raccourcis.
 Par exemple, à la place de `Get-Help`, on peut juste entrer `Help`
 
@@ -146,7 +143,7 @@ Stop-Process -Name notepad
 spps -Name notepad
 ```
 
-### Travaux Pratiques - les CMDlets
+## Travaux Pratiques - les CMDlets
 Premier script:
 Créez un script permettant :
 |Tâche|Bon ordre|Commande|
@@ -162,12 +159,6 @@ Créez un script permettant :
 -----
 
 
-# Utiliser l'ISE
-
-Créons un fichier de script, par exemple ISE_1.ps1:
-Ajouter Get-Date en ligne 1 et cliquer sur la fenêtre d'execution verte afin d'obtenir le résultat retourné par le script
-Ajouter un nouvelle commande ; `Get-WMIObject-Class Win32_LogicalDisk` et constater le résultat à nouveau
-Essayons de personnaliser un peu ce script pour qu'il nous accueuille avec la date et nous donne la taille disponible sur le disque C: uniquement.  `Get-WMIObject-Class Win32_LogicalDisk | Where-Object DeviceID -eq "C:" | Select-Object DeviceID,Size`
 
 
 -----
@@ -178,7 +169,7 @@ Essayons de personnaliser un peu ce script pour qu'il nous accueuille avec la da
 -----
 
 
-### Commentaires
+## Commentaires
 Laisser des commentaires dans un script va vous permettre ainsi qu'aux différents utilisateurs du script de mieux comprendre ce que le script fait. Un commentaire peut être une ligne commençant par un dièze (#) ou un bloc sur plusieurs lignes commençant et finissant par des dièzes et des chevrons :
 
 ```powershell
@@ -192,7 +183,7 @@ lignes #>
 -----
 
 
-### Pipes
+## Pipes
 Les pipes ( "|" - barre verticale), renvoient les données d'une cmdlet à une autre.
 Par exemple :
 `Get-Service | Sort-Object -property Status`
@@ -202,7 +193,7 @@ Il est possible d'utiliser plusieurs pipes par exemple:
 La commande liste les services, exclue les services arrêtés et affiche seulement leur nom.
 Pour information : `$_` defini l'element  actuellement dans le pipe.
 
-## Les Fonctions
+# Les Fonctions
 Rappel: les donctions sont des successions de commandes regroupées dans le but de réaliser certaines tâches
 Repronons un script blanc et créons une fonction vierge dan le fichier:
 
@@ -239,33 +230,30 @@ param()
 Invoke-AdvancedFunctionality
 ```
 
-Les différents 'Write'
-Host: sert à présenter de la donnée lisible sous forme de texte.
-Utilie pour suivre le déroulement d'un script et présenter des menus
-Output: set à envoyer des objets dans le 'pipeline' Ce qui veut dire que le prochain objet dans le shell/script sera lisible.
-Verbose: Permet d'afficher ou non le texte associé avec l'argument -Verbose
+## Write
 
-Les types:
-|array|liste|
-|bool|true or false|
+`Write-Host` : sert à présenter de la donnée lisible sous forme de texte.
+Utilie pour suivre le déroulement d'un script et présenter des menus
+`Write-Output` : set à envoyer des objets dans le 'pipeline' Ce qui veut dire que le prochain objet dans le shell/script sera lisible.
+`Write-Verbose` : Permet d'afficher ou non le texte associé avec l'argument -Verbose
+
+## Variables
+|Types|Description|
+|------|-------------|
+|array|liste de valeurs|
+|bool|valeur booléenne (Vrai ou Faux)|
 |byte|nombre en 8 bits|
 |char|suite de charactère en 16bits|
-|decimal|nombre pouvant comprendre un point en 32 bits|
-|double|nombre pouvant comprendre un point en 32 bits|
-|hashtable||
-|int||
-|single||
-|string||
-|xml||
+|decimal|nombre pouvant comprendre un point en 128 bits|
+|single|nombre pouvant comprendre un point en 32 bits|
+|double|nombre pouvant comprendre un point en 64 bits|
+|hashtable|Stocker des objets sous forme de clé-valeur (key-value)|
+|int|entier sur 32 bits|
+|long| entier sur 64 bits|
+|string|chaine de caractère Unicode (2 milliards de caractères)|
+|xml|objet XML|
 
-## Travaux pratiques 
-Créer une calculatrice:
-elle doit gérer les 4 opérations de base,
-Elle doit retourner une erreur si les valeurs renseignées par l'utilisateur ne sont pas valides,
-Gestion des décimales
-Afficher des couleurs différentes pour un nombre de chiffres d'entiers différents devant la virgule (1 => Bleu, 2 => Rouge, 3 => Noir, etc)
-Intégrer des debug et des verboses, qui commentent les actions entreprises par le script au fur et à mesure
-elle ne doit pas se fermer tant que l'utilisateur ne l'a pas demandé
+
 
 
 -----
@@ -349,3 +337,23 @@ Très similaire à Do While, 'utilisation est à déterminer au cas par cas.
 
 
 # Les Comparateurs
+Les comparateurs permettent de specifier les conditions de comparaison des valeurs et de déterminer les valeurs qui correspondent aux modèles spécifiés.
+|Type|Opérateur|Description|
+|-----|------------|------------|
+|Egalité|`-eq`|égal à|
+||`-ne`|n'est pas égal à|
+||`-gt`|plus grand que|
+||`-ge`|plus grand ou égal|
+||`-lt`|plus petit que|
+||`-le`|plus petit ou égal|
+|Correspondance|`-like`|Retourne Vrai si la chaine correspond au motif|
+||`notlike`|
+
+## Travaux pratiques - Scripts
+Créer une calculatrice:
+elle doit gérer les 4 opérations de base,
+Elle doit retourner une erreur si les valeurs renseignées par l'utilisateur ne sont pas valides,
+Gestion des décimales
+Afficher des couleurs différentes pour un nombre de chiffres d'entiers différents devant la virgule (1 => Bleu, 2 => Rouge, 3 => Noir, etc)
+Intégrer des debug et des verboses, qui commentent les actions entreprises par le script au fur et à mesure
+elle ne doit pas se fermer tant que l'utilisateur ne l'a pas demandé
