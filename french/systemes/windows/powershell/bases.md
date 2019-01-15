@@ -88,5 +88,19 @@ Créez un script permettant :
 # Utiliser l'ISE
 Créons un fichier de script, par exemple ISE_1.ps1:
 Ajouter Get-Date en ligne 1 et cliquer sur la fenêtre d'execution verte afin d'obtenir le résultat retourné par le script
-Ajouter un nouvelle commande ; Get-WMIObject-Class Win32_LogicalDisk et constater le résultat à nouveau
-Essayons de personnaliser un peu ce script pour qu'il nous accueuille avec la date et nous donne la taille disponible sur le disque C: uniquement.
+Ajouter un nouvelle commande ; `Get-WMIObject-Class Win32_LogicalDisk` et constater le résultat à nouveau
+Essayons de personnaliser un peu ce script pour qu'il nous accueuille avec la date et nous donne la taille disponible sur le disque C: uniquement.  `Get-WMIObject-Class Win32_LogicalDisk | Where-Object DeviceID -eq "C:" | Select-Object DeviceID,Size`
+
+# Les Fonctions
+Rappel: les donctions sont des successions de commandes regroupées dans le but de réaliser certaines tâches
+Repronons un script blanc et créons une fonction vierge dan le fichier:
+
+```powershell
+function Get-OSInfo {
+Write-Host "This function will dipslay OS information"
+$osInfo = Get-WmiObject -Class Win32_OperatingSystem
+Return $osInfo
+}
+Get-OSInfo
+```
+
