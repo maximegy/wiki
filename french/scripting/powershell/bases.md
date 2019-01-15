@@ -95,10 +95,11 @@ La structure d'une cmdlet consiste toujours à un **verbe** suivi d'un **nom**. 
 - `Out` : pour retourner quelque-chose,
 - `New` : pour créer quelque-chose.
 
-Commandes la plus importante "`| gm`" pour "`Get-Member`"
+Commandes les plus importantes :
+- "`| gm`" pour "`Get-Member`" permet de récupérer les membres, propriétés et méthodes des objets.
+- `Get-Verb` permet d'avoir une vue sur l'ensemble des verbes utilisés.
+- `Get-Help` permet d'avoir des informations sur les commandes, cmdlets et autres.
 
-
-La commande `Get-Verb` permet d'avoir une vue sur l'ensemble des verbes utilisés dans le monde Powershell
 "`Get-Command -CommandType Cmdlet | Group-Object Verb | Sort-Object Count -Descendig | Format-Table --Autosize`"
 Les Alias (`Get-Alias`) Permettent de créer des raccourcis pour exécuter des commandes communes
 `Get-Command`: Permet de découvrir les commandes par exemple toutes les commandes relatives aux processus (`Get-Command -Name "*process*"`)
