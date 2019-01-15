@@ -20,7 +20,7 @@ Powershell est la volonté de Microsoft de fournir une platefoerme d'automatisat
 |![Personnalisation Powershell](/uploads/powershell/personnalisation-powershell.png "Personnalisation Powershell")|Le fichier de profil individuel est stocké dans la variable `$profile.CurrentUserAllHosts` <br/> Le fichier de profil global `$profile.AllUsersAllHosts` <br/> Les fichiers de profils sont chargés au lancement d'un shell, ils permettent de customiser les environnements utilisateurs et système. <br/> La function function Prompt { } permet de modifier les informations retournées par le prompt.|
 
 
-## Travaux Pratiques:
+## Travaux Pratiques - Personnalisation du Shell
 Personnaliser son shel pour que chaque ligne retourne l'heure, l'emplacement actuel, l'utilisateur actuel...
 Faire en sorte que le message d'accueil du shell teste votre,connexion vers google.com avec un message en fonction du succès ou de l'échec
 Changer la couleur de la police du message du shell uniquement
@@ -73,7 +73,7 @@ Start-Process .\processes.txt
 Rappel d'objet avec le pipe: le pipe permet d'utiliser un objet récupéré dans une commande précédente (`Select-Objet`, `Out-File`...)
 Un exemple pratique pour agir dur une machine: `Get-Process notepad | Stop-Process`
 
-## Travaux Pratiques
+## Travaux Pratiques - les CMDlets
 Premier script:
 Créez un script permettant :
 |Tâche|Bon ordre|Commande|
@@ -103,7 +103,7 @@ Return $osInfo
 }
 Get-OSInfo
 ```
-## Travaux Pratiques
+## Travaux Pratiques - les fonctions
 Affinez votre fonction afin qu'elle remonte les informations suivantes:
 - la version de Windows en cours sur votre machine
 - Tous les disques disponibles ainsi que l'espace disponible sur chaque disque
