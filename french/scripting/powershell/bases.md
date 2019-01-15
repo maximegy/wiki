@@ -39,7 +39,6 @@ Depuis sa création, PowerShell a évolué jusqu'à devenir un langage puissant 
 |--------------------------|--------------------------|
 |![Personnalisation Powershell](/uploads/powershell/personnalisation-powershell.png "Personnalisation Powershell")|Le fichier de profil individuel est stocké dans la variable `$profile.CurrentUserAllHosts` <br/> Le fichier de profil global `$profile.AllUsersAllHosts` <br/> Les fichiers de profils sont chargés au lancement d'un shell, ils permettent de customiser les environnements utilisateurs et système. <br/> La function function Prompt { } permet de modifier les informations retournées par le prompt.|
 
-
 ## Travaux Pratiques - Personnalisation du Shell
 Personnaliser son shell pour que chaque ligne retourne l'heure, l'emplacement actuel, l'utilisateur actuel...
 Faire en sorte que le message d'accueil du shell teste votre,connexion vers google.com avec un message en fonction du succès ou de l'échec
@@ -115,6 +114,15 @@ Créez un script permettant :
 
 
 # Utiliser l'ISE
+## Avant tout
+Par défaut et par sécurité la politique de Microsoft est de restreindre l'execution de scripts. Pour vérifier la politique d'execution, lancer la commande `Get-Execution Policy` dans une console PowerShell lancée en administrateur.
+
+4 valeurs sont possibles:
+* Restricted : Aucun script est autorisé. C'est la politique par défaut.
+* AllSigned : Il est possible d'executer les scripts signés par un developper de confiance. Avec cette politque, il est demandé de confirmer le lancement du script.
+* RemoteSigned : Il est possible de lancer ses propres scripts ou les scripts signés par un developpeur de confiance.
+* Unrestricted : On peut lancer n'importe quel script.
+## 
 Créons un fichier de script, par exemple ISE_1.ps1:
 Ajouter Get-Date en ligne 1 et cliquer sur la fenêtre d'execution verte afin d'obtenir le résultat retourné par le script
 Ajouter un nouvelle commande ; `Get-WMIObject-Class Win32_LogicalDisk` et constater le résultat à nouveau
