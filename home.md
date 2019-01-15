@@ -40,7 +40,7 @@ https://www.facebook.com/notes/nas-synology-francophone/les-tutos/78737719479112
 ## Algorithmique
 
 ## PowerShell
-* [Bases](http://wiki.maximegy.ovh/french/systemes/windows/powershell/bases)
+* [Bases](http://wiki.maximegy.ovh/french/scripting/powershell/bases)
 
 # Bureautique
 ## Powerpoint
