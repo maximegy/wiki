@@ -18,7 +18,7 @@ objet : voir ça comme un conteneur qui contient des propriétés etc "visu comm
 exemple 'Hello World'
 'Hello World'.Lenght
 
-Commandes la plus importante "| gm" pour "Get-Member"
+Commandes la plus importante "`| gm`" pour "`Get-Member`"
 
 
 
@@ -60,7 +60,19 @@ Fonctions: une fonction est une série de commandes groupées qui ensemble perme
 
 Cmdlets
 La structure est Verbe+Nom
-La commande Get-Verb permet d'avoir une vue sur l'ensemble des verbes utilisés dans le monde Powershell
-"Get-Command -CommandType Cmdlet | Group-Object Verb | Sort-Object Count -Descendig | Format-Table --Autosize"
-Les Alias (Get-Alias) Permettent de créer des raccourcis pour exécuter des commandes communes
-Get-Command: Permet de découvrir les commandes par exemple toutes les commandes relatives aux processus (Get-Command -Name "*process*")
+La commande `Get-Verb` permet d'avoir une vue sur l'ensemble des verbes utilisés dans le monde Powershell
+"`Get-Command -CommandType Cmdlet | Group-Object Verb | Sort-Object Count -Descendig | Format-Table --Autosize`"
+Les Alias (`Get-Alias`) Permettent de créer des raccourcis pour exécuter des commandes communes
+`Get-Command`: Permet de découvrir les commandes par exemple toutes les commandes relatives aux processus (`Get-Command -Name "*process*"`)
+
+Appliquons l'utilisation d'une commande sur un exemple pratique:
+- `Get-Process` retourne les process
+- `Get-Process` | Format list permet d'avoir une liste séparatn chaque item
+
+Un petit mix de toutes les informations pour avoir par exmple les process qui consomment le plus de CPU
+- `Get-Process | Select-Object Name,CPU | Sort-Object CPU -Descending | Format-Table -Autosize`
+- Powershell est également en mesure d'afficher un tableau exporté en utilisant la commande Out-GridView
+
+Les chevrons '>' et '>>' permettent respectivement d'exporter des résultats dans un fichier.
+Par exmple 'Get-Process > processes.txt
+Start-Process .\processes.txt
