@@ -6,23 +6,15 @@ Mettre un utilisateur dans un groupe:
 ![Algorithmique](/uploads/powershell/algorithmique.png "Algorithmique"){.align-center}
 
 # Présentation
+## Introduction
 Powershell est la volonté de Microsoft de fournir une platefoerme d'automatisation, de scripting et d'une variété d'autres fonctions afin de concurrencer les shells du marché:
 - Fournir une vraie interface robuste d'administration scriptée
 - Offrir une logique dans les commandes "verbe-nom"
 
-Versions:
-
-Les cmdlets:
-Les commandes suivent la logique "Actions" - "information"
-objet : voir ça comme un conteneur qui contient des propriétés etc "visu comme des poupées russes
-exemple 'Hello World'
-'Hello World'.Lenght
-
-Commandes la plus importante "`| gm`" pour "`Get-Member`"
+## Versions:
 
 
-
-Personnalisation du Shell
+# Personnalisation du Shell
 | Personnalisation de Base | Personnalisation avancée |
 |--------------------------|--------------------------|
 |![Personnalisation Powershell](/uploads/powershell/personnalisation-powershell.png "Personnalisation Powershell")|Le fichier de profil individuel est stocké dans la variable ||$profile.CurrentUserAllHosts|
@@ -38,7 +30,7 @@ Le fichier de profil global $profile.AllUsersAllHosts
 Les fichiers de profils sont chargés au lancement d'un shell, ils permettent de customiser les environnements utilisateurs et système.
 La function function Prompt { } permet de modifier les informations retournées par le prompt.
 
-Travaux Pratiques:
+## Travaux Pratiques:
 Personnaliser son shel pour que chaque ligne retourne l'heure, l'emplacement actuel, l'utilisateur actuel...
 Faire en sorte que le message d'accueil du shell teste votre,connexion vers google.com avec un message en fonction du succès ou de l'échec
 Changer la couleur de la police du message du shell uniquement
@@ -58,7 +50,15 @@ Cmdlets: essentiellement des commandes qui interagissent avec du code .NET sr de
 Scripts: Les scripts dont des fichiers .ps1 executables qui contiennent une série de commandes Powershell
 Fonctions: une fonction est une série de commandes groupées qui ensemble permettent de réaliser une certaine tâche.
 
-Cmdlets
+# Cmdlets
+Les cmdlets:
+Les commandes suivent la logique "Actions" - "information"
+objet : voir ça comme un conteneur qui contient des propriétés etc "visu comme des poupées russes
+exemple 'Hello World'
+'Hello World'.Lenght
+
+Commandes la plus importante "`| gm`" pour "`Get-Member`"
+
 La structure est Verbe+Nom
 La commande `Get-Verb` permet d'avoir une vue sur l'ensemble des verbes utilisés dans le monde Powershell
 "`Get-Command -CommandType Cmdlet | Group-Object Verb | Sort-Object Count -Descendig | Format-Table --Autosize`"
@@ -79,7 +79,6 @@ Par exemple:
 Get-Process > processes.txt
 Start-Process .\processes.txt
 ```
-
 
 Rappel d'objet avec le pipe: le pipe permet d'utiliser un objet récupéré dans une commande précédente (`Select-Objet`, `Out-File`...)
 Un exemple pratique pour agir dur une machine: `Get-Process notepad | Stop-Process`
