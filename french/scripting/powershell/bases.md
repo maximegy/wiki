@@ -30,6 +30,17 @@ PowerShell offre à la fois une console en ligne de commande et un environnement
 ## Versions
 Depuis sa création, PowerShell a évolué jusqu'à devenir un langage puissant et très flexible.
 
+## Avant tout
+Par défaut et par sécurité la politique de Microsoft est de restreindre l'execution de scripts. Pour vérifier la politique d'execution, lancer la commande `Get-Execution Policy` dans une console PowerShell lancée en administrateur.
+
+4 valeurs sont possibles:
+* Restricted : Aucun script est autorisé. C'est la politique par défaut.
+* AllSigned : Il est possible d'executer les scripts signés par un developper de confiance. Avec cette politque, il est demandé de confirmer le lancement du script.
+* RemoteSigned : Il est possible de lancer ses propres scripts ou les scripts signés par un developpeur de confiance.
+* Unrestricted : On peut lancer n'importe quel script.
+
+Pour commencer à travailler avec PowerShell, il faut configurer la politique d'execution de Restricted à RemoteSigned ou Unrestricted par la commande: `Set-ExecutionPolicy RemoteSigned`.
+
 
 -----
 
@@ -114,14 +125,7 @@ Créez un script permettant :
 
 
 # Utiliser l'ISE
-## Avant tout
-Par défaut et par sécurité la politique de Microsoft est de restreindre l'execution de scripts. Pour vérifier la politique d'execution, lancer la commande `Get-Execution Policy` dans une console PowerShell lancée en administrateur.
 
-4 valeurs sont possibles:
-* Restricted : Aucun script est autorisé. C'est la politique par défaut.
-* AllSigned : Il est possible d'executer les scripts signés par un developper de confiance. Avec cette politque, il est demandé de confirmer le lancement du script.
-* RemoteSigned : Il est possible de lancer ses propres scripts ou les scripts signés par un developpeur de confiance.
-* Unrestricted : On peut lancer n'importe quel script.
 ## 
 Créons un fichier de script, par exemple ISE_1.ps1:
 Ajouter Get-Date en ligne 1 et cliquer sur la fenêtre d'execution verte afin d'obtenir le résultat retourné par le script
