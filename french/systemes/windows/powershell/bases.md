@@ -23,11 +23,11 @@ Commandes la plus importante "| gm" pour "Get-Member"
 
 
 Personnalisation du Shell
-| aaaaaaaaa | bbbbbbb |   |   |   |
-|-----------|---------|---|---|---|
-|           |         |   |   |   |
-|           |         |   |   |   |
-|           |         |   |   |   |
+| Personnalisation de Base | Personnalisation avancée |
+|--------------------------|--------------------------|
+|                          |                          |
+|                          |                          |
+|                          |                          |
 clic droit > personnaliser
 
 Personnalisation avancée
