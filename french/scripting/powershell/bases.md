@@ -96,7 +96,7 @@ La structure d'une cmdlet consiste toujours à un **verbe** suivi d'un **nom**. 
 - `New` : pour créer quelque-chose.
 
 Commandes les plus importantes :
-- "`| gm`" pour "`Get-Member`" permet de récupérer les membres, propriétés et méthodes des objets.
+- "`| gm`" pour "`Get-Member`" permet de récupérer les membres, propriétés, paramètres et méthodes des objets.
 - `Get-Verb` permet d'avoir une vue sur l'ensemble des verbes utilisés.
 - `Get-Help` permet d'avoir des informations sur les commandes, cmdlets et autres.
 
@@ -154,6 +154,31 @@ Essayons de personnaliser un peu ce script pour qu'il nous accueuille avec la da
 
 -----
 
+# Alias
+On peut aussi créer des alias qui sont des noms de cmdlets raccourcis.
+Par exemple, à la place de `Get-Help`, on peut juste entrer `Help`
+
+```powershell
+Start-Process notepad
+start notepad
+```
+
+ou encore
+
+```powershell
+Stop-Process -Name notepad
+spps -Name notepad
+```
+
+# Commentaires
+Laisser des commentaires dans un script va vous permettre ainsi qu'aux différents utilisateurs du script de mieux comprendre ce que le script fait. Un commentaire peut être une ligne commençant par un dièze (#) ou un bloc sur plusieurs lignes commençant et finissant par des dièzes et des chevrons :
+
+```powershell
+# simple commentaire
+<# commentaire
+sur plusieurs
+lignes #>
+```
 
 # Les Fonctions
 Rappel: les donctions sont des successions de commandes regroupées dans le but de réaliser certaines tâches
