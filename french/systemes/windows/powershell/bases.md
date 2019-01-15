@@ -11,7 +11,7 @@ Powershell est la volonté de Microsoft de fournir une platefoerme d'automatisat
 - Fournir une vraie interface robuste d'administration scriptée
 - Offrir une logique dans les commandes "verbe-nom"
 
-## Versions:
+## Versions
 
 
 # Personnalisation du Shell
@@ -82,3 +82,15 @@ Start-Process .\processes.txt
 
 Rappel d'objet avec le pipe: le pipe permet d'utiliser un objet récupéré dans une commande précédente (`Select-Objet`, `Out-File`...)
 Un exemple pratique pour agir dur une machine: `Get-Process notepad | Stop-Process`
+
+## Travaux Pratiques
+Premier script:
+Créez un script permettant :
+|Tâche|Correction|
+|------|------------|
+|Exporter les process en cours sur votre machine sur un fichier texte, en triant par celui consommant le plus de ressources au choix. Si vous le souhaitez, n'affichez que des informations que vous jugez utiles.||
+|Ouvrir ce fichier texte après sa création||
+|de le fermer automatiquement après 30 secondes||
+|de supprimer ce fichier nouvellement créé||
+|de vérifier que le dossier où le fichier est créé existe et si non, le créer||
+|Bonus, laisser le choix à l'utilisateur de où est créé le fichier||
