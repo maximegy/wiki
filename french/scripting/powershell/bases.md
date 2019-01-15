@@ -34,10 +34,10 @@ Depuis sa création, PowerShell a évolué jusqu'à devenir un langage puissant 
 Par défaut et par sécurité la politique de Microsoft est de restreindre l'execution de scripts. Pour vérifier la politique d'execution, lancer la commande `Get-Execution Policy` dans une console PowerShell lancée en administrateur.
 
 4 valeurs sont possibles:
-* Restricted : Aucun script est autorisé. C'est la politique par défaut.
-* AllSigned : Il est possible d'executer les scripts signés par un developper de confiance. Avec cette politque, il est demandé de confirmer le lancement du script.
-* RemoteSigned : Il est possible de lancer ses propres scripts ou les scripts signés par un developpeur de confiance.
-* Unrestricted : On peut lancer n'importe quel script.
+* **Restricted** : Aucun script est autorisé. C'est la politique par défaut.
+* **AllSigned** : Il est possible d'executer les scripts signés par un developper de confiance. Avec cette politque, il est demandé de confirmer le lancement du script.
+* **RemoteSigned** : Il est possible de lancer ses propres scripts ou les scripts signés par un developpeur de confiance.
+* **Unrestricted** : On peut lancer n'importe quel script.
 
 Pour commencer à travailler avec PowerShell, il faut configurer la politique d'execution de Restricted à RemoteSigned ou Unrestricted par la commande: `Set-ExecutionPolicy RemoteSigned`.
 
@@ -65,22 +65,25 @@ function prompt {
 if (Test-Connection google.fr -Count 1) {Write-Host "Connection Google.fr OK"} else {Write-Host "Connection Google.fr NOK"}
 ```
 
-
-
-
 -----
 
 # Terminologie
 Terminologie:
-Cmdlets: essentiellement des commandes qui interagissent avec du code .NET sr des fonctions définies par les comandes
-Scripts: Les scripts dont des fichiers .ps1 executables qui contiennent une série de commandes Powershell
-Fonctions: une fonction est une série de commandes groupées qui ensemble permettent de réaliser une certaine tâche.
+* **Cmdlets**: essentiellement des commandes qui interagissent avec du code .NET sr des fonctions définies par les comandes
+* **Scripts**: Les scripts dont des fichiers .ps1 executables qui contiennent une série de commandes Powershell
+* **Fonctions**: une fonction est une série de commandes groupées qui ensemble permettent de réaliser une certaine tâche.
 # Cmdlets
-Les cmdlets:
-Les commandes suivent la logique "Actions" - "information"
-objet : voir ça comme un conteneur qui contient des propriétés etc "visu comme des poupées russes
-exemple 'Hello World'
+Une cmdlet est une commande PowerShell avec une fonction prédéfinie suivant la logique "Action" - "information".
+* Il existe des applets de commande système, utilisateur et personnalisé,
+* Les résultats des CMDlets en sortie sont des objets ou des tableaux d'objets, il faut voir ça comme un conteneur qui contient des propriétés, imagé comme des poupées russes
+exemple: 
+```powershell
+'Hello World'
 'Hello World'.Lenght
+```
+* Les applets de commande peuvent obtenir des données à analyser ou transférer des données vers une autre applet de commande à l'aide de canaux,
+* Les cmdlets sont insensibles à la casse, par exemple `Get-Aduser`, `get-aduser` ou encore `GeT-ADUseR` fonctionnent,
+* Dans une chaine, si on veut utiliser 
 
 Commandes la plus importante "`| gm`" pour "`Get-Member`"
 
