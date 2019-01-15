@@ -5,6 +5,10 @@
 Mettre un utilisateur dans un groupe:
 ![Algorithmique](/uploads/powershell/algorithmique.png "Algorithmique"){.align-center}
 
+
+-----
+
+
 # Présentation
 ## Introduction
 Powershell est la volonté de Microsoft de fournir une platefoerme d'automatisation, de scripting et d'une variété d'autres fonctions afin de concurrencer les shells du marché:
@@ -12,6 +16,10 @@ Powershell est la volonté de Microsoft de fournir une platefoerme d'automatisat
 - Offrir une logique dans les commandes "verbe-nom"
 
 ## Versions
+
+
+
+-----
 
 
 # Personnalisation du Shell
@@ -39,6 +47,10 @@ Terminologie:
 Cmdlets: essentiellement des commandes qui interagissent avec du code .NET sr des fonctions définies par les comandes
 Scripts: Les scripts dont des fichiers .ps1 executables qui contiennent une série de commandes Powershell
 Fonctions: une fonction est une série de commandes groupées qui ensemble permettent de réaliser une certaine tâche.
+
+
+-----
+
 
 # Cmdlets
 Les cmdlets:
@@ -85,11 +97,19 @@ Créez un script permettant :
 |de vérifier que le dossier où le fichier est créé existe et si non, le créer|de le fermer automatiquement après 30 secondes|`Start-Sleep -Seconds 10 & Get-Process *notepad* | Stop-Process`|
 |Bonus, laisser le choix à l'utilisateur de où est créé le fichier|de supprimer ce fichier nouvellement créé|`Remove-Item $chemin`|
 
+
+-----
+
+
 # Utiliser l'ISE
 Créons un fichier de script, par exemple ISE_1.ps1:
 Ajouter Get-Date en ligne 1 et cliquer sur la fenêtre d'execution verte afin d'obtenir le résultat retourné par le script
 Ajouter un nouvelle commande ; `Get-WMIObject-Class Win32_LogicalDisk` et constater le résultat à nouveau
 Essayons de personnaliser un peu ce script pour qu'il nous accueuille avec la date et nous donne la taille disponible sur le disque C: uniquement.  `Get-WMIObject-Class Win32_LogicalDisk | Where-Object DeviceID -eq "C:" | Select-Object DeviceID,Size`
+
+
+-----
+
 
 # Les Fonctions
 Rappel: les donctions sont des successions de commandes regroupées dans le but de réaliser certaines tâches
@@ -103,6 +123,7 @@ Return $osInfo
 }
 Get-OSInfo
 ```
+
 ## Travaux Pratiques - les fonctions
 Affinez votre fonction afin qu'elle remonte les informations suivantes:
 - la version de Windows en cours sur votre machine
