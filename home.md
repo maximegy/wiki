@@ -23,8 +23,6 @@
 ## Windows
 ### Standard
 ### Server
-### Powershell
-* [Bases](http://wiki.maximegy.ovh/french/systemes/windows/powershell/bases)
 
 ### Autres
 * [Installer Windows sur une clé](https://www.01net.com/astuces/comment-installer-windows-sur-une-cle-usb-pour-l-utiliser-sur-n-importe-quel-pc-1587476.html?fbclid=IwAR1cQzHJGLFwcwxGshLsVfojqEDK5zZNcZhYaKcC5m5DzBV1yqN6UXU0Kow#utm_medium=Social&Xtor=CS2-123463&utm_source=Facebook&Echobox=1545235848)
@@ -38,6 +36,12 @@
 https://www.facebook.com/notes/nas-synology-francophone/les-tutos/787377194791122/
 ## PAAS
 # Sécurité
+# Scripting
+## Algorithmique
+
+## PowerShell
+* [Bases](http://wiki.maximegy.ovh/french/systemes/windows/powershell/bases)
+
 # Bureautique
 ## Powerpoint
 ## Word
