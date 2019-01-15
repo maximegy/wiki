@@ -25,9 +25,11 @@ Commandes la plus importante "| gm" pour "Get-Member"
 Personnalisation du Shell
 | Personnalisation de Base | Personnalisation avancée |
 |--------------------------|--------------------------|
-|![Personnalisation Powershell](/uploads/powershell/personnalisation-powershell.png "Personnalisation Powershell")|                          |
-|                          |                          |
-|                          |                          |
+|![Personnalisation Powershell](/uploads/powershell/personnalisation-powershell.png "Personnalisation Powershell")|Le fichier de profil individuel est stocké dans la variable $profile.CurrentUserAllHosts
+Le fichier de profil global $profile.AllUsersAllHosts
+Les fichiers de profils sont chargés au lancement d'un shell, ils permettent de customiser les environnements utilisateurs et système.
+La function function Prompt { } permet de modifier les informations retournées par le prompt.|
+
 clic droit > personnaliser
 
 Personnalisation avancée
