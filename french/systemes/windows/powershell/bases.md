@@ -20,7 +20,14 @@ exemple 'Hello World'
 
 Commandes la plus importante "| gm" pour "Get-Member"
 
+
+
 Personnalisation du Shell
+| aaaaaaaaa | bbbbbbb |   |   |   |
+|-----------|---------|---|---|---|
+|           |         |   |   |   |
+|           |         |   |   |   |
+|           |         |   |   |   |
 clic droit > personnaliser
 
 Personnalisation avancée
