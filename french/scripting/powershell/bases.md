@@ -346,6 +346,8 @@ Les comparateurs permettent de specifier les conditions de comparaison des valeu
 ||`-ge`|plus grand ou égal|
 ||`-lt`|plus petit que|
 ||`-le`|plus petit ou égal|
+||`-c`|placé devant l'opérateur, active la sensibilité à la casse ex : `-ceq`|
+||`-i`|placé devant l'opérateur, explicite l'insensibilité à la casse ex : `-ieq`|
 |Correspondance|`-like`|Retourne Vrai si la chaine correspond au motif|
 ||`notlike`|Retourne Vrai si la chaine ne correpond pas au motif|
 ||`match`|Retourne vrai si la chaine correspond à l'expression régulière|
