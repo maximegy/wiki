@@ -28,3 +28,19 @@ Le fichier de profil individuel est stocké dans la variable $profile.CurrentUse
 Le fichier de profil global $profile.AllUsersAllHosts
 Les fichiers de profils sont chargés au lancement d'un shell, ils permettent de customiser les environnements utilisateurs et système.
 La function function Prompt { } permet de modifier les informations retournées par le prompt.
+
+Travaux Pratique:
+Personnaliser son shel pour que chaque ligne retourne l'heure, l'emplacement actuel, l'utilisateur actuel...
+Faire en sorte que le message d'accueil du shell teste votre,connexion vers google.com avec un message en fonction du succès ou de l'échec
+Changer la couleur de la police du message du shell uniquement
+
+
+```powershell
+function prompt { 
+    $date=$(Get-Date)
+    $location=$(Get-Location)
+    $user=$env:USERNAME
+    Write-Host "$date $location $user" -NoNewline -ForegroundColor Green
+    return ">"}
+if (Test-Connection google.fr -Count 1) {Write-Host "Connection Google.fr OK"} else {Write-Host "Connection Google.fr NOK"}
+```
