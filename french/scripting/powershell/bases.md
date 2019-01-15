@@ -1,6 +1,6 @@
 <!-- TITLE: Powershell - Bases -->
 <!-- SUBTITLE: Cours de base de Powershell -->
-
+Documentation officielle : [docs.microsoft.com](https://docs.microsoft.com/en-us/powershell/#pivot=main&panel=getstarted)
 # Algorithmique de Base
 Mettre un utilisateur dans un groupe:
 
@@ -196,7 +196,11 @@ lignes #>
 Les pipes ( "|" - barre verticale), renvoient les données d'une cmdlet à une autre.
 Par exemple :
 `Get-Service | Sort-Object -property Status`
-Le résultat de la commande `Get-Ser`vice`
+Le résultat de la commande `Get-Service` est redirigé dans la commande `Sort-Object -property Status`. Tous les services sont donc triés par leur statut.
+Il est possible d'utiliser plusieurs pipes par exemple:
+`Get-Service | WHERE {$_.status -eq "Running"} | SELECT displayname`
+La commande liste les services, exclue les services arrêtés et affiche seulement leur nom.
+Pour information : `$_` defini l'element  actuellement dans le pipe.
 
 ## Les Fonctions
 Rappel: les donctions sont des successions de commandes regroupées dans le but de réaliser certaines tâches
