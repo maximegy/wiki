@@ -494,14 +494,15 @@ Explorer l'usage d'une commande se fait avec Get-Help. Cette commande affiche al
 Type de menu:
 |Help Type Name|Description|
 |------------------|-------------|
-|.Synopsis|Brève description de la fonction, commence par un verbe et explique à l'utilisateur ce que fait la fonction. Ne contient pas le nom de la fonction et comment la fonction travaille.|
-|.Description|2 ou 3 phrases  qui list brievement tout ce que la fonction peut faire. La description commence par "La fonction *nomdelafonction*...". Si la fonction peut prendre en compte plusieurs objets ou plusieurs entrées, il faut utiliser plusieurs noms dans la description.|
-|.Parameter|Breve et minutieux. Il décrit ce que fait la fonction lorsque les paramètres sont utilisés et quelles sont les valeurs utilisées pour le paramètre.|
-|.Example|Illustre l'utilisation de la fonction avec tout ses paramètres. Les exemples sont énoncés de la plus simple utilisation à la plus complexe.|
-|.Inputs|Liste les classes .NET des objets que la fonction accept comme entrée.|
-|.Outputs|Liste les classes .NET des objets que la fonction présente en sortie|
-|.Notes|Permet d'indiquer des informations qui ne peuvent pas être placées dans les autres catégories|
-|.Link|Liste les liens vers les autres pages internet d'explications.|
+|`.Name`|Nom de la fonction|
+|`.Synopsis`|Brève description de la fonction, commence par un verbe et explique à l'utilisateur ce que fait la fonction. Ne contient pas le nom de la fonction et comment la fonction travaille.|
+|`.Description`|2 ou 3 phrases  qui list brievement tout ce que la fonction peut faire. La description commence par "La fonction *nomdelafonction*...". Si la fonction peut prendre en compte plusieurs objets ou plusieurs entrées, il faut utiliser plusieurs noms dans la description.|
+|`.Parameter`|Breve et minutieux. Il décrit ce que fait la fonction lorsque les paramètres sont utilisés et quelles sont les valeurs utilisées pour le paramètre.|
+|`.Example`|Illustre l'utilisation de la fonction avec tout ses paramètres. Les exemples sont énoncés de la plus simple utilisation à la plus complexe.|
+|`.Inputs`|Liste les classes .NET des objets que la fonction accept comme entrée.|
+|`.Outputs`|Liste les classes .NET des objets que la fonction présente en sortie|
+|`.Notes`|Permet d'indiquer des informations qui ne peuvent pas être placées dans les autres catégories|
+|`.Link`|Liste les liens vers les autres pages internet d'explications.|
 
 
 ## Travaux Pratiques : Help documentation
