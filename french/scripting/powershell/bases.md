@@ -445,6 +445,9 @@ Les modules sont listables avec la commande `Get-Module -ListAvailable`
 Voir les fonctions que rend disponilbes un module se fait avec la commande Get-Command -Module 'Module'
 Les modules disponibles sont ceux qui sont stockés dans le résultat de la commande `(Get-ChildItem Env:\PSModulePath).Value.Split(';')`
 
+Manifest:
+Contient les métadatas d'un module, permet un import plus rapide, une utilisation a la volée des commandes.
+
 ### Travaux Pratiques
 Récupérer le fichier "Joli_Texte.txt"
 - Identifiez les fonctions du script et expiquez les
@@ -452,3 +455,35 @@ Récupérer le fichier "Joli_Texte.txt"
 - Faites fonctionner ce script avec un autre script. Faites appel à une boucle dans ce dernier.
 - Enlevez le module.
 
+
+```powershell
+# Renommer le fichier
+Rename-Item -Path C:\... -NewName joli_texte.psm1
+Move-item
+Copy-item
+# Déplacer
+Move-Item; Copy-Item; Get-content | out-file 
+# Créer dossier 
+New-item -Path *path* -Type Directory
+# Importer
+New-ModuleManifest -Path *Path\module.psd1* -NestedModules *Path\module.psm1*
+Get-Module-List-Available
+Import-Module *NomDuModule*
+```
+
+utilisation : Write-Pretty "texte" "type
+Write-Pretty -PrettyText "texte" -texttype "type"
+Commande | Write-Pretty -textype "type"
+
+## Ajouter de l'aide sur les scripts
+Explorer l'usage d'une commande se fait avec Get-Help. Cette commande affiche alors des bocs de notes renseignées dans les fonctions et modules.
+
+<#
+.SYNOPSIS
+
+.DESCRIPTION
+
+.NOTES
+#>
+
+Type de menu:
