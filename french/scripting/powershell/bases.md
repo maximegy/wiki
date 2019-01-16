@@ -494,7 +494,6 @@ Explorer l'usage d'une commande se fait avec Get-Help. Cette commande affiche al
 Type de menu:
 |Help Type Name|Description|
 |------------------|-------------|
-|`.Name`|Nom de la fonction|
 |`.Synopsis`|Brève description de la fonction, commence par un verbe et explique à l'utilisateur ce que fait la fonction. Ne contient pas le nom de la fonction et comment la fonction travaille.|
 |`.Description`|2 ou 3 phrases  qui list brievement tout ce que la fonction peut faire. La description commence par "La fonction *nomdelafonction*...". Si la fonction peut prendre en compte plusieurs objets ou plusieurs entrées, il faut utiliser plusieurs noms dans la description.|
 |`.Parameter`|Breve et minutieux. Il décrit ce que fait la fonction lorsque les paramètres sont utilisés et quelles sont les valeurs utilisées pour le paramètre.|
