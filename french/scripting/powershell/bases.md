@@ -228,8 +228,8 @@ Utilie pour suivre le déroulement d'un script et présenter des menus
 
 
 ## Les Fonctions
-Rappel: les donctions sont des successions de commandes regroupées dans le but de réaliser certaines tâches
-Repronons un script blanc et créons une fonction vierge dan le fichier:
+Rappel: les fonctions sont des successions de commandes regroupées dans le but de réaliser certaines tâches
+Reprenons un script blanc et créons une fonction vierge dans le fichier:
 
 ```powershell
 function Get-OSInfo {
@@ -247,6 +247,20 @@ Affinez votre fonction afin qu'elle remonte les informations suivantes:
 - Le disque sur lequel est installé Windows et son chemin d'installation
 - Le langage du système
 Prenez soin de formater les résultats.
+
+
+```powershell
+function Get-OSInfo {
+    $OS = Get-WmiObject -Class Win32_OperatingSystem
+    $Culture = Get-Culture
+    $Drive = Get-PSDrive -PSProvider 'FileSystem'
+    Write-Host "version : $($OS.Version)"
+    Write-Host "Language : $($Culture.DisplayName)"
+    Write-Host "Disque Install : $($OS.SystemDrive)"
+    Write-Host "Disques Disponibles : $($Drive.Name): $($Drive.Free/1gb)"
+    }
+Get-OSInfo
+```
 
 
 ## Travaux Pratiques - Personnalisation du Shell
@@ -302,11 +316,16 @@ Les comparateurs permettent de specifier les conditions de comparaison des valeu
 |Type|`-is`|Retourne vrai si les deux objets sont de même type|
 ||`-isnot`|Retourne vrai si les objets ne sont pas de même type|
 
+## if then else elsif
+
+## switch
+Case = switch > conditions, aiguillage indexé
 
 
 ## Les boucles
 Il y a plusieurs types de boucles en Powershell. Plusieurs peuvent servir le même but, mais il y a souvent une plus adaptée qu'une autre par cas.
 ### La boucle ForEach
+Cette boucle permet de parcourir un tableau ou une collection composée de 0 à n éléments sans se préocuper du nombre.
 
 ```powershell
 ForEach ($element in $listeelement) {
@@ -335,7 +354,8 @@ ForEach ($proc in $process)
 
 
  ### La boucle For
- for (initialiser;condition;repetition) {
+ 
+ for (valeur de départ;test ou condition;nombre d'itération) {
  FaireQuelquechose
  }
  
@@ -367,15 +387,18 @@ $notepad = Get-Process Notepad
 While ($notepad.Count -le 5)
 
 
-### La boucle Do While
-La différence avec la boucle While, l'action se fera systématiquement au moins une fois
-Do {
+### La boucle Do
+La différence avec la boucle While, l'action se fera systématiquement au moins une fois.
+La condition peut être traitée par "until" ou "while", selon l'opération de comparaison et l'évaluation.
 
-}
+```powershell
+do {
+  $valeur++
+  Write-Host $valeur
+} until | while ($valeur –ge | –le 10)
+```
 
 
-### La boucle Do Until
-Très similaire à Do While, 'utilisation est à déterminer au cas par cas.
 
 
 -----
