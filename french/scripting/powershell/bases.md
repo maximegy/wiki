@@ -47,27 +47,14 @@ Terminologie:
 
 -----
 
-# Personnalisation du Shell
-| Personnalisation de Base | Personnalisation avancée |
-|--------------------------|--------------------------|
-|![Personnalisation Powershell](/uploads/powershell/personnalisation-powershell.png "Personnalisation Powershell")|Le fichier de profil individuel est stocké dans la variable `$profile.CurrentUserAllHosts` <br/> Le fichier de profil global `$profile.AllUsersAllHosts` <br/> Les fichiers de profils sont chargés au lancement d'un shell, ils permettent de customiser les environnements utilisateurs et système. <br/> La function function Prompt { } permet de modifier les informations retournées par le prompt.|
-
-## Travaux Pratiques - Personnalisation du Shell
-Personnaliser son shell pour que chaque ligne retourne l'heure, l'emplacement actuel, l'utilisateur actuel...
-Faire en sorte que le message d'accueil du shell teste votre,connexion vers google.com avec un message en fonction du succès ou de l'échec
-Changer la couleur de la police du message du shell uniquement
-
-```powershell
-function prompt { 
-    $date=$(Get-Date)
-    $location=$(Get-Location)
-    $user=$env:USERNAME
-    Write-Host "$date $location $user" -NoNewline -ForegroundColor Green
-    return ">"}
-if (Test-Connection google.fr -Count 1) {Write-Host "Connection Google.fr OK"} else {Write-Host "Connection Google.fr NOK"}
-```
-
------
+# Symboles
+|Symbole|Nom|Description|
+|---------|------|------------|
+|**$**|Dollar|Préfixe le nom d'une variable, `$_` est l'objet en cours.|
+|**[]**|Crochets|Encadre un type de variable ou l'indice des éléments d'un tableau. <br/> Exemple: `[int]`, `$var`ou `$tableau[$i]`|
+|**{}**|Accolades|Encadre un ensemble de code (bloc d'instructions, expressions, filtres, boucles, ...)|
+|**()**|Parenthèses|Groupe de commandes ou d'expressions (évite l'ambiguité des évaluations)||`|
+|`|`|Pipe|
 
 
 
@@ -215,8 +202,26 @@ Affinez votre fonction afin qu'elle remonte les informations suivantes:
 Prenez soin de formater les résultats.
 
 
------
+## Travaux Pratiques - Personnalisation du Shell
+| Personnalisation de Base | Personnalisation avancée |
+|--------------------------|--------------------------|
+|![Personnalisation Powershell](/uploads/powershell/personnalisation-powershell.png "Personnalisation Powershell")|Le fichier de profil individuel est stocké dans la variable `$profile.CurrentUserAllHosts` <br/> Le fichier de profil global `$profile.AllUsersAllHosts` <br/> Les fichiers de profils sont chargés au lancement d'un shell, ils permettent de customiser les environnements utilisateurs et système. <br/> La function function Prompt { } permet de modifier les informations retournées par le prompt.|
 
+Personnaliser son shell pour que chaque ligne retourne l'heure, l'emplacement actuel, l'utilisateur actuel...
+Faire en sorte que le message d'accueil du shell teste votre,connexion vers google.com avec un message en fonction du succès ou de l'échec
+Changer la couleur de la police du message du shell uniquement
+
+```powershell
+function prompt { 
+    $date=$(Get-Date)
+    $location=$(Get-Location)
+    $user=$env:USERNAME
+    Write-Host "$date $location $user" -NoNewline -ForegroundColor Green
+    return ">"}
+if (Test-Connection google.fr -Count 1) {Write-Host "Connection Google.fr OK"} else {Write-Host "Connection Google.fr NOK"}
+```
+
+-----
 
 # CMDlet-like
 Afin d'améliorer les fonctions, il est possible d'ajouter une fonctionnalité Powershell simple à cette dernière [cmdletbinding()]
