@@ -478,13 +478,18 @@ Commande | Write-Pretty -textype "type"
 ## Ajouter de l'aide sur les scripts
 Explorer l'usage d'une commande se fait avec Get-Help. Cette commande affiche alors des bocs de notes renseignées dans les fonctions et modules.
 
-<#
-.SYNOPSIS
 
-.DESCRIPTION
+```powershell
+  <#
+    .SYNOPSIS 
+      Displays a list of WMI Classes based upon a search criteria
+    .EXAMPLE
+     Get-WmiClasses -class disk -ns rootcimv2"
+     This command finds wmi classes that contain the word disk. The 
+     classes returned are from the rootcimv2 namespace.
+  #>
+```
 
-.NOTES
-#>
 
 Type de menu:
 |Help Type Name|Description|
@@ -506,4 +511,8 @@ Voici les éléments a faire apparaitre:
 - Quels sont les paramètres et comment s'en sert-on
 - Des exemples d'usages
 
-Les paramètres
+Les paramètres qui devraient remonter..
+- `Get-Help`
+- `Get-Help -detailed`
+- `Get-Help Write-Pretty -Parameter prettyText & textType`
+- `Get-Hep Write-Pretty -Examples`
