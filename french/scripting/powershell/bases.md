@@ -240,6 +240,26 @@ Return $osInfo
 Get-OSInfo
 ```
 
+### Passer des variables en paramètre de la fonction
+La fonction est utilisée par son nom.
+Si on veut mettre des variables ou des données en entrée de la fonction il faut dans la fonction déclarer les positions de paramètres ainsi que la variable rattachée:
+
+```powershell
+function mafonction {
+  param (
+        [parameter(position=1)]
+        $X,
+        [parameter(position=2)]
+        $Y,
+        [parameter(position=3)]
+        $ntry,
+        [parameter(position=4)]
+        $number
+    )
+}
+```
+
+
 ## Travaux Pratiques - les fonctions
 Affinez votre fonction afin qu'elle remonte les informations suivantes:
 - la version de Windows en cours sur votre machine
@@ -284,7 +304,14 @@ if (Test-Connection google.fr -Count 1) {Write-Host "Connection Google.fr OK"} e
 
 -----
 
-
+## Les Modules
+LEs modules sont un moyen de constituer un agrégat de fonctions dans un fichier dans l'optique de les réutiliser plus tard. Il en existe plusieurs types.
+Si vous utilisez de manière récurrente certaines fonctions, il peut alors être intéressant de créer un module.
+Un module se constitue avec:
+- un fichier contenant du code powershell (les modules sont des fichiers .psm1)
+- D'autres modules dont le module pourrait avoir besoin
+- Un dossier ou le module peut être importé
+- Un manifeste, contenant les informations du module.
 
 
 
