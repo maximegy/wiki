@@ -419,6 +419,7 @@ if (Test-Connection google.fr -Count 1) {Write-Host "Connection Google.fr OK"} e
 ```
 
 ## Travaux pratiques - Calculatrice
+
 Créer une calculatrice:
 elle doit gérer les 4 opérations de base,
 Elle doit retourner une erreur si les valeurs renseignées par l'utilisateur ne sont pas valides,
