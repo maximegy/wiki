@@ -427,6 +427,8 @@ Gestion des décimales
 Afficher des couleurs différentes pour un nombre de chiffres d'entiers différents devant la virgule (1 => Bleu, 2 => Rouge, 3 => Noir, etc)
 Intégrer des debug et des verboses, qui commentent les actions entreprises par le script au fur et à mesure
 elle ne doit pas se fermer tant que l'utilisateur ne l'a pas demandé
+
+
 -----
 
 ## Les Modules
