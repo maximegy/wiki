@@ -53,9 +53,22 @@ Terminologie:
 |**$**|Dollar|Préfixe le nom d'une variable, `$_` est l'objet en cours.|
 |**[]**|Crochets|Encadre un type de variable ou l'indice des éléments d'un tableau. <br/> Exemple: `[int]`, `$var`ou `$tableau[$i]`|
 |**{}**|Accolades|Encadre un ensemble de code (bloc d'instructions, expressions, filtres, boucles, ...)|
-|**()**|Parenthèses|Groupe de commandes ou d'expressions (évite l'ambiguité des évaluations)||`|
-|`|`|Pipe|
-
+|**()**|Parenthèses|Groupe de commandes ou d'expressions (évite l'ambiguité des évaluations)|
+|**\|**|Pipe|Pipeline (enchainement de commandes et/ou de filtres), peut être mis en fin d'une ligne de commande dans un script, la suite sur la ligne suivante|
+|**.**|Point|Membre d'une instance d'objet (méthode ou propriété), séparateur décimal (la virgule étant un séparateur de valeur)|
+|**,**|Virgule|Séparateur de valeur, typiquement pour les éléments d'un tableau|
+|**..**|Point Point|Plage de valeurs (exemple 1..10 désigne tous les chiffres de 1 à 10)|
+|**::**|Double 2 points|Membre statique d'une classe .NET|
+|**%**|Pourcent|Reste de division (Modulo) Ou alias de la commande de boucle ForEach `%{_}`|
+|**#**|Dièse|Commentaire ou <# bloc de commentaire #>|
+|**\`**|Anti-quotte <br/> ou Backtick|Caractère d'échappement (évite l'interpretation du caractère qui suit), permet de couper une ligne d'instruction s'il est situé en fin de ligne|
+|**?**|Point d'interrogation|Alias de la commande `Where-Object`|
+|**;**|Point virgule|Permet d'écrire plusieurs instructions sur la même ligne (ou de terminer explicitement une ligne d'instruction, et ainsi éviter une erreur d'interprétation lorsque le retour ligne est supprimé)|
+|**@**|Arrobase|Tableau de valeurs si suivi de parenthèses `@()` ou table de hachage si suivi d'accolades @{}. Cas particulier pour du texte @' string '@|
+|**&**|Esperuette|Opérateur d'invocation ou d'appel (Execution d'un bloc de script ou d'une commande)|
+|**!**|Point d'exclamation|Opérateur logique d'inversion équivalent à "-not"|
+|**"**|Guillements|Encadre typiquement une chaine "non protégée". Les variables $... sont remplacées par leur valeur respective ou rien si vide|
+|**'**|Simple quottes|Encadre strictement une chaine en évitant toute interprétation des caractères qu'elle contient"|
 
 
 
@@ -114,6 +127,16 @@ Chaque CMDlet possède de nombreux paramètres permettant de personnaliser son f
 
 ![Parametres](/uploads/powershell/parametres.png "Parametres"){.align-center}
 
+## Pipes
+Les pipes ( "|" - barre verticale), renvoient les données d'une cmdlet à une autre.
+Par exemple :
+`Get-Service | Sort-Object -property Status`
+Le résultat de la commande `Get-Service` est redirigé dans la commande `Sort-Object -property Status`. Tous les services sont donc triés par leur statut.
+Il est possible d'utiliser plusieurs pipes par exemple:
+`Get-Service | WHERE {$_.status -eq "Running"} | SELECT displayname`
+La commande liste les services, exclue les services arrêtés et affiche seulement leur nom.
+Pour information : `$_` defini l'element  actuellement dans le pipe.
+
 ## Alias
 On peut aussi créer des alias qui sont des noms de cmdlets raccourcis.
 Par exemple, à la place de `Get-Help`, on peut juste entrer `Help`
@@ -145,6 +168,18 @@ Créez un script permettant :
 
 -----
 
+## CMDlet-like
+Afin d'améliorer les fonctions, il est possible d'ajouter une fonctionnalité Powershell simple à cette dernière [cmdletbinding()]
+
+```powershell
+function Invoke-AdvancedFunctionality {
+[cmdletbinding()]
+param()
+	Write-Verbose "Cette fonction est maintenant avancée !"
+}
+Invoke-AdvancedFunctionality
+```
+
 
 
 
@@ -154,8 +189,7 @@ Créez un script permettant :
 
 
 -----
-
-
+# Scripts
 ## Commentaires
 Laisser des commentaires dans un script va vous permettre ainsi qu'aux différents utilisateurs du script de mieux comprendre ce que le script fait. Un commentaire peut être une ligne commençant par un dièze (#) ou un bloc sur plusieurs lignes commençant et finissant par des dièzes et des chevrons :
 
@@ -168,19 +202,32 @@ lignes #>
 
 
 -----
+## Write
+
+`Write-Host` : sert à présenter de la donnée lisible sous forme de texte.
+Utilie pour suivre le déroulement d'un script et présenter des menus
+`Write-Output` : set à envoyer des objets dans le 'pipeline' Ce qui veut dire que le prochain objet dans le shell/script sera lisible.
+`Write-Verbose` : Permet d'afficher ou non le texte associé avec l'argument -Verbose
+
+## Variables
+|Types|Description|
+|------|-------------|
+|array|liste de valeurs|
+|bool|valeur booléenne (Vrai ou Faux)|
+|byte|nombre en 8 bits|
+|char|suite de charactère en 16bits|
+|decimal|nombre pouvant comprendre un point en 128 bits|
+|single|nombre pouvant comprendre un point en 32 bits|
+|double|nombre pouvant comprendre un point en 64 bits|
+|hashtable|Stocker des objets sous forme de clé-valeur (key-value)|
+|int|entier sur 32 bits|
+|long| entier sur 64 bits|
+|string|chaine de caractère Unicode (2 milliards de caractères)|
+|xml|objet XML|
 
 
-## Pipes
-Les pipes ( "|" - barre verticale), renvoient les données d'une cmdlet à une autre.
-Par exemple :
-`Get-Service | Sort-Object -property Status`
-Le résultat de la commande `Get-Service` est redirigé dans la commande `Sort-Object -property Status`. Tous les services sont donc triés par leur statut.
-Il est possible d'utiliser plusieurs pipes par exemple:
-`Get-Service | WHERE {$_.status -eq "Running"} | SELECT displayname`
-La commande liste les services, exclue les services arrêtés et affiche seulement leur nom.
-Pour information : `$_` defini l'element  actuellement dans le pipe.
 
-# Les Fonctions
+## Les Fonctions
 Rappel: les donctions sont des successions de commandes regroupées dans le but de réaliser certaines tâches
 Repronons un script blanc et créons une fonction vierge dan le fichier:
 
@@ -223,50 +270,43 @@ if (Test-Connection google.fr -Count 1) {Write-Host "Connection Google.fr OK"} e
 
 -----
 
-# CMDlet-like
-Afin d'améliorer les fonctions, il est possible d'ajouter une fonctionnalité Powershell simple à cette dernière [cmdletbinding()]
 
-```powershell
-function Invoke-AdvancedFunctionality {
-[cmdletbinding()]
-param()
-	Write-Verbose "Cette fonction est maintenant avancée !"
-}
-Invoke-AdvancedFunctionality
-```
-
-## Write
-
-`Write-Host` : sert à présenter de la donnée lisible sous forme de texte.
-Utilie pour suivre le déroulement d'un script et présenter des menus
-`Write-Output` : set à envoyer des objets dans le 'pipeline' Ce qui veut dire que le prochain objet dans le shell/script sera lisible.
-`Write-Verbose` : Permet d'afficher ou non le texte associé avec l'argument -Verbose
-
-## Variables
-|Types|Description|
-|------|-------------|
-|array|liste de valeurs|
-|bool|valeur booléenne (Vrai ou Faux)|
-|byte|nombre en 8 bits|
-|char|suite de charactère en 16bits|
-|decimal|nombre pouvant comprendre un point en 128 bits|
-|single|nombre pouvant comprendre un point en 32 bits|
-|double|nombre pouvant comprendre un point en 64 bits|
-|hashtable|Stocker des objets sous forme de clé-valeur (key-value)|
-|int|entier sur 32 bits|
-|long| entier sur 64 bits|
-|string|chaine de caractère Unicode (2 milliards de caractères)|
-|xml|objet XML|
 
 
 
 
 -----
+## Les blocs conditionnels
+### Les comparateurs
+
+Les comparateurs permettent de specifier les conditions de comparaison des valeurs et de déterminer les valeurs qui correspondent aux modèles spécifiés.
+|Type|Opérateur|Description|
+|-----|------------|------------|
+|Egalité|`-eq`|égal à|
+||`-ne`|n'est pas égal à|
+||`-gt`|plus grand que|
+||`-ge`|plus grand ou égal|
+||`-lt`|plus petit que|
+||`-le`|plus petit ou égal|
+||`-c`|placé devant l'opérateur, active la sensibilité à la casse ex : `-ceq`|
+||`-i`|placé devant l'opérateur, explicite l'insensibilité à la casse ex : `-ieq`|
+|Correspondance|`-like`|Retourne Vrai si la chaine correspond au motif|
+||`notlike`|Retourne Vrai si la chaine ne correpond pas au motif|
+||`match`|Retourne vrai si la chaine correspond à l'expression régulière|
+||`notmatch`|Retourne vrai si la chaine ne correspond pas à l'expression régulière
+|||`$match`contient la chaîne correspondant à l'expression régulière|
+|Contenant|`-contains`|Retourne vrai quand le motif de référence est contenu dans  le motif|
+||`-notcontains`|Retourne vrai quand le motif de référence n'est pas contenu dans  le motif|
+||`-in`|Retourne vrai quand la valeur testée est contenue dans le motif|
+||`-notin`|Retourne vrai quand la valeur testée n'est pas contenue dans le motif|
+|Type|`-is`|Retourne vrai si les deux objets sont de même type|
+||`-isnot`|Retourne vrai si les objets ne sont pas de même type|
 
 
-# Les boucles
+
+## Les boucles
 Il y a plusieurs types de boucles en Powershell. Plusieurs peuvent servir le même but, mais il y a souvent une plus adaptée qu'une autre par cas.
-## La boucle ForEach
+### La boucle ForEach
 
 ```powershell
 ForEach ($element in $listeelement) {
@@ -294,7 +334,7 @@ ForEach ($proc in $process)
 ```
 
 
- ## La boucle For
+ ### La boucle For
  for (initialiser;condition;repetition) {
  FaireQuelquechose
  }
@@ -317,7 +357,7 @@ for () { Write-Host "Wheeeeeeeeeeee!"}
 
 On privilégiera les boucles For lorsqu'on veut exécuter un même ensemble de code plusieurs fois, pour une raison ou une autre.
 
-## La boucle While
+### La boucle While
 les boucles While continuent tant qu'une condition est vraie
 
 While (condition)
@@ -327,43 +367,21 @@ $notepad = Get-Process Notepad
 While ($notepad.Count -le 5)
 
 
-## La boucle Do While
+### La boucle Do While
 La différence avec la boucle While, l'action se fera systématiquement au moins une fois
 Do {
 
 }
 
 
-## La boucle Do Until
+### La boucle Do Until
 Très similaire à Do While, 'utilisation est à déterminer au cas par cas.
 
 
 -----
 
 
-# Les Comparateurs
-Les comparateurs permettent de specifier les conditions de comparaison des valeurs et de déterminer les valeurs qui correspondent aux modèles spécifiés.
-|Type|Opérateur|Description|
-|-----|------------|------------|
-|Egalité|`-eq`|égal à|
-||`-ne`|n'est pas égal à|
-||`-gt`|plus grand que|
-||`-ge`|plus grand ou égal|
-||`-lt`|plus petit que|
-||`-le`|plus petit ou égal|
-||`-c`|placé devant l'opérateur, active la sensibilité à la casse ex : `-ceq`|
-||`-i`|placé devant l'opérateur, explicite l'insensibilité à la casse ex : `-ieq`|
-|Correspondance|`-like`|Retourne Vrai si la chaine correspond au motif|
-||`notlike`|Retourne Vrai si la chaine ne correpond pas au motif|
-||`match`|Retourne vrai si la chaine correspond à l'expression régulière|
-||`notmatch`|Retourne vrai si la chaine ne correspond pas à l'expression régulière
-|||`$match`contient la chaîne correspondant à l'expression régulière|
-|Contenant|`-contains`|Retourne vrai quand le motif de référence est contenu dans  le motif|
-||`-notcontains`|Retourne vrai quand le motif de référence n'est pas contenu dans  le motif|
-||`-in`|Retourne vrai quand la valeur testée est contenue dans le motif|
-||`-notin`|Retourne vrai quand la valeur testée n'est pas contenue dans le motif|
-|Type|`-is`|Retourne vrai si les deux objets sont de même type|
-||`-isnot`|Retourne vrai si les objets ne sont pas de même type|
+
 
 
 ## Travaux pratiques - Scripts
