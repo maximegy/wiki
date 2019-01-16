@@ -443,7 +443,7 @@ Un module se constitue avec:
 Les modules sont listables avec la commande `Get-Module -ListAvailable`
 
 Voir les fonctions que rend disponilbes un module se fait avec la commande Get-Command -Module 'Module'
-Les modules disponibles sont ceux qui sont stockés dans le résultat de la commande `Get-ChildItem Env:\PSModulePath).Value.Split(';')`
+Les modules disponibles sont ceux qui sont stockés dans le résultat de la commande `(Get-ChildItem Env:\PSModulePath).Value.Split(';')`
 
 ### Travaux Pratiques
 Récupérer le fichier "Joli_Texte.txt"
