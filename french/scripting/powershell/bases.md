@@ -137,6 +137,7 @@ Il est possible d'utiliser plusieurs pipes par exemple:
 La commande liste les services, exclue les services arrêtés et affiche seulement leur nom.
 Pour information : `$_` defini l'element  actuellement dans le pipe.
 
+
 ## Alias
 On peut aussi créer des alias qui sont des noms de cmdlets raccourcis.
 Par exemple, à la place de `Get-Help`, on peut juste entrer `Help`
