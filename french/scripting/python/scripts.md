@@ -8,6 +8,8 @@
 ## Comparaison Booléennes
 ### Portes Logiques
 
+|Porte|Explication|
+|------|------------|
 |AND| ET |
 |OR| OU |
 |XOR| Ou Exclusif |
@@ -37,12 +39,13 @@ Une table de vérité est composée d'une colonne pour chaque variable imputée 
 
 #### Table de vérité XOR
 
-| A | B | A XOU B |
+| A | B | A XOR B |
 |---|---|-----------|
 | 0 | 0 | 0 |
 | 0 | 1 | 1 |
 | 1 | 0 | 1 |
 | 1 | 1 | 0 |
+
 # Boucles
 ## While
 
