@@ -2,6 +2,11 @@
 <!-- SUBTITLE: A quick summary of Bases -->
 
 # Header
+# Variables
+
+
+## Mots réservés sur Python 3
+
 
 ## Concaténation
 On peux combiner des chaînes de caractère en une seule en utilisant l'opérateur `+`.
