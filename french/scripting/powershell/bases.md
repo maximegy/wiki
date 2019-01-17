@@ -1,4 +1,4 @@
-<!-- TITLE: Powershell - Bases -->
+<!-- TITLE: PowerShell - Bases -->
 <!-- SUBTITLE: Cours de base de Powershell -->
 Documentation officielle : [docs.microsoft.com](https://docs.microsoft.com/en-us/powershell/#pivot=main&panel=getstarted)
 
