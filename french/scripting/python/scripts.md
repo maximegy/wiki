@@ -11,8 +11,6 @@
 |AND| ET |
 |OR| OU |
 |XOR| Ou Exclusif |
-|NAND||
-|NOR||
 
 ### Tables de Vérités
 Une table de vérité est une table mathématique utilisée en logique, en particulier pour le l'algèbre de Boole, pour représenter des expressions logiques.
@@ -31,12 +29,20 @@ Une table de vérité est composée d'une colonne pour chaque variable imputée 
 #### Table de vérité OU
 	 
 | A | B | A OU B |
-|---|---|--------|
+|---|---|---------|
 | 0 | 0 | 0 |
 | 0 | 1 | 1 |
 | 1 | 0 | 1 |
 | 1 | 1 | 1 |
 
+#### Table de vérité XOR
+
+| A | B | A XOU B |
+|---|---|-----------|
+| 0 | 0 | 0 |
+| 0 | 1 | 1 |
+| 1 | 0 | 1 |
+| 1 | 1 | 0 |
 # Boucles
 ## While
 
