@@ -50,3 +50,33 @@ Une table de vérité est composée d'une colonne pour chaque variable imputée 
 ## While
 
 
+
+
+
+# CodeCombat
+def inAttackRange(enemy):
+	distance = hero.distanceTo(enemy)
+	if distance <= 3:
+		blabla
+	else:
+		blabla
+		
+canAttack = inAttackRange(target)
+
+enemy = hero.findNearestEnemy()
+if enemy.type == "munchkin":
+	hero.attack(enemy)
+
+while True:
+	item = hero.findNearestItem()
+	if item:
+		itemPosition = item.pos
+		itemX = itemPosition.x
+		itemY = itemPosition.y
+		hero.moveXY(itemX, itemY)
+
+
+
+
+
+
