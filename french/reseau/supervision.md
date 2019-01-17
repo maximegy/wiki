@@ -40,3 +40,11 @@ chaque objet dans la mib est identifié par un OID:
 	- assurer l'interopérabilité
 
 Un fichier MIB est écrit en ASN.1
+
+
+Sous Windows, par défaut est utilisé WMI, SNMP est un composant à rajouter via l'ajout suppression de programmes.
+On le gère ensuite via les services
+
+
+
+SNMPB est un logiciel qui permet d'interroger un équipement pour trouver les OID
