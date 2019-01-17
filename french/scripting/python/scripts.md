@@ -18,11 +18,11 @@ Une table de vérité est une table mathématique utilisée en logique, en parti
 Une table de vérité est composée d'une colonne pour chaque variable imputée (A et B par exemple) et d'une colonne où sont inscrits tous les résultats possibles de l'opération logique présentée.
 
 #### Table de vérité ET
-|A|B|A ET B|
-|0|0|0|
-|0|1|0|
-|1|0|0|
-|1|1|1|
+| A | B | A ET B |
+| 0 | 0 | 0 |
+| 0 | 1 | 0 |
+| 1 | 0 | 0 |
+| 1 | 1 | 1 |
 
 # Boucles
 ## While
