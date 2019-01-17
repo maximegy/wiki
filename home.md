@@ -53,6 +53,7 @@ https://www.facebook.com/notes/nas-synology-francophone/les-tutos/78737719479112
 * [Introduction](http://wiki.maximegy.ovh/french/scripting/python/introduction)
 * [Bases](http://wiki.maximegy.ovh/french/scripting/python/bases)
 * [Scripts](http://wiki.maximegy.ovh/french/scripting/python/scripts)
+* [Fonctions](http://wiki.maximegy.ovh/french/scripting/python/fonctions)
 
 
 # Bureautique
