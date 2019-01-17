@@ -9,3 +9,10 @@ Définir une fonction
 def *fonction*() :
   *some code*
 ```
+
+Utilise la fonction :
+
+```python
+*fonction*()
+```
+
