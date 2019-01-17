@@ -7,11 +7,11 @@
 
 ## Comparaison Booléennes
 ### Portes Logiques
-|AND| ET
-|OR| OU
-|XOR| Ou Exclusif
-|NAND|
-|NOR|
+|AND| ET |
+|OR| OU |
+|XOR| Ou Exclusif |
+|NAND||
+|NOR||
 
 ### Tables de Vérités
 Une table de vérité est une table mathématique utilisée en logique, en particulier pour le l'algèbre de Boole, pour représenter des expressions logiques.
