@@ -47,6 +47,7 @@ https://www.facebook.com/notes/nas-synology-francophone/les-tutos/78737719479112
 * [Bases](http://wiki.maximegy.ovh/french/scripting/powershell/bases)
 * [Scripts](http://wiki.maximegy.ovh/french/scripting/powershell/scripts)
 * [Modules](http://wiki.maximegy.ovh/french/scripting/powershell/modules)
+* [Fonctions](http://wiki.maximegy.ovh/french/scripting/powershell/fonctions)
 
 ## Python
 
