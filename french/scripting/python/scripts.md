@@ -26,9 +26,9 @@ Une table de vérité est composée d'une colonne pour chaque variable imputée 
    | 0 | 1 | 0 |
    | 1 | 0 | 0 |
    | 1 | 1 | 1 |
-	 
-	 
-	 #### Table de vérité OU
+
+
+#### Table de vérité OU
 	 
 | A | B | A OU B |
 |---|---|--------|
