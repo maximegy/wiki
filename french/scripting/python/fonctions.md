@@ -6,13 +6,13 @@
 Définir une fonction
 
 ```python
-def *fonction*() :
+def masuperfonction() :
   *some code*
 ```
 
 Utilise la fonction :
 
 ```python
-*fonction*()
+masuperfonction()
 ```
 
