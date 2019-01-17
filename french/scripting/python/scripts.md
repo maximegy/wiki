@@ -20,12 +20,22 @@ Une table de vérité est composée d'une colonne pour chaque variable imputée 
 
 #### Table de vérité ET
 
-   | A | B | A ET B |                          | A | B | A OU B |
-   |---|---|--------|                          |---|---|---------|
-   | 0 | 0 | 0 |                          | 0 | 0 | 0 |
-   | 0 | 1 | 0 |                          | 0 | 1 | 1 |
-   | 1 | 0 | 0 |                          
-   | 1 | 1 | 1 |                          
+   | A | B | A ET B |
+   |---|---|--------|
+   | 0 | 0 | 0 |
+   | 0 | 1 | 0 |
+   | 1 | 0 | 0 |
+   | 1 | 1 | 1 |
+	 
+	 
+	 #### Table de vérité OU
+	 
+| A | B | A OU B |
+|---|---|--------|
+| 0 | 0 | 0 |
+| 0 | 1 | 1 |
+| 1 | 0 | 1 |
+| 1 | 1 | 1 |
 
 # Boucles
 ## While
