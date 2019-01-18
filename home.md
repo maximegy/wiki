@@ -63,3 +63,7 @@ https://www.facebook.com/notes/nas-synology-francophone/les-tutos/78737719479112
 # Rédaction
 ## Mémoire
 * [Principes de l'écrit](http://wiki.maximegy.ovh/french/redaction/memoire/principes-de-lecrit)
+
+
+# Parcours métier
+* [Parcours métier](http://wiki.maximegy.ovh/french/parcours_metier/parcours_metier)
