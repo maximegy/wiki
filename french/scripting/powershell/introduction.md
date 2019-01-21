@@ -32,6 +32,9 @@ Depuis sa création, PowerShell a évolué jusqu'à devenir un langage puissant 
 | |Server 2003 et 2003 R2|Server 2008 et 2008 R2|Server 2012 et 2012 R2|Windows 7 et 8.1|Windows 8|Windows 10|
 |-|-------------------------|--------------------------|-------------------------|-------------------|------------|--------------|
 |Version 1| OK | NOK | NOK | NOK | NOK | NOK |
+|Version 2| OK | OK | OK | OK | OK | NOK |
+|Version 3| NOK | OK | OK | OK | OK | NOK |
+|Version 4 et +| NOK | OK | OK | OK | NOK | OK |
 
 ## Avant tout
 Par défaut et par sécurité la politique de Microsoft est de restreindre l'execution de scripts. Pour vérifier la politique d'execution, lancer la commande `Get-Execution Policy` dans une console PowerShell lancée en administrateur.
