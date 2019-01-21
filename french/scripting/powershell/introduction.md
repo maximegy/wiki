@@ -11,9 +11,10 @@ Mettre un utilisateur dans un groupe:
 
 # Présentation
 ## Introduction
-Powershell est la volonté de Microsoft de fournir une platefoerme d'automatisation, de scripting et d'une variété d'autres fonctions afin de concurrencer les shells du marché:
-- Fournir une vraie interface robuste d'administration scriptée
-- Offrir une logique dans les commandes "verbe-nom"
+Powershell est la volonté de Microsoft de fournir une plateforme d'automatisation, de scripting et d'une variété d'autres fonctions afin de concurrencer les shells du marché:
+- Fournir une vraie interface robuste d'administration scriptée,
+- Offrir une logique dans les commandes "verbe-nom",
+- Remplacer l'obsolète "CMD".
 PowerShell offre à la fois une console en ligne de commande et un environnement de scripting intégré.
 * Pour lancer la console PowerShell, tapez PowerShell.exe dans le menu Démarrer de Windows.  
 
@@ -28,6 +29,9 @@ PowerShell offre à la fois une console en ligne de commande et un environnement
 
 ## Versions
 Depuis sa création, PowerShell a évolué jusqu'à devenir un langage puissant et très flexible.
+||Server 2003 et 2003 R2|Server 2008 et 2008 R2|Server 2012 et 2012 R2|Windows 7 et 8.1|Windows 8|Windows 10|
+||-------------------------|--------------------------|-------------------------|-------------------|------------|--------------|
+|Version 1| OK | NOK | NOK | NOK | NOK | NOK |
 
 ## Avant tout
 Par défaut et par sécurité la politique de Microsoft est de restreindre l'execution de scripts. Pour vérifier la politique d'execution, lancer la commande `Get-Execution Policy` dans une console PowerShell lancée en administrateur.
