@@ -36,6 +36,8 @@ Depuis sa création, PowerShell a évolué jusqu'à devenir un langage puissant 
 |Version 3| NOK | OK | OK | OK | OK | NOK |
 |Version 4 et +| NOK | OK | OK | OK | NOK | OK |
 
+La version de Powershell est stockée dans la variable système `$host`. Pour obtenir seulement la version : `$host.version`.
+
 ## Avant tout
 Par défaut et par sécurité la politique de Microsoft est de restreindre l'execution de scripts. Pour vérifier la politique d'execution, lancer la commande `Get-Execution Policy` dans une console PowerShell lancée en administrateur.
 
