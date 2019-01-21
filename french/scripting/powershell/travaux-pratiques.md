@@ -88,9 +88,14 @@ Get-Module-List-Available
 Import-Module *NomDuModule*
 ```
 
-utilisation : Write-Pretty "texte" "type
+utilisation : 
+
+```powershell
+Write-Pretty "texte" "type"
 Write-Pretty -PrettyText "texte" -texttype "type"
 Commande | Write-Pretty -textype "type"
+```
+
 
 
 # TP 6 - Help documentation
