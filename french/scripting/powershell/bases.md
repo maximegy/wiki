@@ -34,12 +34,20 @@ Documentation officielle : [docs.microsoft.com](https://docs.microsoft.com/en-us
 ## A propos
 Une cmdlet est une commande PowerShell avec une fonction prédéfinie suivant la logique "Action" - "information".
 * Il existe des applets de commande système, utilisateur et personnalisé,
-* Les résultats des CMDlets en sortie sont des objets ou des tableaux d'objets, il faut voir ça comme un conteneur qui contient des propriétés, imagé comme des poupées russes
-exemple: 
+* Les résultats des CMDlets en sortie sont des objets ou des tableaux d'objets, il faut voir ça comme un conteneur qui contient des propriétés et ainsi de suite, comme des poupées russes.
+		Les objets les plus simples sont ainsi exploitables :
 ```powershell
-'Hello World'
-'Hello World'.Lenght
+> 'Hello World'.Lenght
+11
 ```
+		Et manipulables
+```powershell
+> 'Hello World'.ToLower()
+hello world
+> 'Hello World'.ToUpper()
+HELLO WORLD
+```
+		
 * Les applets de commande peuvent obtenir des données à analyser ou transférer des données vers une autre applet de commande à l'aide de canaux,
 * Les cmdlets sont insensibles à la casse, par exemple `Get-Aduser`, `get-aduser` ou encore `GeT-ADUseR` fonctionnent,
 * Dans une chaine, si on veut utiliser plusieurs cmdlets, il faut les séparer par un point-virgule (`;`).
