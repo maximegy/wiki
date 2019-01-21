@@ -20,32 +20,7 @@ Les modules disponibles sont ceux qui sont stockés dans le résultat de la comm
 Manifest:
 Contient les métadatas d'un module, permet un import plus rapide, une utilisation a la volée des commandes.
 
-### Travaux Pratiques
-Récupérer le fichier "Joli_Texte.txt"
-- Identifiez les fonctions du script et expiquez les
-- Importez ce script en tant que modue et faites le fonctionner uniquement par des commandes
-- Faites fonctionner ce script avec un autre script. Faites appel à une boucle dans ce dernier.
-- Enlevez le module.
 
-
-```powershell
-# Renommer le fichier
-Rename-Item -Path C:\... -NewName joli_texte.psm1
-Move-item
-Copy-item
-# Déplacer
-Move-Item; Copy-Item; Get-content | out-file 
-# Créer dossier 
-New-item -Path *path* -Type Directory
-# Importer
-New-ModuleManifest -Path *Path\module.psd1* -NestedModules *Path\module.psm1*
-Get-Module-List-Available
-Import-Module *NomDuModule*
-```
-
-utilisation : Write-Pretty "texte" "type
-Write-Pretty -PrettyText "texte" -texttype "type"
-Commande | Write-Pretty -textype "type"
 
 ## Ajouter de l'aide sur les scripts
 Explorer l'usage d'une commande se fait avec Get-Help. Cette commande affiche alors des bocs de notes renseignées dans les fonctions et modules.
@@ -76,15 +51,3 @@ Type de menu:
 |`.Link`|Liste les liens vers les autres pages internet d'explications.|
 
 
-## Travaux Pratiques : Help documentation
-En vous appuyant sur les déductions faites sur le script "Joli_Texte". Constituez l'aide.
-Voici les éléments a faire apparaitre:
-- Que font les Rando; Error; Warning et Info,
-- Quels sont les paramètres et comment s'en sert-on
-- Des exemples d'usages
-
-Les paramètres qui devraient remonter..
-- `Get-Help`
-- `Get-Help -detailed`
-- `Get-Help Write-Pretty -Parameter prettyText & textType`
-- `Get-Hep Write-Pretty -Examples`
