@@ -39,17 +39,17 @@ Depuis sa création, PowerShell a évolué jusqu'à devenir un langage puissant 
 La version de Powershell est stockée dans la variable système `$host`. Pour obtenir seulement la version : `$host.version`.
 
 ## Avant tout
-Par défaut et par sécurité la politique de Microsoft est de restreindre l'execution de scripts. Pour vérifier la politique d'execution, lancer la commande `Get-Execution Policy` dans une console PowerShell lancée en administrateur.
+Par défaut et par sécurité la politique de Microsoft est de restreindre l'exécution de scripts. Pour vérifier la politique d'exécution, lancer la commande `Get-Execution Policy` dans une console PowerShell lancée en administrateur.
 
 4 valeurs sont possibles:
 * **Restricted** : Aucun script est autorisé. C'est la politique par défaut.
-* **AllSigned** : Il est possible d'executer les scripts signés par un developper de confiance. Avec cette politque, il est demandé de confirmer le lancement du script.
-* **RemoteSigned** : Il est possible de lancer ses propres scripts ou les scripts signés par un developpeur de confiance.
+* **AllSigned** : Il est possible d'exécuter les scripts signés par un developper de confiance. Avec cette politique, il est demandé de confirmer le lancement du script.
+* **RemoteSigned** : Il est possible de lancer ses propres scripts ou les scripts signés par un développeur de confiance.
 * **Unrestricted** : On peut lancer n'importe quel script.
 
-Pour commencer à travailler avec PowerShell, il faut configurer la politique d'execution de Restricted à RemoteSigned ou Unrestricted par la commande: `Set-ExecutionPolicy RemoteSigned`.
+Pour commencer à travailler avec PowerShell, il faut configurer la politique d'exécution de Restricted à RemoteSigned ou Unrestricted par la commande: `Set-ExecutionPolicy RemoteSigned`.
 
 Terminologie:
-* **Cmdlets**: essentiellement des commandes qui interagissent avec du code .NET sr des fonctions définies par les comandes
-* **Scripts**: Les scripts dont des fichiers .ps1 executables qui contiennent une série de commandes Powershell
-* **Fonctions**: une fonction est une série de commandes groupées qui ensemble permettent de réaliser une certaine tâche.
+* **Cmdlets**: Ce sont essentiellement des commandes qui interagissent avec du code .NET sr des fonctions définies par les commandes
+* **Scripts**: Les scripts dont des fichiers .ps1 exécutables qui contiennent une série de commandes PowerShell
+* **Fonctions**: une fonction est une série de commandes groupées qui, ensemble, permettent de réaliser une certaine tâche.
