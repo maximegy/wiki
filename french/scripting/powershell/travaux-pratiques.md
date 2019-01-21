@@ -65,7 +65,7 @@ Afficher des couleurs différentes pour un nombre de chiffres d'entiers différe
 Intégrer des debug et des verboses, qui commentent les actions entreprises par le script au fur et à mesure
 elle ne doit pas se fermer tant que l'utilisateur ne l'a pas demandé
 
-# TP 5
+# TP 5 - Modules
 Récupérer le fichier "Joli_Texte.txt"
 - Identifiez les fonctions du script et expiquez les
 - Importez ce script en tant que modue et faites le fonctionner uniquement par des commandes
@@ -93,7 +93,7 @@ Write-Pretty -PrettyText "texte" -texttype "type"
 Commande | Write-Pretty -textype "type"
 
 
-# TP 6 : Help documentation
+# TP 6 - Help documentation
 En vous appuyant sur les déductions faites sur le script "Joli_Texte". Constituez l'aide.
 Voici les éléments a faire apparaitre:
 - Que font les Rando; Error; Warning et Info,
