@@ -35,12 +35,13 @@ Documentation officielle : [docs.microsoft.com](https://docs.microsoft.com/en-us
 Une cmdlet est une commande PowerShell avec une fonction prédéfinie suivant la logique "Action" - "information".
 * Il existe des applets de commande système, utilisateur et personnalisé,
 * Les résultats des CMDlets en sortie sont des objets ou des tableaux d'objets, il faut voir ça comme un conteneur qui contient des propriétés et ainsi de suite, comme des poupées russes.
-		Les objets les plus simples sont ainsi exploitables :
+	 Les objets les plus simples sont ainsi exploitables :
 ```powershell
 > 'Hello World'.Lenght
 11
 ```
-		Et manipulables
+
+   Et manipulables
 ```powershell
 > 'Hello World'.ToLower()
 hello world
