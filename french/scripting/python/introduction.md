@@ -2,8 +2,9 @@
 <!-- SUBTITLE: A quick summary of Introduction -->
 
 # Présentation
-Python est un langage de programmation facile à apprendre et puissant. C'est un 
-Il se distingue par la lisibilité et la simplicité du code.
+Python est un langage de programmation facile à apprendre et puissant. C'est un langage orienté objet et multiplateformes.
+Il se distingue par la lisibilité et la simplicité du code. Il permet de créer des scripts pour exécuter des tâches.
+On peut, par exemple, l'utiliser pour créer des interfaces graphiques.
 
 # Installation
 ## Unix
@@ -45,3 +46,5 @@ C:\Users\*user*\AppData\Local\Programs\Python\Python37-32\Scripts\
 C:\Users\*user*\AppData\Local\Programs\Python\Python37-32\
 ```
 La variable `PATH` sert à Windows pour chercher la commande qu'on a tapé. Lorsque je tape `pip install`, Windows va chercher dans chacun des chemins présents dans la variable `PATH` la commande, s'il ne la trouve pas, une erreur sera affichée.
+
+
