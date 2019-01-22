@@ -12,6 +12,7 @@ L'utilisation est simple
 
 ## Mots réservés sur Python 3
 |and|del|from|none|true|as|
+|---|---|----|----|----|--|
 |elif|global|nonllocal|try|assert|else|
 |if|not|while|break|except|import|
 |or|with|class|false|in|pass|
