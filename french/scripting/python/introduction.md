@@ -13,7 +13,6 @@ HomeBrew est un gestionnaire de packet comme `yum` ou `apt` respectivements sur 
 
 Une fois Homebrew installé, installer Python via la commande `brew install python`.
 Il faut savoir qu'OS 10 contient déjà Python 2.7 et que Homebrew installe la version 3.
-Pour connaitre la version de Python, lancer la commande `python --version` et `python3 --version`.
 
 ## Linux
 ### Ubuntu, Debian
@@ -25,5 +24,8 @@ Pour connaitre la version de Python, lancer la commande `python --version` et `p
 ### Arch
 `sudo pacman -S python3`
 
+
+Pour connaitre la version de Python, lancer la commande `python --version` et `python3 --version`.
+
 ## Windows
-Aller à https://www.python.org/downloads/ et téléchargez la version voulue.
+Aller à https://www.python.org/downloads/ et télécharger la version voulue.
