@@ -32,6 +32,7 @@ Aller à https://www.python.org/downloads/ et télécharger la version voulue.
 Lancer le programme, choisir les options d'installation:
 
 ![Install Python Windows 1](/uploads/python/install-python-windows-1.png "Install Python Windows 1"){.align-center}
-Puis lancer l'installation:{.align-left}
+
+Puis lancer l'installation:
 
 ![Install Python Windows 2](/uploads/python/install-python-windows-2.png "Install Python Windows 2"){.align-center}
