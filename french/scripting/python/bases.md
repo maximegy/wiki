@@ -6,10 +6,17 @@ Au lancement de l'interpréteur, les 3 chevrons (`>>>`), signifient que l'interp
 
 ![Python Interpreteur](/uploads/python/python-interpreteur.png "Python Interpreteur"){.align-center}
 # Variables
+Une variable est une donnée du programme, stockée dans l'ordinateur. C'est un code que nous pouvons lier à une donnée du programme afin de pouvoir l'utiliser à plusieurs reprises mais aussi intéragir avec.
+L'utilisation est simple 
 
 
 ## Mots réservés sur Python 3
-
+|and|del|from|none|true|as|
+|elif|global|nonllocal|try|assert|else|
+|if|not|while|break|except|import|
+|or|with|class|false|in|pass|
+|yield|continue|finally|is|raise|def|
+|for|lambda|return||||
 
 ## Concaténation
 On peux combiner des chaînes de caractère en une seule en utilisant l'opérateur `+`.
