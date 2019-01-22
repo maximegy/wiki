@@ -25,7 +25,8 @@ Il faut savoir qu'OS 10 contient déjà Python 2.7 et que Homebrew installe la v
 `sudo pacman -S python3`
 
 Pour connaitre la version de Python, lancer la commande `python --version` et `python3 --version`.
-Pour lancer l'interpreteur, lancer la commande `python3`
+Pour lancer l'interpreteur, lancer la commande `python3`.
+Pour ajouter Python à la variable `PATH`, lancer la commande `export $PATH=chemin/to/python:$PATH`. Pour l'afficher, taper `echo $PATH`.
 
 ## Windows
 Aller à https://www.python.org/downloads/ et télécharger la version voulue.
@@ -36,3 +37,11 @@ Lancer le programme, choisir les options d'installation:
 Puis lancer l'installation:
 
 ![Install Python Windows 2](/uploads/python/install-python-windows-2.png "Install Python Windows 2"){.align-center}
+
+Pour gérer la variable PATH, aller dans **Panneau de configuration\Système et sécurité\Système** puis dans **Paramètres Systèmes avancés** et enfin cliquer sur **Variables d'Environnement...**. Sélectionner la variable PATH et vérifier que les chemins vers Python y sont renseignés.
+
+```text
+C:\Users\*user*\AppData\Local\Programs\Python\Python37-32\Scripts\
+C:\Users\*user*\AppData\Local\Programs\Python\Python37-32\
+```
+La variable `PATH` sert à Windows pour chercher la commande qu'on a tapé. Lorsque je tape `pip install`, Windows va chercher dans chacun des chemins présents dans la variable `PATH` la commande, s'il ne la trouve pas, une erreur sera affichée.
