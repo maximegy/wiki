@@ -1,7 +1,10 @@
 <!-- TITLE: Python - Bases -->
 <!-- SUBTITLE: A quick summary of Bases -->
 
-# Header
+# L'interpréteur de commandes
+Au lancement de l'interpréteur, les 3 chevrons (`>>>`), signifient que l'interpréteur est prêt à recevoir des instructions.
+
+![Python Interpreteur](/uploads/python/python-interpreteur.png "Python Interpreteur"){.align-center}
 # Variables
 
 
