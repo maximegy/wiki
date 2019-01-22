@@ -24,8 +24,8 @@ Il faut savoir qu'OS 10 contient déjà Python 2.7 et que Homebrew installe la v
 ### Arch
 `sudo pacman -S python3`
 
-  
 Pour connaitre la version de Python, lancer la commande `python --version` et `python3 --version`.
+Pour lancer l'interpreteur, lancer la commande `python3`
 
 ## Windows
 Aller à https://www.python.org/downloads/ et télécharger la version voulue.
