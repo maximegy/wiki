@@ -1,7 +1,7 @@
 <!-- TITLE: Accueil -->
 <!-- SUBTITLE: Page d'accueil pour les articles en français -->
-# English
- For English side, please click   [here](http://wiki.maximegy.ovh/english/home)
+[//] # English
+[//] For English side, please click   [here](http://wiki.maximegy.ovh/english/home) >
 # Réseau
 ## Principes Généraux
 ## Supervision
