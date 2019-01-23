@@ -3,6 +3,9 @@
 [//]: # "English"
 [//]: # "For English side, please click   [here](http://wiki.maximegy.ovh/english/home)"
 # Réseau
+https://github.com/charlax/professional-programming
+https://web.stanford.edu/class/msande91si/www-spr04/readings/week1/InternetWhitepaper.htm
+https://github.com/vasanthk/how-web-works
 ## Principes Généraux
 ## Supervision
 * [Introduction](http://wiki.maximegy.ovh/french/reseau/supervision)
