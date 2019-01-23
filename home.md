@@ -5,7 +5,7 @@
 # Réseau
 ## Principes Généraux
 ## Supervision
-* [Introduction à PFSense](http://wiki.maximegy.ovh/french/reseau/supervision)
+* [Introduction](http://wiki.maximegy.ovh/french/reseau/supervision)
 
 ## Cisco
 ### CheatSheets
