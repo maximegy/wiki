@@ -15,6 +15,7 @@ Attention toutefois, des règles de syntaxe d'appliquent :
 * Le nom de la variable peut être composé de lettres (majuscules et minuscules), chiffres et du symbole `_` (souligné ou underscore en anglais).
 * Python est sensible à la casse, donc bonjour, Bonjour, BONjour et BoNjOuR sont des variables différentes.
 * Il existe des mots réservés qui sont utilisés par Python :
+
 |and|del|from|none|true|as|
 |---|---|----|----|----|--|
 |elif|global|nonllocal|try|assert|else|
