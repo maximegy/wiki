@@ -76,6 +76,11 @@ x =  8.3 <class 'float'>
 
 #### Opérateurs
 
+| Opérateur | Signification | Exemple |
+|-------------|---------------|----------|
+| `<<` ou `>>` | décalage de bit à gauche ou à droite, bitwise shift | `x = 8 << 1` |
+| `\|` | opérateur logique `ou` | `x = 8 | 1` |
+
 
 ### Booléen
 
