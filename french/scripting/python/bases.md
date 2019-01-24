@@ -88,6 +88,22 @@ x =  8.3 <class 'float'>
 | `//` | division entière, renvoie le quotient de la division | `x = a // b` |
 | `%` | reste d'une division - modulo | `x = a % b` |
 | `**` | puissance, `** 0.5` pour la racine carrée | `x = a ** 4` |
+| `int()` | conversion en nombre entier | `w = int(5.5)` |
+| `float()` | conversion en nombre réel | `w = float(8)` |
+| | on peut aussi convertir une chaîne de caractères | `w = int("5.5")` |
+Attention toutefois, pour convertir une chaîne de caractère représentant un nombre réel en nombre entier, il faut d'abord la convertir en nombre réel puis en nombre entier :
+
+```python
+>>> x = int("3.4")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: invalid literal for int() with base 10: '3.4'
+>>> x = int(float("3.4"))
+>>> print(x)
+3
+```
+
+
 
 
 ### Booléen
