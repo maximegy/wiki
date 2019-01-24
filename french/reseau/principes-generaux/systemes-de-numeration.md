@@ -10,7 +10,7 @@ Le binaire repose donc sur la base 2, pour 2 symboles.
 * Un **quartet** est une suite de 4 bits,
 * Un **octet** est une suite de 8 bits.
 
-10^(4)
+10^4
 
 |Mesure|Correspondance|
 |--------|------------------|
