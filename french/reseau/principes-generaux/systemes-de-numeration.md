@@ -10,6 +10,7 @@ Le binaire repose donc sur la base 2, pour 2 symboles. L'écriture d'un nombre b
 * Un **quartet** est une suite de 4 bits,
 * Un **octet** est une suite de 8 bits.
 
+En anglais octet se traduit par **byte**. Il est donc nécessaire de ne pas confondre bit et byte. 1Ko = 1KB.
 
 |Mesure|Correspondance|
 |--------|------------------|
@@ -17,3 +18,7 @@ Le binaire repose donc sur la base 2, pour 2 symboles. L'écriture d'un nombre b
 | 1 Mo (Mega octets) | 10<SUP>6</SUP> octets - 1 000 000 bits |
 | 1 Go (Giga octets) | 10<SUP>9</SUP> octets - 1 000 000 000 bits |
 | 1 To (Kilo octets) | 10<SUP>12</SUP> octets - 1 000 000 000 000 bits |
+
+# Conversions
+## Décimal vers binaire par divisions successives
+![Decimal To Binaire Division](/uploads/systemes-de-numerations/decimal-to-binaire-division.png "Decimal To Binaire Division")
