@@ -11,7 +11,7 @@ L'utilisation est simple, c'est l'équivalent de dire "je veux que dans une vari
 En Python, pour affecter une valeur à une variable il suffit d'écrire : `nom_de_variable = valeur`.
 Attention toutefois, des règles de syntaxe d'appliquent :
 * Le nom de la variable ne peut pas commencer par un chiffre [0 à 9],
-* Le nom de la variable peut être composé de lettres (majuscules et minuscules), chiffres et du symbole ** _ ** (souligné ou underscore en anglais).
+* Le nom de la variable peut être composé de lettres (majuscules et minuscules), chiffres et du symbole **_** (souligné ou underscore en anglais).
 
 
 ## Mots réservés sur Python 3
