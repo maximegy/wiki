@@ -34,6 +34,13 @@ Il existe des conventions entre développeurs sur l'écriture des variables :
 
 
 ## Types de données
+### a
+
+### b
+
+### c
+
+### d
 
 ## Concaténation
 On peux combiner des chaînes de caractère en une seule en utilisant l'opérateur `+`.
