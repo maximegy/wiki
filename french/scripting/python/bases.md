@@ -104,9 +104,8 @@ ValueError: invalid literal for int() with base 10: '3.4'
 ```
 
 
-
-
 ### Booléen
+Les variables de ce type ne peuvent avoir que deux valeurs possibles: `True` ou `False`. Ces variables sont résultat d'opérations logiques 
 
 ### Chaînes de Caractères
 
