@@ -79,7 +79,15 @@ x =  8.3 <class 'float'>
 | Opérateur | Signification | Exemple |
 |-------------|---------------|----------|
 | `<<` ou `>>` | décalage de bit à gauche ou à droite, bitwise shift | `x = 8 << 1` |
-| `\|` | opérateur logique `ou` | `x = 8 | 1` |
+| `|` | opérateur logique `ou` | `x = 8 | 1` |
+| `&` | opérateur logique `et` | `x = 8 & 1` |
+| `+` ou `-` | addition ou soustraction| `x = a + b` - `x = a - b` |
+| `+=` ou `-=` | opération puis affectation | `x +=3` - `x -= 3` |
+| `*` ou `/` | multiplication ou division | `x = a * b` - `x = a / b` |
+| `*=` ou `/=` | opération puis affectation | `x +=3` - `x -= 3` |
+| `//` | division entière, renvoie le quotient de la division | `x = a // b` |
+| `%` | reste d'une division - modulo | `x = a % b` |
+| `**` | puissance, `** 0.5` pour la racine carrée | `x = a ** 4` |
 
 
 ### Booléen
