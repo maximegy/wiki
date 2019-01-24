@@ -27,12 +27,13 @@ https://github.com/vasanthk/how-web-works
 * [Mettre en place un VPN IPSec](http://wiki.maximegy.ovh/french/reseau/pfsense/mettre-en-place-un-vpn-ipsec)
 # Systèmes
 ## Windows
-### Standard
-### Server
+[//]: # "### Standard"
+[//]: # "### Server"
 
 ### Autres
 * [Installer Windows sur une clé](https://www.01net.com/astuces/comment-installer-windows-sur-une-cle-usb-pour-l-utiliser-sur-n-importe-quel-pc-1587476.html?fbclid=IwAR1cQzHJGLFwcwxGshLsVfojqEDK5zZNcZhYaKcC5m5DzBV1yqN6UXU0Kow#utm_medium=Social&Xtor=CS2-123463&utm_source=Facebook&Echobox=1545235848)
-## Linux
+
+[//]: # "## Linux"
 ## Docker
 ### Docker for Windows
 * [No space left on device](http://wiki.maximegy.ovh/french/systemes/docker/docker-for-windows/no-space-left-on-device)
@@ -40,8 +41,9 @@ https://github.com/vasanthk/how-web-works
 
 ## Synology
 https://www.facebook.com/notes/nas-synology-francophone/les-tutos/787377194791122/
-## PAAS
-# Sécurité
+[//]: # "## PAAS"
+
+[//]: # "# Sécurité"
 # Scripting
 ## Algorithmique
 
@@ -66,10 +68,10 @@ https://www.facebook.com/notes/nas-synology-francophone/les-tutos/78737719479112
 * [Fonctions](http://wiki.maximegy.ovh/french/scripting/python/fonctions)
 * [Administration Système et Réseaux](http://wiki.maximegy.ovh/french/scripting/python/administration)
 
-# Bureautique
-## Powerpoint
-## Word
-# Gestion de Projet
+[//]: # "# Bureautique"
+[//]: # "## Powerpoint"
+[//]: # "## Word"
+[//]: # "# Gestion de Projet"
 # Rédaction
 ## Mémoire
 * [Principes de l'écrit](http://wiki.maximegy.ovh/french/redaction/memoire/principes-de-lecrit)
