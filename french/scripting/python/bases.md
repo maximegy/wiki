@@ -33,14 +33,72 @@ Il existe des conventions entre développeurs sur l'écriture des variables :
 - La seconde consiste à passer la première lettre de chaque mots en majuscule, par exemple `maSuperbeVariable`.
 
 
-## Types de données
-### a
+# Types de données
+Le typage est dynamique en python. Le type n'est donc pas précisé explicitement, il est dédui
 
-### b
+## Types immuables (ou immutable)
+Un objet immuable est un objet dont l'état ne peut pas être modifié après sa création. Contrasté avec l'objet variable.
+Une opération sur un objet de ce type va donc créer une autre variable temporaire du même type pour stocker le résultat avant de l'affecter à l'objet initial.
+Par exemple :
 
-### c
+```python
+a = 2
+# Opération
+a = a + 3
+# Création de la variable temporaire (virtuellement)
+c = 2 + 3
+c = 5
+# Attribution de la nouvelle valeur à a
+a = c
+a = 5
+```
 
-### d
+
+### Nombres
+#### Entiers
+Les nombres entiers, `int`, sont des nombres entiers positifs ou nuls, c'est-à-dire qu'il s'écrivent sans chiffre après la virgule et est supérieur ou égal à 0.
+
+```python
+>>> x = 8
+>>> print ("x = ", x, type(x))
+x =  8 <class 'int'>
+```
+
+
+#### Réels
+Les nombres réels, `float`, sont des nombres qui peuvent être représentés par une partie entière et une liste finie ou infinie de décimales.
+
+```python
+>>> x = 8.3
+>>> print ("x = ", x, type(x))
+x =  8.3 <class 'float'>
+```
+
+#### Opérateurs
+
+
+### Booléen
+
+### Chaînes de Caractères
+
+### Tuple
+
+### Nombres Complexes
+
+
+### Bytes
+
+### None
+Ce type signifie qu'une variable ne contient **rien**, cette variable est donc égale à `None`.
+
+```python
+>>> s = None
+>>> print(s)
+None
+```
+
+
+## Types modifiables ou mutable
 
 ## Concaténation
 On peux combiner des chaînes de caractère en une seule en utilisant l'opérateur `+`.
