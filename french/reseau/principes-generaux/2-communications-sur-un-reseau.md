@@ -1,8 +1,8 @@
 <!-- TITLE: Communications sur un réseau -->
 <!-- SUBTITLE: Notions de base et vocabulaire -->
 
-# Les éléments de communication
-## Les éléments principaux de communication
+# Eléments de communication
+## Principaux éléments de communication
 Une communication commence avec l'envoi d'un message (des informations) d'un individu ou un périphérique à un autre.
 On échange par de nombreuses méthodes de communication différentes mais elles ont toutes en commun:
 - Une <span style="color:red">source</span> du message, l'expéditeur.
@@ -35,7 +35,7 @@ Les <span style="color:red">services</span> et les <span style="color:red">proce
 * Un service réseau fournit des informations en réponse à une demande. Les services incluent de nombreuses applications réseau courantes et les services d'hébergement Web.
 * Les processus fournissent les fonctionnalités qui dirigent et déplacent les messages à travers le réseau. Les processus nous semblent moins évidents, mais ils sont essentiels au fonctionnement des réseaux.
 
-## Périphériques finaux et leur rôle sur le réseau
+## Périphériques finaux
 Les péripériques réseau auxquels les personnes sont le plus habituées sont appelés <span style="color:red">périphériques finaux</span>. Ces périphériques forment l'interface entre le réseau humain et le réseau de communication sous-jacent. Certains de ces périphériques finaux sont les suivants:
 * Ordinateurs (stations de travail, portables, serveurs, ...),
 * Imprimantes réseaux,
@@ -50,7 +50,7 @@ Dans les réseaux actuels, un hôte peut jouer le rôle de <span style="color:re
 * Les <span style="color:red">serveurs</span> sont des hôtes équipés de logiciels leur permettant de fournir des informations et des services, commes les emails, des pages web, à d'autres hôtes sur le réseau.
 * Les <span style="color:red">clients</span> sont des hôtes équipés d'un logiciel qui leur permet de demander des informations auprès du serveur et de les traiter et/ou les afficher.
 
-## Périphériques intermédiaires et leur rôle sur le réseau
+## Périphériques intermédiaires
 En plus des périphériques finaux, les réseaux dépendent de <span style="color:red">périphériques intermédiaires</span> pour fournir une connectivité et travailler en arrière-plan, afin de garantir le flux des données à travers le réseau. Ces périphériques connectent les hôtes individuels au réseau et peuvent connecter plusieurs réseaux individuels afin de former un <span style="color:red">interréseau</span>. Ces périphériques réseau intermédiaires peuvent être:
 * Périphériques d'accès réseau (concentrateurs, commutateurs et point d'accès sans fil),
 * Périphériques interréseaux (routeurs),
