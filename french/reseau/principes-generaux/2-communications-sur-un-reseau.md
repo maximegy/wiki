@@ -83,7 +83,7 @@ Les critères de choix d'un support réseau sont:
 * La quantité de données et le débit de la transmission,
 * Le coût des supports et de l'installation.
 
-# Réseaux locaux, réseau métropolitain, réeaux étendus et interréseaux
+# Réseaux locaux, réseau métropolitain, réseaux étendus et interréseaux
 Les infrastructures réseau peuvent considérablement varier selon:
 - la taille de la zone couverte,
 - le nombre d'utilisateurs connectés,
@@ -100,3 +100,9 @@ Ce tpe de réseau est appelé <span style="color:red">réseau local</span>:
 En règle général, un réseau local est <span style="color:red">*administré par une organisation unique*</span>. Le contrôle administratif qui gère les stratégies de sécurité et de contrôle d'accès s'applique au niveau du réseau.
 
 ## Réseaux métropolitains
+Certaines organisations (un campus, une ville) doivent gérer des sites distants les uns des autres de quelques kilomètres. Ces différents sites regroupent un ensemble d'ordinateurs et fournissent deifférents services.
+Ce type de réseau est appelé <span style="color:red">réseau métropolitain</span>:
+<center>**MAN** : <span style="color:red">M</span>etropolitan <span style="color:red">A</span>rea <span style="color:red">N</span>etwork</center>
+
+Ces réseaux utilisent généralement des fibres optiques pour relier les différents sites. Certaines technologies  utilisées dans ce but sont l'ATM ou le FDDI. Ces anciennes technollogies sont en passe d'être remplacées par le Gigabit Ethernet utilisé dans de nombreux MAN, comme dans les LAN.
+Comme pour les réseaux locaux, les réseaux métropolitains sont <span style="color:red">*administrés par une organisation unique*</span>.
