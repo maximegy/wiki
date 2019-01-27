@@ -29,8 +29,28 @@ Le résultat de la conversion est obtenu par la lecture du reste des divisions e
 Le principe est de soustraire les puissances de 2 de la plus grande possible à la plus petite. Si on peut soustraire la puissance au nombre décimal, on note un **1** sinon **0**.
 Pour rappel :
 <table class="tftable" border="1">
-<tr><th>Header 1</th><th>Header 2</th><th>Header 3</th><th>Header 4</th><th>Header 5</th><th>Header 6</th><th>Header 7</th><th>Header 8</th><th>Header 9</th></tr>
-<tr><td> </td><td> </td><td> </td><td> </td><td> </td><td> </td><td> </td><td> </td><td> </td></tr>
+    <tr>
+        <td>Puissance de 2</td>
+        <td>2<SUP>7</SUP></td>
+        <td>2<SUP>6</SUP></td>
+        <td>2<SUP>5</SUP></td>
+        <td>2<SUP>4</SUP></td>
+        <td>2<SUP>3</SUP></td>
+        <td>2<SUP>2</SUP></td>
+        <td>2<SUP>1</SUP></td>
+        <td>2<SUP>0</SUP></td>
+    </tr>
+    <tr>
+        <td>Valeur Décimale</td>
+        <td>128</td>
+        <td>64</td>
+        <td>32</td>
+        <td>16</td>
+        <td>8</td>
+        <td>4</td>
+        <td>2</td>
+        <td>1</td>
+    </tr>
 </table>
 
 
