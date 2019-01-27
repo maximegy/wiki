@@ -12,8 +12,8 @@ https://github.com/charlax/professional-programming
 https://web.stanford.edu/class/msande91si/www-spr04/readings/week1/InternetWhitepaper.htm
 https://github.com/vasanthk/how-web-works
 ## Principes Généraux
-* :1234:[Systèmes de Numérations](http://wiki.maximegy.ovh/french/reseau/principes-generaux/systemes-de-numeration)
-	* [Communications sur un réseau - Notions de base et vocabulaire](http://wiki.maximegy.ovh/french/reseau/principes-generaux/communications-sur-un-reseau)
+* :1234:[Systèmes de Numérations](http://wiki.maximegy.ovh/french/reseau/principes-generaux/1-systemes-de-numeration)
+	* [Communications sur un réseau - Notions de base et vocabulaire](http://wiki.maximegy.ovh/french/reseau/principes-generaux/2-communications-sur-un-reseau)
 
 ## Supervision
 * [Introduction](http://wiki.maximegy.ovh/french/reseau/supervision)
