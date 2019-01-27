@@ -122,3 +122,8 @@ La plupart d'entre nous devons communiquer avec une ressource sur un autre rése
 * le suivi des résultats sportifs de son équipe favorite sur un téléphone portable.
 
 Pour répondre à ces besoins humains en matière de communication il faut interconnecter une multitude de réseaux. L'interréseau public le plus connu et dont l'utilisation est la plus répandue est *Internet*.
+Garantir une communication efficace à travers cette infrastructure diverse implique l'application de technologies et de protocoles cohérents et communément reconnus, ainsi que la coopération entre de nombrex organismes.
+
+Le terme <span style="color:red">intranet</span> est souvent utilisé pour faire référence à un réseau LAN privé qui appartient à une entreprise ou une administration et auquel peuvent accéder uniquement ses membres, ses employés ou des tierces personnes autorisées. Un intranet est un réseau LAN sur lequel on utilise les mêmes technologies que sur Internet.
+
+## Représentations du réseau et symboles utilisés
