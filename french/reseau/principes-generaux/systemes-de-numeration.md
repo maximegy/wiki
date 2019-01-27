@@ -14,13 +14,14 @@ Le binaire repose donc sur la base 2, pour 2 symboles. L'écriture d'un nombre b
 
 En anglais, octet se traduit par **byte**. Il est donc nécessaire de ne pas confondre **bit** et **byte**. 1Ko = 1KB.
 
+<center>
 |       Mesure       | Correspondance                            |
 | :----------------: | :---------------------------------------- |
 | 1 Ko (Kilo octets) | $$10^3$$ octets - 1 000 bits              |
 | 1 Mo (Mega octets) | $$10^6$$ octets - 1 000 000 bits          |
 | 1 Go (Giga octets) | $$10^9$$ octets - 1 000 000 000 bits      |
 | 1 To (Kilo octets) | $$10^12$$ octets - 1 000 000 000 000 bits |
-
+</center>
 
 # Conversions
 ## Binaires
@@ -32,9 +33,11 @@ Le résultat de la conversion est obtenu par la lecture du reste des divisions e
 ### Décimal vers binaire par soustractions successives
 Le principe est de soustraire les puissances de 2 de la plus grande possible à la plus petite. Si on peut soustraire la puissance au nombre décimal, on note un **1** sinon **0**.
 Pour rappel :
+<center>
 | Puissance de 2  | $$2^7$$ | $$2^6$$ | $$2^5$$ | $$2^4$$ | $$2^3$$ | $$2^2$$ | $$2^1$$ | $$2^0$$ |
 | --------------- | :-----: | :-----: | :-----: | :-----: | :-----: | :-----: | :-----: | :-----: |
 | Valeur décimale |   128   |   64    |   32    |   16    |    8    |    4    |    2    |    1    |
+</center>
 
 Un exemple : convertir $$230_10$$ en base 2:
 - De 230 on peut retirer 128 ($$2^7$$) reste 102 ==> 1
@@ -68,58 +71,97 @@ Donc $$110011_2$$ => $$51_10$$.
 ## Hexadécimales
 Lorsque qu'il s'agit de grandes séries binaires, ce langage devient très difficile à traiter par l'Homme. Le système d'hexadécimal (base 16) est donc utilisé.
 L'hexadécimal est donc un alphabet de 16 symboles:
-| Base 16 | 0   | 1   | 2   | 3   | 4   | 5   | 6   | 7   | 8   | 9   | A   | B   | C   | D   | E   | F   |
-| ------- | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-| Base 10 | 0   | 1   | 2   | 3   | 4   | 5   | 6   | 7   | 8   | 9   | 10  | 11  | 12  | 13  | 14  | 15  |
-
+<center>
+| Base 16 |   0   |   1   |   2   |   3   |   4   |   5   |   6   |   7   |   8   |   9   |   A   |   B   |   C   |   D   |   E   |   F   |
+| ------- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| Base 10 |   0   |   1   |   2   |   3   |   4   |   5   |   6   |   7   |   8   |   9   |  10   |  11   |  12   |  13   |  14   |  15   |
+</center>
 
 ### Hexadécimal vers Décimal
 Cette conversion repose sur le même principe que la conversion binaire vers décimal sauf qu'on utilise les puissances de 16.
-Les poids sont par exemple: $$16^0$$=1, $$16^1$$=16, $$16^2$$=256, $$16^3$$=4096.
+Les poids sont par exemple: $$16^0=1$$, $$16^1=16$$, $$16^2=256$$, $$16^3=4096$$.
 Exemple: convertir $$13D_16$$ en base 10
-    > $$1*16^{2}$$
+    > $$1*16^2 + 3*16^1 + D*16^0$$ => $$1*256 + 3*16 + 13*1$$ => $$317_10$$
 
+### Hexadécimal vers Binaire
+On peut dresser le tableau de correspondance suivant:
+<center>
+| Base 16 | Base 10 | Binaire |
+| :-----: | :-----: | :-----: |
+| 0       | 0       | 0000    |
+| 1       | 1       | 0001    |
+| 2       | 2       | 0010    |
+| 3       | 3       | 0011    |
+| 4       | 4       | 0100    |
+| 5       | 5       | 0101    |
+| 6       | 6       | 0110    |
+| 7       | 7       | 0111    |
+| 8       | 8       | 1000    |
+| 9       | 9       | 1001    |
+| A       | 10      | 1010    |
+| B       | 11      | 1011    |
+| C       | 12      | 1100    |
+| D       | 13      | 1101    |
+| E       | 14      | 1110    |
+| F       | 15      | 1111    |
+</center>
+Ce tableau nous permet de constater que l'alphabet hexadécimal en binaire utilise au maximum 4 bits.
+Le passage de l'un à l'autre peut se faire en convertissant chacun de ses composants par sa valeur binaire.
 
+### Décimal vers Hexadécimal par divisions successives
+Comme vu dans la partie ![Décimal vers Binaire](http://wiki.maximegy.ovh/french/reseau/principes-generaux/systemes-de-numeration#decimal-vers-binaire-par-divisions-successives), sauf qu'ici on divise par 16. La lecture des restes de la dernière division vers la première nous donne le résultat.
+Exemple: convertir $$728_10$$ en base 16:
+- $$728/16=45$$ reste $$8$$
+- $$45/16=2$$ reste $$13$$
+- $$2/16=0$$ reste $$2$$
 
+Donc $$728_10$$ est égal à $$2D8_16$$.
+
+### Décimal vers Hexadécimal par une conversion intermédiaire en binaire
+On peut aussi passer du binaire à l'hexadécimal en décomposant le nombre binaire en bloc de quartet (4 bits), en partant du **LSB**.
+Exemple: conversion de $$732_10$$
+- $$732_10 = 10 1101 1100_2$$
+- $$10 1101 1100_2 = 2 D C_16$$
+- Vérification: $$2DC_16 = 2*256 + 13(D)=16 + 12(C)*1 = 732_10$$
 
 
 ## Opérateurs Logiques
-
 ### Portes Logiques
 
 | Porte | Explication                                                                                                   |
 | :---: | ------------------------------------------------------------------------------------------------------------- |
-| AND   | ET : le résultat de l'opération prend la valeur `true` si les deux valeurs sont `true`                        |
-| OR    | OU : le résultat de l'opération prend la valeur `true` si au moins une des deux valeurs est `true`            |
-| XOR   | Ou Exclusif : le résultat de l'opération prend la valeur true si eclusivement une des deux valeurs est `true` |
+|  AND  | ET : le résultat de l'opération prend la valeur `true` si les deux valeurs sont `true`                        |
+|  OR   | OU : le résultat de l'opération prend la valeur `true` si au moins une des deux valeurs est `true`            |
+|  XOR  | Ou Exclusif : le résultat de l'opération prend la valeur true si eclusivement une des deux valeurs est `true` |
 
 ### Tables de Vérités
 Une table de vérité est une table mathématique utilisée en logique, en particulier pour  l'algèbre de Boole, pour représenter des expressions logiques.
 Une table de vérité est composée d'une colonne pour chaque variable imputée (A et B par exemple) et d'une colonne où sont inscrits tous les résultats possibles de l'opération logique présentée.
 
 #### Table de vérité ET
-
-   | A   | B   | A ET B |
-   | --- | --- | ------ |
-   | 0   | 0   | 0      |
-   | 0   | 1   | 0      |
-   | 1   | 0   | 0      |
-   | 1   | 1   | 1      |
-
+<center>
+| A   | B   | A ET B |
+| :-: | :-: | :----: |
+| 0   | 0   | 0      |
+| 0   | 1   | 0      |
+| 1   | 0   | 0      |
+| 1   | 1   | 1      |
+</center>
 
 #### Table de vérité OU
-	 
+<center>
 | A   | B   | A OU B |
-| --- | --- | ------ |
+| :-: | :-: | :----: |
 | 0   | 0   | 0      |
 | 0   | 1   | 1      |
 | 1   | 0   | 1      |
 | 1   | 1   | 1      |
+</center>
 
 #### Table de vérité XOR
 
 | A   | B   | A XOR B |
-| --- | --- | ------- |
+| :-: | :-: | :-----: |
 | 0   | 0   | 0       |
 | 0   | 1   | 1       |
 | 1   | 0   | 1       |
