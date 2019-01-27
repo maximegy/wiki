@@ -110,6 +110,7 @@ Lorsqu'une entreprise ou une organisation dispose d'emplacements (sites) sépar�
 
 Les organisation individuelles utilisent généralement des connexions via un réseau de fournisseurs de services de télécommunications. Ces réseaux qui connectent des réseaux locaux à des emplacements géographiquement séparés sont appelés <span style="color:red">réseaux étendus</span>:
 > **WAN** : <span style="color:red">W</span>ide <span style="color:red">A</span>rea <span style="color:red">N</span>etwork.
+
 Bien que l'organisation gère l'ensemble des stratégies et de l'administration des réseaux locaux aux deux extrémités de la connexion, les stratégies au sein du réseau du fournisseur de services de communications sont gérées par lui-même.
 Les réseaux étendus utilisent des périphériques réseau spécialement conçus pour effectuer les interconnexions entre les réseaux locaux : les <span style="color:red">routeurs</span>.
 
