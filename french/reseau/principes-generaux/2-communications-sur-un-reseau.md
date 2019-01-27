@@ -132,13 +132,17 @@ Afin de pouvoir visualiser l'organisation et le fonctionnement d'un réseau, il 
 Comme pour tout langage, celui propre au réseau utilise un ensemble commun de symboles pour représenter les différents périphériques finaux, réseaux et supports.
 Les principaux symboles utilisés en réseau sont:
 
+<center>
+
 | Icône | Description             | Icône | Description                |
-| :---: | :---------------------- | :---: | :------------------------- |
-|       | Routeur                 |       | Commutateur                |
-|       | Routeur Wi-Fi           |       | Pare-feu                   |
-|       | Ordinateur de bureau    |       | Ordinateur Portable        |
-|       | Serveur                 |       | Support de réseau sans fil |
-|       | Support de réseau local |       | Support de réseau étendu   |
+| :---: | :---------------------: | :---: | :------------------------: |
+|![Routeur](/uploads/communication-sur-un-reseau/routeur.png "Routeur")| Routeur                 |![Commutateur](/uploads/communication-sur-un-reseau/commutateur.png "Commutateur")| Commutateur                |
+|![Routeur Sans Fil](/uploads/communication-sur-un-reseau/routeur-sans-fil.png "Routeur Sans Fil")| Routeur Wi-Fi           |![Pare Feu](/uploads/communication-sur-un-reseau/pare-feu.png "Pare Feu")| Pare-feu                   |
+|![Ordinateur](/uploads/communication-sur-un-reseau/ordinateur.png "Ordinateur")| Ordinateur de bureau    |![Ordinateur Portable](/uploads/communication-sur-un-reseau/ordinateur-portable.png "Ordinateur Portable")| Ordinateur Portable        |
+|![Serveur](/uploads/communication-sur-un-reseau/serveur.png "Serveur")| Serveur                 |![Sans Fil](/uploads/communication-sur-un-reseau/sans-fil.png "Sans Fil")| Support de réseau sans fil |
+|![Reseau Local](/uploads/communication-sur-un-reseau/reseau-local.png "Reseau Local")| Support de réseau local |![Etendu](/uploads/communication-sur-un-reseau/etendu.png "Etendu")| Support de réseau étendu   |
+
+</center>
 
 En plus de ces représentations, une terminologie spécialisée est étudiée pour étudier la manière dont ces périphériques et supports se connectent entre eux. Les termes importants sont:
 * <span style="color:red">Carte réseau</span>: ou adaptateur, fournit la connexion physique au réseau à partir de l'ordinateur ou d'un autre périphérique hôte. Les supports qui relient l'ordinateur au périphérique réseau se branchent directement à la carte réseau.
