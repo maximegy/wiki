@@ -14,7 +14,7 @@ En anglais octet se traduit par **byte**. Il est donc nécessaire de ne pas conf
 
 | Mesure             | Correspondance                                  |
 | ------------------ | ----------------------------------------------- |
-| 1 Ko (Kilo octets) | 10<SUP>3</SUP> octets - 1 000 bits              |
+| 1 Ko (Kilo octets) | 10^{3} octets - 1 000 bits              |
 | 1 Mo (Mega octets) | 10<SUP>6</SUP> octets - 1 000 000 bits          |
 | 1 Go (Giga octets) | 10<SUP>9</SUP> octets - 1 000 000 000 bits      |
 | 1 To (Kilo octets) | 10<SUP>12</SUP> octets - 1 000 000 000 000 bits |
