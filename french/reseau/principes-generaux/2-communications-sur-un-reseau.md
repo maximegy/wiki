@@ -176,3 +176,15 @@ L'utilisation de normes dans le développement et l'implémentation de protocole
 Dans les communications de données, par exemple, si les extrémités d'une conversation utilisent des protocoles différents pour gérer une communication, en toute probabilité, aucune information ne peut être échangée.
 
 ## Interaction des protocoles
+L'interaction entre un serveur Web et un navigateur Web constitue un exemple de l'utilisation d'une suite de protocoles sans des communications réseau. Cette interaction utilise plusieurs protocoles et normes dans le processus d'échange d'informations entre ceux-ci. Les différents protocoles fonctionnent entre eux pour garantir que les messages sont reçus et compris par les deux parties. Voici des exemples de protocoles:
+* <span style="color:red">**Protocole d'application**</span>:
+  Le protocole de transfert hypertexte HTTP - <span style="color:red">Hyper Text Transfer Protocol</span> régit la manière dont un serveur Web et un client Web interagissent. Le protocole HTTP décrit le contenu et la mise en forme des requêtes et des réponses échangées entre le client et le serveur. Les logiciels du client et du serveur Web implémentent le protocole HTTP dans le cadre de l'application. Le protocole HTTP dépend d'autres protocoles pour gérer le transport des messages entre le client et le serveur.
+* <span style="color:red">**Protocole de transport**</span>:
+  Le protocole TCP - <span style="color:red">Transmission Control Protocol</span> représente le protocole de transport qui gère les conversations individuelles entre des serveurs Web et des clients Web. Le protocole TCP *divise les messages* HTTP en *parties de plus petite taille*, appelées <span style="color:red">segments</span>, pour les envoyer au client de destination. Ce protocole est également responsable du *contrôle de la taille et du débit d'échange* de messages entre le serveur et le client.
+* <span style="color:red">**Protocole interréseau**</span>:
+  Le protocole interréseau le plus courant est le protocole IP - <span style="color:red">Internet Protocol</span>. Le protocole IP est responsable de la récupération des segments formatés à partir du protocole TCP, de leur encapsulation en <span style="color:red">paquets</span>, de *l'affectation des adresses* appropriées et de la *sélection du meilleur chemin* vers l'hôte de destination.
+* <span style="color:red">**Protocoles d'accès au réseau**</span>:
+  Les protocoles d'accès au réseau décrivent deux fonctions principales: la gestion des liaisons de données et la transmission physique des données sur les supports.
+  - Les protocoles de gestion de liaison de données prennent les paquets fournis par le protocole IP et les formatent pour les transmettre à travers les supports.
+  - Les normes et les protocoles des supports physiques régissent la manière dont les signaux sont envoyés à travers les supports, ainsi que leur interprétation par les clients destinataires. Des émetteurs-récepteurs sur les cartes réseau implémentent les normes appropriées pour les supports en cours d'utilisation.
+
