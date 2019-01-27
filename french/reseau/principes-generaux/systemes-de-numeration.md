@@ -70,7 +70,7 @@ Le résultat est $$230^(_10)$$ => $$11100110^(_2)$$.
 
 
 ### Binaire vers Décimal
-Chaque bit d'un octet n'a pas le même poids. Le bit le plus à droite est le **LSB** (*Least Significant Bit* - *bit de poids faible*), il peut prendre la valeur **0** ou **2<SUP>0</SUP>=1**.
+Chaque bit d'un octet n'a pas le même poids. Le bit le plus à droite est le **LSB** (*Least Significant Bit* - *bit de poids faible*), il peut prendre la valeur **0** ou **$$2^(0)$$=1**.
 A l'inverse, le bit le plus à gauche est le **MSB** (*Most Significant Bit* - *bit de poids fort*), il peut prendre la valeur **0** ou **2<SUP>7</SUP>=128**.
 
 Pour faire la conversion de binaire à décimal, on va donc multiplier la valeur du bit (0 ou 1) par son *poids binaire*, puis on effectue la somme des résultats obtenus.
