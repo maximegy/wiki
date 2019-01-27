@@ -67,3 +67,18 @@ Un exemple : convertir 230<SUB>10</SUB> en base 2:
 
 Le résultat est 230<SUB>10</SUB> => 11100110<SUB>2</SUB>
 
+## Binaire vers Décimal
+Chaque bit d'un octet n'a pas le même poids. Le bit le plus à droite est le `LSB` (*Least Significant Bit* - *bit de poids faible*), il peut prendre la valeur **0** ou **2<SUP>0</SUP>=1**.
+A l'inverse, le bit le plus à gauche est le `MSB` (*Most Significant Bit* - *bit de poids fort*), il peut prendre la valeur **0** ou **2<SUP>7</SUP>=128**.
+
+Pour faire la conversion de binaire à décimal, on va donc multiplier la valeur du bit (0 ou 1) par son *poids binaire*, puis on effectue la somme des résultats obtenus.
+exemple: 110011<SUB>2</SUB> à convertir en décimal.
+<table border="0" align="center">
+    <tr><td>1</td><td></td><td>1</td><td></td><td>0</td><td></td><td>0</td><td></td><td>1</td><td></td><td>1</td></tr>
+    <tr><td>*</td><td></td><td>*</td><td></td><td>*</td><td></td><td>*</td><td></td><td>*</td><td></td><td>*</td></tr>
+    <tr><td>2<SUP>5</SUP></td><td></td><td>2<SUP>4</SUP></td><td></td><td>2<SUP>3</SUP></td><td></td><td>2<SUP>2</SUP></td><td></td><td>2<SUP>1</SUP></td><td></td><td>2<SUP>0</SUP></td></tr>
+    <tr><td>(32)</td><td></td><td>(16)</td><td></td><td>(8)</td><td></td><td>(4)</td><td></td><td>(2)</td><td></td><td>(1)</td></tr>
+    <tr><td>=</td><td></td><td>=</td><td></td><td>=</td><td></td><td>=</td><td></td><td>=</td><td></td><td>=</td></tr>
+    <tr><td>32</td><td>+</td><td>16</td><td>+</td><td>0</td><td>+</td><td>0</td><td>+</td><td>2</td><td>+</td><td>1</td></tr>
+</table>
+Donc 110011<SUB>2</SUB> => 51<SUB>10</SUB>
