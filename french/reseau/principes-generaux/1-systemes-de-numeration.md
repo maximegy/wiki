@@ -15,12 +15,14 @@ Le binaire repose donc sur la base 2, pour 2 symboles. L'écriture d'un nombre b
 En anglais, octet se traduit par **byte**. Il est donc nécessaire de ne pas confondre **bit** et **byte**. 1Ko = 1KB.
 
 <center>
+
 |       Mesure       | Correspondance                            |
 | :----------------: | :---------------------------------------- |
 | 1 Ko (Kilo octets) | $$10^3$$ octets - 1 000 bits              |
 | 1 Mo (Mega octets) | $$10^6$$ octets - 1 000 000 bits          |
 | 1 Go (Giga octets) | $$10^9$$ octets - 1 000 000 000 bits      |
 | 1 To (Kilo octets) | $$10^12$$ octets - 1 000 000 000 000 bits |
+
 </center>
 
 # Conversions
@@ -34,9 +36,11 @@ Le résultat de la conversion est obtenu par la lecture du reste des divisions e
 Le principe est de soustraire les puissances de 2 de la plus grande possible à la plus petite. Si on peut soustraire la puissance au nombre décimal, on note un **1** sinon **0**.
 Pour rappel :
 <center>
+
 | Puissance de 2  | $$2^7$$ | $$2^6$$ | $$2^5$$ | $$2^4$$ | $$2^3$$ | $$2^2$$ | $$2^1$$ | $$2^0$$ |
 | --------------- | :-----: | :-----: | :-----: | :-----: | :-----: | :-----: | :-----: | :-----: |
 | Valeur décimale |   128   |   64    |   32    |   16    |    8    |    4    |    2    |    1    |
+
 </center>
 
 Un exemple : convertir $$230_10$$ en base 2:
@@ -72,9 +76,11 @@ Donc $$110011_2$$ => $$51_10$$.
 Lorsque qu'il s'agit de grandes séries binaires, ce langage devient très difficile à traiter par l'Homme. Le système d'hexadécimal (base 16) est donc utilisé.
 L'hexadécimal est donc un alphabet de 16 symboles:
 <center>
+
 | Base 16 |   0   |   1   |   2   |   3   |   4   |   5   |   6   |   7   |   8   |   9   |   A   |   B   |   C   |   D   |   E   |   F   |
 | ------- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | Base 10 |   0   |   1   |   2   |   3   |   4   |   5   |   6   |   7   |   8   |   9   |  10   |  11   |  12   |  13   |  14   |  15   |
+
 </center>
 
 ### Hexadécimal vers Décimal
@@ -86,6 +92,7 @@ Exemple: convertir $$13D_16$$ en base 10
 ### Hexadécimal vers Binaire
 On peut dresser le tableau de correspondance suivant:
 <center>
+
 | Base 16 | Base 10 | Binaire |
 | :-----: | :-----: | :-----: |
 | 0       | 0       | 0000    |
@@ -104,6 +111,7 @@ On peut dresser le tableau de correspondance suivant:
 | D       | 13      | 1101    |
 | E       | 14      | 1110    |
 | F       | 15      | 1111    |
+
 </center>
 Ce tableau nous permet de constater que l'alphabet hexadécimal en binaire utilise au maximum 4 bits.
 Le passage de l'un à l'autre peut se faire en convertissant chacun de ses composants par sa valeur binaire.
@@ -140,25 +148,31 @@ Une table de vérité est composée d'une colonne pour chaque variable imputée 
 
 #### Table de vérité ET
 <center>
+
 | A   | B   | A ET B |
 | :-: | :-: | :----: |
 | 0   | 0   | 0      |
 | 0   | 1   | 0      |
 | 1   | 0   | 0      |
 | 1   | 1   | 1      |
+
 </center>
 
 #### Table de vérité OU
 <center>
+
 | A   | B   | A OU B |
 | :-: | :-: | :----: |
 | 0   | 0   | 0      |
 | 0   | 1   | 1      |
 | 1   | 0   | 1      |
 | 1   | 1   | 1      |
+
 </center>
 
 #### Table de vérité XOR
+
+<center>
 
 | A   | B   | A XOR B |
 | :-: | :-: | :-----: |
@@ -166,3 +180,5 @@ Une table de vérité est composée d'une colonne pour chaque variable imputée 
 | 0   | 1   | 1       |
 | 1   | 0   | 1       |
 | 1   | 1   | 0       |
+
+</center>
