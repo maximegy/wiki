@@ -23,7 +23,7 @@ Il existe donc une meilleure approche qui consiste à diviser les données en pa
 2. La segmentation peut augmenter la fiabilité des communications réseau. Les différentes parties de chaque message n'ont pas besoin de parcourir le même chemin sur le réseau depuis la source jusqu'à la destination. Si un chemin particulier devient encombré en raison du trafic de données ou qu'il connaît une défaillance, les parties individuelles du message peuvent toujours être adressées à la destination via d'autres chemins. Si une partie du message ne parvient pas à sa destination, seules les parties manquantes seront transmises à nouveau.
 
 L'inconvénient que présente l'utilisation de la segmentation et du multiplexage pour la transmission des messages à travers un résau réside dans le niveau de complexité ajouté au processus.
-> Imaginons que nous devions 
+> Imaginons que nous devions une lettre de 100 pages mais que chaque enveloppe ne peut contenir qu'une seule page. Le processus d'écrire de l'adresse, de mise sous enveloppe, d'envoi, de réception et d'ouverture de la totalité des 100 enveloppes prendrait beaucoup de temps à l'expéditeur et au destinataire.
 
 ## Composants du réseau
 
