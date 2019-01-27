@@ -53,6 +53,14 @@ Pour rappel :
     </tr>
 </table>
 Un exemple : convertir 230<SUB>10</SUB> en base 2:
+De      230     on peut retirer         128 (2<SUP>7</SUP>)     reste   102 ==> 1
+De      102     on peut retirer         64  (2<SUP>6</SUP>)     reste   38  ==> 1
+De      38      on peut retirer         32  (2<SUP>5</SUP>)     reste   6   ==> 1
+De      6       on ne peut pas retirer  16  (2<SUP>4</SUP>)     reste   6   ==> 0
+De      6       on ne peut pas retirer  8   (2<SUP>3</SUP>)     reste   6   ==> 0
+De      6       on peut retirer         4   (2<SUP>2</SUP>)     reste   2   ==> 1
+De      2       on peut retirer         2   (2<SUP>1</SUP>)     reste   0   ==> 1
+De      0       on ne peut pas retirer  1   (2<SUP>0</SUP>)     reste   0   ==> 0
 
-
+Le résultat est 230<SUB>10</SUB>
 
