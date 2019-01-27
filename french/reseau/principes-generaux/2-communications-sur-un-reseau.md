@@ -84,3 +84,19 @@ Les critères de choix d'un support réseau sont:
 * Le coût des supports et de l'installation.
 
 # Réseaux locaux, réseau métropolitain, réeaux étendus et interréseaux
+Les infrastructures réseau peuvent considérablement varier selon:
+- la taille de la zone couverte,
+- le nombre d'utilisateurs connectés,
+- le nombre et les types de services disponibles.
+Le type de réseau local (local, métropolitain, étendu) dépendra donc de ces différents critères.
+
+## Réseaux locaux
+Un réseau individuel s'étend généralement sur une zone géographique unique et fournit des services et des applications aux personnes au sein d'une structure organisationnelle commune, telle qu'une entreprise, un campus, une région ou une maison.
+Ce tpe de réseau est appelé <span style="color:red">réseau local</span>: 
+<center>
+**LAN** : <span style="color:red">L</span>ocal <span style="color:red">A</span>rea <span style="color:red">N</span>etwork
+**RLE** : <span style="color:red">R</span>éseau <span style="color:red">L</span>ocal d'<span style="color:red">E</span>ntreprise
+</center>
+En règle général, un réseau local est <span style="color:red">*administré par une organisation unique*</span>. Le contrôle administratif qui gère les stratégies de sécurité et de contrôle d'accès s'applique au niveau du réseau.
+
+## Réseaux métropolitains
