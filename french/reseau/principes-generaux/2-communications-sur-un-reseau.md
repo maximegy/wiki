@@ -51,7 +51,19 @@ Dans les réseaux actuels, un hôte peut jouer le rôle de <span style="color:re
 * Les <span style="color:red">clients</span> sont des hôtes équipés d'un logiciel qui leur permet de demander des informations auprès du serveur et de les traiter et/ou les afficher.
 
 ## Périphériques intermédiaires et leur rôle sur le réseau
+En plus des périphériques finaux, les réseaux dépendent de <span style="color:red">périphériques intermédiaires</span> pour fournir une connectivité et travailler en arrière-plan, afin de garantir le flux des données à travers le réseau. Ces périphériques connectent les hôtes individuels au réseau et peuvent connecter plusieurs réseaux individuels afin de former un <span style="color:red">interréseau</span>. Ces périphériques réseau intermédiaires peuvent être:
+* Périphériques d'accès réseau (concentrateurs, commutateurs et point d'accès sans fil),
+* Périphériques interréseaux (routeurs),
+* Serveurs et modems de communication,
+* Périphérique de sécurité.
 
+La gestion des données lors de leur passage à travers le réseau constitue également l'un des rôles des périphériques intermédiaires. Ces périphériques utilisent l'adresse d'hôte de destination, avec les informations concernant les interconnexions réseau, de manière à déterminer le chemin que doivent emprunter les messages à travers le réseau.
+Les processus qui s'exécutent sur les périphériques du réseau intermédiaire remplissent les fonctions suivantes:
+- régénérer et retransmettre des signaux de données,
+- gérer des informations indiquant les chemins qui existent à travers le réseau et l'interréseau,
+- indiquer aux autres périphériques les erreurs et les échecs de communication,
+- diriger des données vers d'autres chemins en cas d'échec de liaison,
+- classifier et diriger des messages en fonction des priorités QoS,
+- autoriser ou refuser le flux de données, selon des paramètres de sécurité.
 
 ## Supports réseau
-
