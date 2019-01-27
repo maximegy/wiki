@@ -28,7 +28,7 @@ Le résultat de la conversion est obtenu par la lecture du reste des divisions e
 ## Décimal vers binaire par soustractions successives
 Le principe est de soustraire les puissances de 2 de la plus grande possible à la plus petite. Si on peut soustraire la puissance au nombre décimal, on note un **1** sinon **0**.
 Pour rappel :
-<table width=auto; align=center border="1">
+<table width=auto align=center border="1">
     <tr>
         <td>Puissance de 2</td>
         <td>2<SUP>7</SUP></td>
@@ -53,14 +53,17 @@ Pour rappel :
     </tr>
 </table>
 Un exemple : convertir 230<SUB>10</SUB> en base 2:
-De      230     on peut retirer         128 (2<SUP>7</SUP>)     reste   102 ==> 1
-De      102     on peut retirer         64  (2<SUP>6</SUP>)     reste   38  ==> 1
-De      38      on peut retirer         32  (2<SUP>5</SUP>)     reste   6   ==> 1
-De      6       on ne peut pas retirer  16  (2<SUP>4</SUP>)     reste   6   ==> 0
-De      6       on ne peut pas retirer  8   (2<SUP>3</SUP>)     reste   6   ==> 0
-De      6       on peut retirer         4   (2<SUP>2</SUP>)     reste   2   ==> 1
-De      2       on peut retirer         2   (2<SUP>1</SUP>)     reste   0   ==> 1
-De      0       on ne peut pas retirer  1   (2<SUP>0</SUP>)     reste   0   ==> 0
 
-Le résultat est 230<SUB>10</SUB>
+<table border="0" align=center>
+    <tr><td>De</td><td>230</td><td>on peut retirer</td><td>128 (2<SUP>7</SUP></td><td>reste</td><td>102</td><td>==></td><td>1</td><tr>
+    <tr><td>De</td><td>102</td><td>on peut retirer</td><td>64 (2<SUP>6</SUP>)</td><td>reste</td><td>38</td><td>==></td><td>1</td></tr>
+    <tr><td>De</td><td>38</td><td>on peut retirer</td><td>32 (2<SUP>5</SUP>)</td><td>reste</td><td>6</td><td>==></td><td>1</td></tr>
+    <tr><td>De</td><td>6</td><td>on ne peut pas retirer</td><td>16 (2<SUP>4</SUP>)</td><td>reste</td><td>6</td><td>==></td><td>0</td></tr>
+    <tr><td>De</td><td>6</td><td>on ne peut pas retirer</td><td>8 (2<SUP>3</SUP>)</td><td>reste</td><td>6</td><td>==></td><td>0</td></tr>
+    <tr><td>De</td><td>6</td><td>on peut retirer</td><td>4 (2<SUP>2</SUP>)</td><td>reste</td><td>2</td><td>==></td><td>1</td></tr>
+    <tr><td>De</td><td>2</td><td>on peut retirer</td><td>2 (2<SUP>1</SUP>)</td><td>reste</td><td>0</td><td>==></td><td>1</td></tr>
+    <tr><td>De</td><td>0</td><td>on ne peut pas retirer</td><td>1 (2<SUP>0</SUP>)</td><td>reste</td><td>0</td><td>==></td><td>0</td></tr>
+</table>
+
+Le résultat est 230<SUB>10</SUB> => 11100110<SUB>2</SUB>
 
