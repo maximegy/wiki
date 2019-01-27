@@ -188,3 +188,13 @@ L'interaction entre un serveur Web et un navigateur Web constitue un exemple de 
   - Les protocoles de gestion de liaison de données prennent les paquets fournis par le protocole IP et les formatent pour les transmettre à travers les supports.
   - Les normes et les protocoles des supports physiques régissent la manière dont les signaux sont envoyés à travers les supports, ainsi que leur interprétation par les clients destinataires. Des émetteurs-récepteurs sur les cartes réseau implémentent les normes appropriées pour les supports en cours d'utilisation.
 
+## Protocoles indépendants de la technologie
+Les protocoles réseau décrivent les fonctions qui se produisent au cours de communication réseau. Dans l'exemple d'une conversation face à face, un protocole de communication peut stipuler qu'afin de signaler que la conversation est terminée, l'expéditeur doit demeurer silencieux pendant deux secondes complètes. Cependant, ce protocole ne spécifie pas comment l'expéditeur doit demeurer silencieux pendant ces deux secondes.
+
+En général, les protocoles n'indiquent pas comment remplir une fonction particulière. Ils précisent uniquement quelles fonctions sont requises pour une règle de communication spécifique mais pas comment ces fonctions doivent être exécutées, l'implémentation d'un protocole particulier peut être indépendante de la technologie.
+
+Si nous prenons l'exemple d'un serveur Web, le protocole HTTP ne spécifie pas le langage de programmation utilisé pour créer le navigateur, ni le logiciel de serveur Web qui doit être utilisé pour traiter les pages Web, ni le système d'exploitation sous lequel le logiciel est exécuté, ni les exigences matérielles pour afficher le navigateur. Il ne décrit pas non plus la manière dont le serveur doit détecter les erreurs, même s'il décrit ce que doit effectuer le serveur en cas d'erreur.
+
+Cela signifie qu'un ordinateur et tout autre périphérique (par exemple, des smartphones) peut accéder à une page web stockée sur n'iporte quel type de serveur Web qui utilise n'importe quel système d'exploitation, n'importe où sur Internet.
+
+Pour visualiser l'interaction entre différents protocoles, un <span style="color:red">modèle en couches</span> est généralement utilisé. Un modèle en couches illustre le fonctionnement des protocoles dans chaque couche, ainsi que l'interaction avec les couches supérieures et inférieures.
