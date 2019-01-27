@@ -54,7 +54,7 @@ Pour rappel :
 </table>
 Un exemple : convertir 230<SUB>10</SUB> en base 2:
 
-<table border="0" align=center>
+<table border="" bordercolor="white" align=center>
     <tr><td>De</td><td>230</td><td>on peut retirer</td><td>128 (2<SUP>7</SUP></td><td>reste</td><td>102</td><td>==></td><td>1</td><tr>
     <tr><td>De</td><td>102</td><td>on peut retirer</td><td>64 (2<SUP>6</SUP>)</td><td>reste</td><td>38</td><td>==></td><td>1</td></tr>
     <tr><td>De</td><td>38</td><td>on peut retirer</td><td>32 (2<SUP>5</SUP>)</td><td>reste</td><td>6</td><td>==></td><td>1</td></tr>
@@ -73,7 +73,7 @@ A l'inverse, le bit le plus à gauche est le `MSB` (*Most Significant Bit* - *bi
 
 Pour faire la conversion de binaire à décimal, on va donc multiplier la valeur du bit (0 ou 1) par son *poids binaire*, puis on effectue la somme des résultats obtenus.
 exemple: 110011<SUB>2</SUB> à convertir en décimal.
-<table border="0" align="center">
+<table border="0" bordercolor="white" align="center">
     <tr><td>1</td><td></td><td>1</td><td></td><td>0</td><td></td><td>0</td><td></td><td>1</td><td></td><td>1</td></tr>
     <tr><td>*</td><td></td><td>*</td><td></td><td>*</td><td></td><td>*</td><td></td><td>*</td><td></td><td>*</td></tr>
     <tr><td>2<SUP>5</SUP></td><td></td><td>2<SUP>4</SUP></td><td></td><td>2<SUP>3</SUP></td><td></td><td>2<SUP>2</SUP></td><td></td><td>2<SUP>1</SUP></td><td></td><td>2<SUP>0</SUP></td></tr>
