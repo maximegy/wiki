@@ -128,3 +128,19 @@ Garantir une communication efficace à travers cette infrastructure diverse impl
 Le terme <span style="color:red">intranet</span> est souvent utilisé pour faire référence à un réseau LAN privé qui appartient à une entreprise ou une administration et auquel peuvent accéder uniquement ses membres, ses employés ou des tierces personnes autorisées. Un intranet est un réseau LAN sur lequel on utilise les mêmes technologies que sur Internet.
 
 ## Représentations du réseau et symboles utilisés
+Afin de pouvoir visualiser l'organisation et le fonctionnement d'un réseau, il est indispensable de recourir à des représentations et des graphiques visuels.
+Comme pour tout langage, celui propre au réseau utilise un ensemble commun de symboles pour représenter les différents périphériques finaux, réseaux et supports.
+Les principaux symboles utilisés en réseau sont:
+
+| Icône | Description             | Icône | Description                |
+| :---: | :---------------------- | :---: | :------------------------- |
+|       | Routeur                 |       | Commutateur                |
+|       | Routeur Wi-Fi           |       | Pare-feu                   |
+|       | Ordinateur de bureau    |       | Ordinateur Portable        |
+|       | Serveur                 |       | Support de réseau sans fil |
+|       | Support de réseau local |       | Support de réseau étendu   |
+
+En plus de ces représentations, une terminologie spécialisée est étudiée pour étudier la manière dont ces périphériques et supports se connectent entre eux. Les termes importants sont:
+* <span style="color:red">Carte réseau</span>: ou adaptateur, fournit la connexion physique au réseau à partir de l'ordinateur ou d'un autre périphérique hôte. Les supports qui relient l'ordinateur au périphérique réseau se branchent directement à la carte réseau.
+* <span style="color:red">Port physique</span>: connecteur ou prise sur un périphérique réseau auquel le support est connecté à un hôte ou autre périphérique réseau.
+* <span style="color:red">Interface</span>: ports spécialisés sur un périphérique réseau qui se connectent à des réseaux individuels. Puisque les routeurs sont utilisés pour interconnecter des réseaux, les ports sur un routeur sont appelés interfaces réseau.
