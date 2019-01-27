@@ -12,7 +12,7 @@ On échange par de nombreuses méthodes de communication différentes mais elles
 - Un [color=#FB0000]**canal**[/color].
   > Il est constitué du support qui fournit la voie par laquelle le message peut se déplacer depuis la source vers la destination.
 
-> Imaginons que nous souhaitons communiquer par des mots, des images et des sons. Chacun de ces messages peut-être envoyé à travers un réseau en étant au préalable converti en chiffres binaires, ou [color=#FB0000]**bits**[/color]. Ces bits sont ensuites codés pour former un signal qui peut être transmis via le support approprié. Dans un réseau informatique, le support est généralement un type de transmission par câble ou sans fil.
+> Imaginons que nous souhaitons communiquer par des mots, des images et des sons. Chacun de ces messages peut-être envoyé à travers un réseau en étant au préalable converti en chiffres binaires, ou <span style="color:red"> **bits** </span>. Ces bits sont ensuites codés pour former un signal qui peut être transmis via le support approprié. Dans un réseau informatique, le support est généralement un type de transmission par câble ou sans fil.
 
 ## Communication des messages
 En théorie, une communication unique, comme une vidéo ou un mail, pourraient être transmis à travers un réseau depuis une source vers une destination sous la forme d'un flux continu et volumineux de bits.
