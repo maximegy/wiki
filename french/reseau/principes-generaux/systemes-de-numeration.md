@@ -3,7 +3,7 @@
 
 # Introduction
 L'ordinateur travaille seulement avec un langage binaire. Ce langage ne comprend que deux symboles: **0** et **1**. Cette raison est historique et technologique puisque les composants éléctroniques ne peuvent avoir que deux états: soit le courant passe (état 1) ou il ne passe pas (état 0).
-Le binaire repose donc sur la base 2, pour 2 symboles. L'écriture d'un nombre binaire se fait de la manière suivante : n<SUB>2</SUB>
+Le binaire repose donc sur la base 2, pour 2 symboles. L'écriture d'un nombre binaire se fait de la manière suivante : $$n^{2}$$
 
 # Vocabulaire
 * Un **bit** (pour Binary digiT - digit binaire) est un élément binaire pouvant prendre la valeur 0 ou 1,
@@ -14,10 +14,10 @@ En anglais octet se traduit par **byte**. Il est donc nécessaire de ne pas conf
 
 | Mesure             | Correspondance                                  |
 | ------------------ | ----------------------------------------------- |
-| 1 Ko (Kilo octets) | 10<SUP>3</SUP> octets - 1 000 bits              |
-| 1 Mo (Mega octets) | 10<SUP>6</SUP> octets - 1 000 000 bits          |
-| 1 Go (Giga octets) | 10<SUP>9</SUP> octets - 1 000 000 000 bits      |
-| 1 To (Kilo octets) | 10<SUP>12</SUP> octets - 1 000 000 000 000 bits |
+| 1 Ko (Kilo octets) | $$10^{3}$$ octets - 1 000 bits              |
+| 1 Mo (Mega octets) | $$10^{6}$$ octets - 1 000 000 bits          |
+| 1 Go (Giga octets) | $$10^{9}$$ octets - 1 000 000 000 bits      |
+| 1 To (Kilo octets) | $$10^{12}$$ octets - 1 000 000 000 000 bits |
 
 # Conversions
 ## Binaires
@@ -32,14 +32,14 @@ Pour rappel :
 <table width=auto align=center border="1">
     <tr>
         <td>Puissance de 2</td>
-        <td>2<SUP>7</SUP></td>
-        <td>2<SUP>6</SUP></td>
-        <td>2<SUP>5</SUP></td>
-        <td>2<SUP>4</SUP></td>
-        <td>2<SUP>3</SUP></td>
-        <td>2<SUP>2</SUP></td>
-        <td>2<SUP>1</SUP></td>
-        <td>2<SUP>0</SUP></td>
+        <td>$$2^{7}$$></td>
+        <td>$2^{6}$$</td>
+        <td>$2^{5}$$</td>
+        <td>$$2^{4}$$</td>
+        <td>$$2^{3}$$</td>
+        <td>$$2^{2}$$</td>
+        <td>$$2^{1}$$</td>
+        <td>$$2^{0}$$</td>
     </tr>
     <tr>
         <td>Valeur Décimale</td>
@@ -56,17 +56,17 @@ Pour rappel :
 <p>Un exemple : convertir 230<SUB>10</SUB> en base 2:</p>
 
 <table border="" bordercolor="white" align=center>
-    <tr><td>De</td><td>230</td><td>on peut retirer</td><td>128 (2<SUP>7</SUP></td><td>reste</td><td>102</td><td>==></td><td>1</td><tr>
-    <tr><td>De</td><td>102</td><td>on peut retirer</td><td>64 (2<SUP>6</SUP>)</td><td>reste</td><td>38</td><td>==></td><td>1</td></tr>
-    <tr><td>De</td><td>38</td><td>on peut retirer</td><td>32 (2<SUP>5</SUP>)</td><td>reste</td><td>6</td><td>==></td><td>1</td></tr>
-    <tr><td>De</td><td>6</td><td>on ne peut pas retirer</td><td>16 (2<SUP>4</SUP>)</td><td>reste</td><td>6</td><td>==></td><td>0</td></tr>
-    <tr><td>De</td><td>6</td><td>on ne peut pas retirer</td><td>8 (2<SUP>3</SUP>)</td><td>reste</td><td>6</td><td>==></td><td>0</td></tr>
-    <tr><td>De</td><td>6</td><td>on peut retirer</td><td>4 (2<SUP>2</SUP>)</td><td>reste</td><td>2</td><td>==></td><td>1</td></tr>
-    <tr><td>De</td><td>2</td><td>on peut retirer</td><td>2 (2<SUP>1</SUP>)</td><td>reste</td><td>0</td><td>==></td><td>1</td></tr>
-    <tr><td>De</td><td>0</td><td>on ne peut pas retirer</td><td>1 (2<SUP>0</SUP>)</td><td>reste</td><td>0</td><td>==></td><td>0</td></tr>
+    <tr><td>De</td><td>230</td><td>on peut retirer</td><td>128 ($$2^{7}$$</td><td>reste</td><td>102</td><td>==></td><td>1</td><tr>
+    <tr><td>De</td><td>102</td><td>on peut retirer</td><td>64 ($$2^{6}$$)</td><td>reste</td><td>38</td><td>==></td><td>1</td></tr>
+    <tr><td>De</td><td>38</td><td>on peut retirer</td><td>32 ($$2^{5}$$)</td><td>reste</td><td>6</td><td>==></td><td>1</td></tr>
+    <tr><td>De</td><td>6</td><td>on ne peut pas retirer</td><td>16 ($$2^{4}$$)</td><td>reste</td><td>6</td><td>==></td><td>0</td></tr>
+    <tr><td>De</td><td>6</td><td>on ne peut pas retirer</td><td>8 ($$2^{3}$$)</td><td>reste</td><td>6</td><td>==></td><td>0</td></tr>
+    <tr><td>De</td><td>6</td><td>on peut retirer</td><td>4 ($$2^{2}$$)</td><td>reste</td><td>2</td><td>==></td><td>1</td></tr>
+    <tr><td>De</td><td>2</td><td>on peut retirer</td><td>2 ($$2^{1}$$)</td><td>reste</td><td>0</td><td>==></td><td>1</td></tr>
+    <tr><td>De</td><td>0</td><td>on ne peut pas retirer</td><td>1 ($$2^{0}$$)</td><td>reste</td><td>0</td><td>==></td><td>0</td></tr>
 </table>
 
-<p>Le résultat est 230<SUB>10</SUB> => 11100110<SUB>2</SUB>.</p>
+Le résultat est $$230^(_10)$$ => $$11100110^(_2)$$.
 
 
 ### Binaire vers Décimal
@@ -95,8 +95,10 @@ L'hexadécimal est donc un alphabet de 16 symboles:
 </table>
 
 ### Hexadécimal vers Décimal
-Cette conversion repose sur le même principe que la conversion binaire vers décimal sauf qu'on utilise les puissances de 16. Les poids sont par exemple: 16<SUP>0</SUP> = 1, 16<SUP>1</SUP> = 16, 16<SUP>2</SUP> = 256, 16<SUP>3</SUP> = 4096.
-
+Cette conversion repose sur le même principe que la conversion binaire vers décimal sauf qu'on utilise les puissances de 16.
+Les poids sont par exemple: 16<SUP>0</SUP> = 1, 16<SUP>1</SUP> = 16, 16<SUP>2</SUP> = 256, 16<SUP>3</SUP> = 4096.
+Exemple: convertir 13D<SUB>16</SUB> en base 10
+    > 1*16<SUP>2</SUP>
 
 
 
