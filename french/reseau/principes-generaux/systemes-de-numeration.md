@@ -14,8 +14,8 @@ Le binaire repose donc sur la base 2, pour 2 symboles. L'écriture d'un nombre b
 
 En anglais, octet se traduit par **byte**. Il est donc nécessaire de ne pas confondre **bit** et **byte**. 1Ko = 1KB.
 
-| Mesure             | Correspondance                                  |
-| ------------------ | ----------------------------------------------- |
+|       Mesure       | Correspondance                            |
+| :----------------: | :---------------------------------------- |
 | 1 Ko (Kilo octets) | $$10^3$$ octets - 1 000 bits              |
 | 1 Mo (Mega octets) | $$10^6$$ octets - 1 000 000 bits          |
 | 1 Go (Giga octets) | $$10^9$$ octets - 1 000 000 000 bits      |
@@ -32,22 +32,19 @@ Le résultat de la conversion est obtenu par la lecture du reste des divisions e
 ### Décimal vers binaire par soustractions successives
 Le principe est de soustraire les puissances de 2 de la plus grande possible à la plus petite. Si on peut soustraire la puissance au nombre décimal, on note un **1** sinon **0**.
 Pour rappel :
-<table width=auto align=center border="1">
-    <tr><td>Puissance de 2</td><td>$$2^7$$</td><td>$$2^6$$</td><td>$$2^5$$</td><td>$$2^4$$</td><td>$$2^3$$</td><td>$$2^2$$</td><td>$$2^1$$</td><td>$$2^0$$</td></tr>
-    <tr><td>Valeur Décimale</td><td>128</td><td>64</td><td>32</td><td>16</td><td>8</td><td>4</td><td>2</td><td>1</td></tr>
-</table>
-Un exemple : convertir $$230_10$$ en base 2:
+| Puissance de 2  | $$2^7$$ | $$2^6$$ | $$2^5$$ | $$2^4$$ | $$2^3$$ | $$2^2$$ | $$2^1$$ | $$2^0$$ |
+| --------------- | :-----: | :-----: | :-----: | :-----: | :-----: | :-----: | :-----: | :-----: |
+| Valeur décimale |   128   |   64    |   32    |   16    |    8    |    4    |    2    |    1    |
 
-<table border="" bordercolor="white" align=center>
-    <tr><td>De</td><td>230</td><td>on peut retirer</td><td>128 ( $$2^7$$ )</td><td>reste</td><td>102</td><td>==></td><td>1</td><tr>
-    <tr><td>De</td><td>102</td><td>on peut retirer</td><td>64 ( $$2^6$$ )</td><td>reste</td><td>38</td><td>==></td><td>1</td></tr>
-    <tr><td>De</td><td>38</td><td>on peut retirer</td><td>32 ( $$2^5$$ )</td><td>reste</td><td>6</td><td>==></td><td>1</td></tr>
-    <tr><td>De</td><td>6</td><td>on ne peut pas retirer</td><td>16 ( $$2^4$$ )</td><td>reste</td><td>6</td><td>==></td><td>0</td></tr>
-    <tr><td>De</td><td>6</td><td>on ne peut pas retirer</td><td>8 ( $$2^3$$ )</td><td>reste</td><td>6</td><td>==></td><td>0</td></tr>
-    <tr><td>De</td><td>6</td><td>on peut retirer</td><td>4 ( $$2^2$$ )</td><td>reste</td><td>2</td><td>==></td><td>1</td></tr>
-    <tr><td>De</td><td>2</td><td>on peut retirer</td><td>2 ( $$2^1$$ )</td><td>reste</td><td>0</td><td>==></td><td>1</td></tr>
-    <tr><td>De</td><td>0</td><td>on ne peut pas retirer</td><td>1 ( $$2^0$$ )</td><td>reste</td><td>0</td><td>==></td><td>0</td></tr>
-</table>
+Un exemple : convertir $$230_10$$ en base 2:
+- De 230 on peut retirer 128 ($$2^7$$) reste 102 ==> 1
+- De 102 on peut retirer 64 ($$2^6$$) reste 38 ==> 1
+- De 38 on peut retirer 32 ($$2^5$$) reste 6 ==> 1
+- De 6 on ne peut pas retirer 16 ($$2^4$$) reste 6 ==> 0
+- De 6 on ne peut pas retirer 8 ($$2^3$$) reste 6 ==> 0 
+- De 6 on peut retirer 4 ($$2^2$$) reste 2 ==> 1
+- De 2 on peut retirer 2 ($$2^1$$) reste 0 ==> 1
+- De 0 on ne peut pas retirer 1 ($$2^0$$) reste 0 ==> 0
 
 Le résultat est $$230_10$$ => $$11100110_2$$.
 
@@ -59,23 +56,22 @@ A l'inverse, le bit le plus à gauche est le **MSB** (*Most Significant Bit* - *
 Pour faire la conversion de binaire à décimal, on va donc multiplier la valeur du bit (0 ou 1) par son *poids binaire*, puis on effectue la somme des résultats obtenus.
 
 exemple: $$110011_2$$ à convertir en décimal.
-<table border="0" bordercolor="white" align="center">
-    <tr><td>1</td><td></td><td>1</td><td></td><td>0</td><td></td><td>0</td><td></td><td>1</td><td></td><td>1</td></tr>
-    <tr><td>*</td><td></td><td>*</td><td></td><td>*</td><td></td><td>*</td><td></td><td>*</td><td></td><td>*</td></tr>
-    <tr><td>$$2^5$$</td><td></td><td>$$2^4$$</td><td></td><td>$$2^3$$</td><td></td><td>$$2^2$$</td><td></td><td>$$2^1$$</td><td></td><td>$$2^0$$</td></tr>
-    <tr><td>(32)</td><td></td><td>(16)</td><td></td><td>(8)</td><td></td><td>(4)</td><td></td><td>(2)</td><td></td><td>(1)</td></tr>
-    <tr><td>=</td><td></td><td>=</td><td></td><td>=</td><td></td><td>=</td><td></td><td>=</td><td></td><td>=</td></tr>
-    <tr><td>32</td><td>+</td><td>16</td><td>+</td><td>0</td><td>+</td><td>0</td><td>+</td><td>2</td><td>+</td><td>1</td></tr>
-</table>
+* 1 * $$2^5$$ (32) = 32
+* 1 * $$2^4$$ (16) = 16
+* 0 * $$2^3$$ (8)  = 0
+* 0 * $$2^2$$ (4)  = 0
+* 1 * $$2^1$$ (2)  = 2
+* 1 * $$2^0$$ (1)  = 1
+
 Donc $$110011_2$$ => $$51_10$$.
 
 ## Hexadécimales
 Lorsque qu'il s'agit de grandes séries binaires, ce langage devient très difficile à traiter par l'Homme. Le système d'hexadécimal (base 16) est donc utilisé.
 L'hexadécimal est donc un alphabet de 16 symboles:
-<table border="0" bordercolor="white" align="center">
-    <tr><td>Base 16</td><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>A</td><td>B</td><td>C</td><td>D</td><td>E</td><td>F</td></tr>
-    <tr><td>Base 10</td><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td></tr>
-</table>
+| Base 16 | 0   | 1   | 2   | 3   | 4   | 5   | 6   | 7   | 8   | 9   | A   | B   | C   | D   | E   | F   |
+| ------- | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+| Base 10 | 0   | 1   | 2   | 3   | 4   | 5   | 6   | 7   | 8   | 9   | 10  | 11  | 12  | 13  | 14  | 15  |
+
 
 ### Hexadécimal vers Décimal
 Cette conversion repose sur le même principe que la conversion binaire vers décimal sauf qu'on utilise les puissances de 16.
@@ -92,7 +88,7 @@ Exemple: convertir $$13D_16$$ en base 10
 ### Portes Logiques
 
 | Porte | Explication                                                                                                   |
-| ----- | ------------------------------------------------------------------------------------------------------------- |
+| :---: | ------------------------------------------------------------------------------------------------------------- |
 | AND   | ET : le résultat de l'opération prend la valeur `true` si les deux valeurs sont `true`                        |
 | OR    | OU : le résultat de l'opération prend la valeur `true` si au moins une des deux valeurs est `true`            |
 | XOR   | Ou Exclusif : le résultat de l'opération prend la valeur true si eclusivement une des deux valeurs est `true` |
