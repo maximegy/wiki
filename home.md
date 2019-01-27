@@ -6,6 +6,7 @@
 https://uptime.com/freetools
 https://downforeveryoneorjustme.com
 https://builtwith.com
+https://gist.github.com/rxaviers/7360908
 # Réseau
 https://github.com/charlax/professional-programming
 https://web.stanford.edu/class/msande91si/www-spr04/readings/week1/InternetWhitepaper.htm
