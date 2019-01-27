@@ -33,7 +33,7 @@ Le résultat de la conversion est obtenu par la lecture du reste des divisions e
 Le principe est de soustraire les puissances de 2 de la plus grande possible à la plus petite. Si on peut soustraire la puissance au nombre décimal, on note un **1** sinon **0**.
 Pour rappel :
 <table width=auto align=center border="1">
-    <tr><td>Puissance de 2</td><td>$$2^{7}$$></td><td>$2^{6}$$</td><td>$2^{5}$$</td><td>$$2^{4}$$</td><td>$$2^{3}$$</td><td>$$2^{2}$$</td><td>$$2^{1}$$</td><td>$$2^{0}$$</td></tr>
+    <tr><td>Puissance de 2</td><td>$$2^{7}$$</td><td>$$2^{6}$$</td><td>$$2^{5}$$</td><td>$$2^{4}$$</td><td>$$2^{3}$$</td><td>$$2^{2}$$</td><td>$$2^{1}$$</td><td>$$2^{0}$$</td></tr>
     <tr><td>Valeur Décimale</td><td>128</td><td>64</td><td>32</td><td>16</td><td>8</td><td>4</td><td>2</td><td>1</td></tr>
 </table>
 Un exemple : convertir $$230^{10}$$ en base 2:
