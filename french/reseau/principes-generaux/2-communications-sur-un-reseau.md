@@ -27,7 +27,7 @@ L'inconvénient que présente l'utilisation de la segmentation et du multiplexag
 
 ## Composants du réseau
 Le chemin emprunté par un message depuis une source vers une destination peut être aussi simple sue le connexion entre deux ordinateurs ou aussi complexe qu'un réseau parcourant de globe terrestre.
-Cette **[color=#FB0000]infrastructure réseau[/color]** constitue la **[color=#FB0000]plateforme réseau[/color]**.
+Cette **[color=#FB0000]infrastructure réseau[/color]** constitue la [color=#FB0000]plateforme réseau[/color].
 
 ## Périphériques finaux et leur rôle sur le réseau
 
