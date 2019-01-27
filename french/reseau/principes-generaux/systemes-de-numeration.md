@@ -53,7 +53,7 @@ Pour rappel :
         <td>1</td>
     </tr>
 </table>
-Un exemple : convertir 230<SUB>10</SUB> en base 2:
+<p>Un exemple : convertir 230<SUB>10</SUB> en base 2:</p>
 
 <table border="" bordercolor="white" align=center>
     <tr><td>De</td><td>230</td><td>on peut retirer</td><td>128 (2<SUP>7</SUP></td><td>reste</td><td>102</td><td>==></td><td>1</td><tr>
@@ -65,7 +65,8 @@ Un exemple : convertir 230<SUB>10</SUB> en base 2:
     <tr><td>De</td><td>2</td><td>on peut retirer</td><td>2 (2<SUP>1</SUP>)</td><td>reste</td><td>0</td><td>==></td><td>1</td></tr>
     <tr><td>De</td><td>0</td><td>on ne peut pas retirer</td><td>1 (2<SUP>0</SUP>)</td><td>reste</td><td>0</td><td>==></td><td>0</td></tr>
 </table>
-Le résultat est 230<SUB>10</SUB> => 11100110<SUB>2</SUB>.
+
+<p>Le résultat est 230<SUB>10</SUB> => 11100110<SUB>2</SUB>.</p>
 
 
 ### Binaire vers Décimal
@@ -73,7 +74,8 @@ Chaque bit d'un octet n'a pas le même poids. Le bit le plus à droite est le **
 A l'inverse, le bit le plus à gauche est le **MSB** (*Most Significant Bit* - *bit de poids fort*), il peut prendre la valeur **0** ou **2<SUP>7</SUP>=128**.
 
 Pour faire la conversion de binaire à décimal, on va donc multiplier la valeur du bit (0 ou 1) par son *poids binaire*, puis on effectue la somme des résultats obtenus.
-exemple: 110011<SUB>2</SUB> à convertir en décimal.
+
+<p>exemple: 110011<SUB>2</SUB> à convertir en décimal.</p>
 <table border="0" bordercolor="white" align="center">
     <tr><td>1</td><td></td><td>1</td><td></td><td>0</td><td></td><td>0</td><td></td><td>1</td><td></td><td>1</td></tr>
     <tr><td>*</td><td></td><td>*</td><td></td><td>*</td><td></td><td>*</td><td></td><td>*</td><td></td><td>*</td></tr>
@@ -82,7 +84,7 @@ exemple: 110011<SUB>2</SUB> à convertir en décimal.
     <tr><td>=</td><td></td><td>=</td><td></td><td>=</td><td></td><td>=</td><td></td><td>=</td><td></td><td>=</td></tr>
     <tr><td>32</td><td>+</td><td>16</td><td>+</td><td>0</td><td>+</td><td>0</td><td>+</td><td>2</td><td>+</td><td>1</td></tr>
 </table>
-Donc 110011<SUB>2</SUB> => 51<SUB>10</SUB>
+<p>onc 110011<SUB>2</SUB> => 51<SUB>10</SUB></p>
 
 ## Hexadécimales
 Lorsque qu'il s'agit de grandes séries binaires, ce langage devient très difficile à traiter par l'Homme. Le système d'hexadécimal (base 16) est donc utilisé.
