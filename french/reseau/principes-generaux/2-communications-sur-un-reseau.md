@@ -144,3 +144,22 @@ En plus de ces représentations, une terminologie spécialisée est étudiée po
 * <span style="color:red">Carte réseau</span>: ou adaptateur, fournit la connexion physique au réseau à partir de l'ordinateur ou d'un autre périphérique hôte. Les supports qui relient l'ordinateur au périphérique réseau se branchent directement à la carte réseau.
 * <span style="color:red">Port physique</span>: connecteur ou prise sur un périphérique réseau auquel le support est connecté à un hôte ou autre périphérique réseau.
 * <span style="color:red">Interface</span>: ports spécialisés sur un périphérique réseau qui se connectent à des réseaux individuels. Puisque les routeurs sont utilisés pour interconnecter des réseaux, les ports sur un routeur sont appelés interfaces réseau.
+
+# Protocoles réseau
+## Les règles qui régissent les communications
+Toutes les communications sont régies par des <span style="color:red">règles prédéterminées</span> appelées <span style="color:red">protocoles</span>. Dans nos communications personnelles quotidiennes, les règles que nous utilisons pour communiquer à travers un support (un appel téléphonique, par exemple) ne sont pas forcémment identiques au protocole d'utilisation d'un autre support tel que l'envoi d'une lettre.
+
+La réussite d'une communication entre des hôtes sur un réseau requiert l'interaction de nombreux protocoles différents. Un groupe de protocoles associés entre eux et nécessaires pour remplir une fonction de communication est appelé <span style="color:red">suite de protocoles</span>. Ces protocoles sont impémentés dans le logiciel et le matériel installés sur chaque hôte et périphérique réseau.
+
+L'une des meilleures manières pour visualiser la manière dont l'ensemble de ces protocoles interagit sur un hôte spécifique est de l'afficher sous forme de pile.
+Une <span style="color:red">pile de protocoles</span> indique la manière dont des protocoles individuels au sein d'une suite sont implémentés sur l'hôte. Les protocoles sont affichés sous forme de hiérarchie en couches.
+Le protocole A sert à faire l'interface avec l'utilisateur et fait appel au protocole B pour communiquer.
+Les fonctionnalités du protocole B permettent de répondre au service demandé par A et pour cela il fait appel au protocole C qui est en mesure de proposer d'autres fonctionnalités. Idem pour le protocole C et les autres.
+
+Une suite de protocoles réseau doit décrire des exigences et des interactions précises. Les suites de protocoles réseau décrivent des processus tels que:
+* Le format ou la structure du message,
+* La méthode selon laquelle des périphériques réseau partagent des informations sur des chemins avec d'autres réseaux,
+* Comment et à quel moment des messages d'erreur et système sont transférés entre des périphériques,
+* La configuration et l'arrêt des sessions de transfert de données.
+
+Certains protocoles peuvent être spécifiques à un fournisseur. il en est le propriétaire. <span style="color:red">Propriétaire</span>, dans ce contexte, signifie qu'une société ou qu'un <span style="color:red">*fournisseur contrôle la définition du protocole* et *la manière dont il fonctionne*</span>. Certains protocoles propriétaires peuvent être utilisés par différentes organisations avec l'autorisation du propriétaire. D'autres peuvent uniquement être implémentés sur du matériel fabriqué par le fournisseur propriétaire.
