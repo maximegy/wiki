@@ -27,7 +27,14 @@ L'inconvénient que présente l'utilisation de la segmentation et du multiplexag
 
 ## Composants du réseau
 Le chemin emprunté par un message depuis une source vers une destination peut être aussi simple sue le connexion entre deux ordinateurs ou aussi complexe qu'un réseau parcourant de globe terrestre.
-Cette <span style="color:red">infrastructure réseau</span> constitue la <span style="color:red">plateforme réseau</span>.
+Cette <span style="color:red">infrastructure réseau</span> constitue la <span style="color:red">plateforme réseau</span>. Elle fournit le canal stable et fiable à travers lequel nos communications peuvent s'établir.
+
+Les <span style="color:red">périphériques</color> et mes <span style="color:red">supports</span> représentent les éléments physiques ou le matériel du réseau. Le matériel correspond souvent aux composants visibles de la plateforme réseau, tel qu'un ordinateur portable, un ordinateur de bureau, un commutateur ou le câblage qui sert à relier les périphériques. Parfois, certains composants ne sont pas visibles. Dans le cas d'un support sans fil, les messages sont transmis à travers l'aur, à l'aide d'une fréquence radio ou d'ondes infrarouges invisibles.
+
+Les <span style="color:red">services</span> et les <span style="color:red">processus</span> constituent les programmes de communication, appelés logiciels, qui sont exécutés sur les périphériques réseau.
+* Un service réseau fournit des informations en réponse à une demande. Les services incluent de nombreuses applications réseau courantes et les services d'hébergement Web.
+* Les processus fournissent les fonctionnalités qui dirigent et déplacent les messages à travers le réseau. Les processus nous semblent moins évidents, mais ils sont essentiels au fonctionnement des réseaux.
+
 
 ## Périphériques finaux et leur rôle sur le réseau
 
