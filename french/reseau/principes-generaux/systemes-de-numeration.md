@@ -52,6 +52,7 @@ Pour rappel :
         <td>1</td>
     </tr>
 </table>
+Un exemple : convertir 230<SUB>10</SUB> en base 2:
 
 
 
