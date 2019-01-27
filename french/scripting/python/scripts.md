@@ -8,11 +8,11 @@
 ## Comparaison Booléennes
 ### Portes Logiques
 
-|Porte|Explication|
-|------|------------|
-|AND| ET : le résultat de l'opération prend la valeur `true` si les deux valeurs sont `true` |
-|OR| OU : le résultat de l'opération prend la valeur `true` si au moins une des deux valeurs est `true`|
-|XOR| Ou Exclusif : le résultat de l'opération prend la valeur true si eclusivement une des deux valeurs est `true`|
+| Porte | Explication                                                                                                   |
+| ----- | ------------------------------------------------------------------------------------------------------------- |
+| AND   | ET : le résultat de l'opération prend la valeur `true` si les deux valeurs sont `true`                        |
+| OR    | OU : le résultat de l'opération prend la valeur `true` si au moins une des deux valeurs est `true`            |
+| XOR   | Ou Exclusif : le résultat de l'opération prend la valeur true si eclusivement une des deux valeurs est `true` |
 
 ### Tables de Vérités
 Une table de vérité est une table mathématique utilisée en logique, en particulier pour  l'algèbre de Boole, pour représenter des expressions logiques.
@@ -20,31 +20,31 @@ Une table de vérité est composée d'une colonne pour chaque variable imputée 
 
 #### Table de vérité ET
 
-   | A | B | A ET B |
-   |---|---|--------|
-   | 0 | 0 | 0 |
-   | 0 | 1 | 0 |
-   | 1 | 0 | 0 |
-   | 1 | 1 | 1 |
+   | A   | B   | A ET B |
+   | --- | --- | ------ |
+   | 0   | 0   | 0      |
+   | 0   | 1   | 0      |
+   | 1   | 0   | 0      |
+   | 1   | 1   | 1      |
 
 
 #### Table de vérité OU
 	 
-| A | B | A OU B |
-|---|---|---------|
-| 0 | 0 | 0 |
-| 0 | 1 | 1 |
-| 1 | 0 | 1 |
-| 1 | 1 | 1 |
+| A   | B   | A OU B |
+| --- | --- | ------ |
+| 0   | 0   | 0      |
+| 0   | 1   | 1      |
+| 1   | 0   | 1      |
+| 1   | 1   | 1      |
 
 #### Table de vérité XOR
 
-| A | B | A XOR B |
-|---|---|-----------|
-| 0 | 0 | 0 |
-| 0 | 1 | 1 |
-| 1 | 0 | 1 |
-| 1 | 1 | 0 |
+| A   | B   | A XOR B |
+| --- | --- | ------- |
+| 0   | 0   | 0       |
+| 0   | 1   | 1       |
+| 1   | 0   | 1       |
+| 1   | 1   | 0       |
 
 # Boucles
 ## While

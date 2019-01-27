@@ -12,11 +12,11 @@ Le binaire repose donc sur la base 2, pour 2 symboles. L'écriture d'un nombre b
 
 En anglais octet se traduit par **byte**. Il est donc nécessaire de ne pas confondre bit et byte. 1Ko = 1KB.
 
-|Mesure|Correspondance|
-|--------|------------------|
-| 1 Ko (Kilo octets) | 10<SUP>3</SUP> octets - 1 000 bits |
-| 1 Mo (Mega octets) | 10<SUP>6</SUP> octets - 1 000 000 bits |
-| 1 Go (Giga octets) | 10<SUP>9</SUP> octets - 1 000 000 000 bits |
+| Mesure             | Correspondance                                  |
+| ------------------ | ----------------------------------------------- |
+| 1 Ko (Kilo octets) | 10<SUP>3</SUP> octets - 1 000 bits              |
+| 1 Mo (Mega octets) | 10<SUP>6</SUP> octets - 1 000 000 bits          |
+| 1 Go (Giga octets) | 10<SUP>9</SUP> octets - 1 000 000 000 bits      |
 | 1 To (Kilo octets) | 10<SUP>12</SUP> octets - 1 000 000 000 000 bits |
 
 # Conversions
@@ -28,7 +28,7 @@ Le résultat de la conversion est obtenu par la lecture du reste des divisions e
 ## Décimal vers binaire par soustractions successives
 Le principe est de soustraire les puissances de 2 de la plus grande possible à la plus petite. Si on peut soustraire la puissance au nombre décimal, on note un **1** sinon **0**.
 Pour rappel :
-<table class="tftable" border="1">
+<table width=auto; align=center border="1">
     <tr>
         <td>Puissance de 2</td>
         <td>2<SUP>7</SUP></td>

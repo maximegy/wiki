@@ -33,12 +33,12 @@ Les deux derniers logiciels permettent :
 
 ## Versions
 Depuis sa création, PowerShell a évolué jusqu'à devenir un langage puissant et très flexible.
-| |Server 2003 et 2003 R2|Server 2008 et 2008 R2|Server 2012 et 2012 R2|Windows 7 et 8.1|Windows 8|Windows 10|
-|-|-------------------------|--------------------------|-------------------------|-------------------|------------|--------------|
-|Version 1| OK | NOK | NOK | NOK | NOK | NOK |
-|Version 2| OK | OK | OK | OK | OK | NOK |
-|Version 3| NOK | OK | OK | OK | OK | NOK |
-|Version 4 et +| NOK | OK | OK | OK | NOK | OK |
+|                | Server 2003 et 2003 R2 | Server 2008 et 2008 R2 | Server 2012 et 2012 R2 | Windows 7 et 8.1 | Windows 8 | Windows 10 |
+| -------------- | ---------------------- | ---------------------- | ---------------------- | ---------------- | --------- | ---------- |
+| Version 1      | OK                     | NOK                    | NOK                    | NOK              | NOK       | NOK        |
+| Version 2      | OK                     | OK                     | OK                     | OK               | OK        | NOK        |
+| Version 3      | NOK                    | OK                     | OK                     | OK               | OK        | NOK        |
+| Version 4 et + | NOK                    | OK                     | OK                     | OK               | NOK       | OK         |
 
 La version de Powershell est stockée dans la variable système `$host`. Pour obtenir seulement la version : `$host.version`.
 

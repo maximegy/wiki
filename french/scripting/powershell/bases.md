@@ -6,27 +6,27 @@ Documentation officielle : [docs.microsoft.com](https://docs.microsoft.com/en-us
 -----
 
 # Symboles
-|Symbole|Nom|Description|
-|---------|------|------------|
-|**$**|Dollar|Préfixe le nom d'une variable, `$_` est l'objet en cours.|
-|**[]**|Crochets|Encadre un type de variable ou l'indice des éléments d'un tableau. <br/> Exemple: `[int]`, `$var`ou `$tableau[$i]`|
-|**{}**|Accolades|Encadre un ensemble de code (bloc d'instructions, expressions, filtres, boucles, ...)|
-|**()**|Parenthèses|Groupe de commandes ou d'expressions (évite l'ambiguité des évaluations)|
-|**\|**|Pipe|Pipeline (enchainement de commandes et/ou de filtres), peut être mis en fin d'une ligne de commande dans un script, la suite sur la ligne suivante|
-|**.**|Point|Membre d'une instance d'objet (méthode ou propriété), séparateur décimal (la virgule étant un séparateur de valeur)|
-|**,**|Virgule|Séparateur de valeur, typiquement pour les éléments d'un tableau|
-|**..**|Point Point|Plage de valeurs (exemple 1..10 désigne tous les chiffres de 1 à 10)|
-|**::**|Double 2 points|Membre statique d'une classe .NET|
-|**%**|Pourcent|Reste de division (Modulo) Ou alias de la commande de boucle ForEach `%{_}`|
-|**#**|Dièse|Commentaire ou <# bloc de commentaire #>|
-|**\`**|Anti-quotte <br/> ou Backtick|Caractère d'échappement (évite l'interpretation du caractère qui suit), permet de couper une ligne d'instruction s'il est situé en fin de ligne|
-|**?**|Point d'interrogation|Alias de la commande `Where-Object`|
-|**;**|Point virgule|Permet d'écrire plusieurs instructions sur la même ligne (ou de terminer explicitement une ligne d'instruction, et ainsi éviter une erreur d'interprétation lorsque le retour ligne est supprimé)|
-|**@**|Arrobase|Tableau de valeurs si suivi de parenthèses `@()` ou table de hachage si suivi d'accolades @{}. Cas particulier pour du texte @' string '@|
-|**&**|Esperuette|Opérateur d'invocation ou d'appel (Execution d'un bloc de script ou d'une commande)|
-|**!**|Point d'exclamation|Opérateur logique d'inversion équivalent à "-not"|
-|**"**|Guillements|Encadre typiquement une chaine "non protégée". Les variables $... sont remplacées par leur valeur respective ou rien si vide|
-|**'**|Simple quottes|Encadre strictement une chaine en évitant toute interprétation des caractères qu'elle contient"|
+| Symbole | Nom                           | Description                                                                                                                                                                                       |
+| ------- | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **$**   | Dollar                        | Préfixe le nom d'une variable, `$_` est l'objet en cours.                                                                                                                                         |
+| **[]**  | Crochets                      | Encadre un type de variable ou l'indice des éléments d'un tableau. <br/> Exemple: `[int]`, `$var`ou `$tableau[$i]`                                                                                |
+| **{}**  | Accolades                     | Encadre un ensemble de code (bloc d'instructions, expressions, filtres, boucles, ...)                                                                                                             |
+| **()**  | Parenthèses                   | Groupe de commandes ou d'expressions (évite l'ambiguité des évaluations)                                                                                                                          |
+| **\|**  | Pipe                          | Pipeline (enchainement de commandes et/ou de filtres), peut être mis en fin d'une ligne de commande dans un script, la suite sur la ligne suivante                                                |
+| **.**   | Point                         | Membre d'une instance d'objet (méthode ou propriété), séparateur décimal (la virgule étant un séparateur de valeur)                                                                               |
+| **,**   | Virgule                       | Séparateur de valeur, typiquement pour les éléments d'un tableau                                                                                                                                  |
+| **..**  | Point Point                   | Plage de valeurs (exemple 1..10 désigne tous les chiffres de 1 à 10)                                                                                                                              |
+| **::**  | Double 2 points               | Membre statique d'une classe .NET                                                                                                                                                                 |
+| **%**   | Pourcent                      | Reste de division (Modulo) Ou alias de la commande de boucle ForEach `%{_}`                                                                                                                       |
+| **#**   | Dièse                         | Commentaire ou <# bloc de commentaire #>                                                                                                                                                          |
+| **\`**  | Anti-quotte <br/> ou Backtick | Caractère d'échappement (évite l'interpretation du caractère qui suit), permet de couper une ligne d'instruction s'il est situé en fin de ligne                                                   |
+| **?**   | Point d'interrogation         | Alias de la commande `Where-Object`                                                                                                                                                               |
+| **;**   | Point virgule                 | Permet d'écrire plusieurs instructions sur la même ligne (ou de terminer explicitement une ligne d'instruction, et ainsi éviter une erreur d'interprétation lorsque le retour ligne est supprimé) |
+| **@**   | Arrobase                      | Tableau de valeurs si suivi de parenthèses `@()` ou table de hachage si suivi d'accolades @{}. Cas particulier pour du texte @' string '@                                                         |
+| **&**   | Esperuette                    | Opérateur d'invocation ou d'appel (Execution d'un bloc de script ou d'une commande)                                                                                                               |
+| **!**   | Point d'exclamation           | Opérateur logique d'inversion équivalent à "-not"                                                                                                                                                 |
+| **"**   | Guillements                   | Encadre typiquement une chaine "non protégée". Les variables $... sont remplacées par leur valeur respective ou rien si vide                                                                      |
+| **'**   | Simple quottes                | Encadre strictement une chaine en évitant toute interprétation des caractères qu'elle contient"                                                                                                   |
 
 
 

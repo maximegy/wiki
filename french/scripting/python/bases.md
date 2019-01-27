@@ -20,13 +20,13 @@ Attention toutefois, des règles de syntaxe d'appliquent :
 * Python est sensible à la casse, donc bonjour, Bonjour, BONjour et BoNjOuR sont des variables différentes.
 * Il existe des mots réservés qui sont utilisés par Python :
 
-|and|del|from|none|true|as|
-|---|---|----|----|----|--|
-|elif|global|nonllocal|try|assert|else|
-|if|not|while|break|except|import|
-|or|with|class|false|in|pass|
-|yield|continue|finally|is|raise|def|
-|for|lambda|return||||
+| and   | del      | from      | none  | true   | as     |
+| ----- | -------- | --------- | ----- | ------ | ------ |
+| elif  | global   | nonllocal | try   | assert | else   |
+| if    | not      | while     | break | except | import |
+| or    | with     | class     | false | in     | pass   |
+| yield | continue | finally   | is    | raise  | def    |
+| for   | lambda   | return    |
 
 Il existe des conventions entre développeurs sur l'écriture des variables :
 - La première consiste à remplacer les espaces par des "`_`", par exemple `ma_variable`,
@@ -76,21 +76,21 @@ x =  8.3 <class 'float'>
 
 #### Opérateurs
 
-| Opérateur | Signification | Exemple |
-|-------------|---------------|----------|
-| `<<` ou `>>` | décalage de bit à gauche ou à droite, bitwise shift | `x = 8 << 1` |
-| `|` | opérateur logique `ou` | `x = 8 | 1` |
-| `&` | opérateur logique `et` | `x = 8 & 1` |
-| `+` ou `-` | addition ou soustraction| `x = a + b` - `x = a - b` |
-| `+=` ou `-=` | opération puis affectation | `x +=3` - `x -= 3` |
-| `*` ou `/` | multiplication ou division | `x = a * b` - `x = a / b` |
-| `*=` ou `/=` | opération puis affectation | `x +=3` - `x -= 3` |
-| `//` | division entière, renvoie le quotient de la division | `x = a // b` |
-| `%` | reste d'une division - modulo | `x = a % b` |
-| `**` | puissance, `** 0.5` pour la racine carrée | `x = a ** 4` |
-| `int()` | conversion en nombre entier | `w = int(5.5)` |
-| `float()` | conversion en nombre réel | `w = float(8)` |
-| | on peut aussi convertir une chaîne de caractères | `w = int("5.5")` |
+| Opérateur    | Signification                                        | Exemple                   |
+| ------------ | ---------------------------------------------------- | ------------------------- |
+| `<<` ou `>>` | décalage de bit à gauche ou à droite, bitwise shift  | `x = 8 << 1`              |
+| `|`          | opérateur logique `ou`                               | `x = 8 | 1`               |
+| `&`          | opérateur logique `et`                               | `x = 8 & 1`               |
+| `+` ou `-`   | addition ou soustraction                             | `x = a + b` - `x = a - b` |
+| `+=` ou `-=` | opération puis affectation                           | `x +=3` - `x -= 3`        |
+| `*` ou `/`   | multiplication ou division                           | `x = a * b` - `x = a / b` |
+| `*=` ou `/=` | opération puis affectation                           | `x +=3` - `x -= 3`        |
+| `//`         | division entière, renvoie le quotient de la division | `x = a // b`              |
+| `%`          | reste d'une division - modulo                        | `x = a % b`               |
+| `**`         | puissance, `** 0.5` pour la racine carrée            | `x = a ** 4`              |
+| `int()`      | conversion en nombre entier                          | `w = int(5.5)`            |
+| `float()`    | conversion en nombre réel                            | `w = float(8)`            |
+|              | on peut aussi convertir une chaîne de caractères     | `w = int("5.5")`          |
 Attention toutefois, pour convertir une chaîne de caractère représentant un nombre réel en nombre entier, il faut d'abord la convertir en nombre réel puis en nombre entier :
 
 ```python

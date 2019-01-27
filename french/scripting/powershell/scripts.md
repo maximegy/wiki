@@ -22,20 +22,20 @@ Utilie pour suivre le déroulement d'un script et présenter des menus
 `Write-Verbose` : Permet d'afficher ou non le texte associé avec l'argument -Verbose
 
 ## Variables
-|Types|Description|
-|------|-------------|
-|array|liste de valeurs|
-|bool|valeur booléenne (Vrai ou Faux)|
-|byte|nombre en 8 bits|
-|char|suite de charactère en 16bits|
-|decimal|nombre pouvant comprendre un point en 128 bits|
-|single|nombre pouvant comprendre un point en 32 bits|
-|double|nombre pouvant comprendre un point en 64 bits|
-|hashtable|Stocker des objets sous forme de clé-valeur (key-value)|
-|int|entier sur 32 bits|
-|long| entier sur 64 bits|
-|string|chaine de caractère Unicode (2 milliards de caractères)|
-|xml|objet XML|
+| Types     | Description                                             |
+| --------- | ------------------------------------------------------- |
+| array     | liste de valeurs                                        |
+| bool      | valeur booléenne (Vrai ou Faux)                         |
+| byte      | nombre en 8 bits                                        |
+| char      | suite de charactère en 16bits                           |
+| decimal   | nombre pouvant comprendre un point en 128 bits          |
+| single    | nombre pouvant comprendre un point en 32 bits           |
+| double    | nombre pouvant comprendre un point en 64 bits           |
+| hashtable | Stocker des objets sous forme de clé-valeur (key-value) |
+| int       | entier sur 32 bits                                      |
+| long      | entier sur 64 bits                                      |
+| string    | chaine de caractère Unicode (2 milliards de caractères) |
+| xml       | objet XML                                               |
 
 
 
@@ -44,27 +44,27 @@ Utilie pour suivre le déroulement d'un script et présenter des menus
 ### Les comparateurs
 
 Les comparateurs permettent de specifier les conditions de comparaison des valeurs et de déterminer les valeurs qui correspondent aux modèles spécifiés.
-|Type|Opérateur|Description|
-|-----|------------|------------|
-|Egalité|`-eq`|égal à|
-||`-ne`|n'est pas égal à|
-||`-gt`|plus grand que|
-||`-ge`|plus grand ou égal|
-||`-lt`|plus petit que|
-||`-le`|plus petit ou égal|
-||`-c`|placé devant l'opérateur, active la sensibilité à la casse ex : `-ceq`|
-||`-i`|placé devant l'opérateur, explicite l'insensibilité à la casse ex : `-ieq`|
-|Correspondance|`-like`|Retourne Vrai si la chaine est semblable au motif|
-||`notlike`|Retourne Vrai si la chaine n'est pas semblable au motif|
-||`match`|Retourne vrai si la chaine correspond à l'expression régulière|
-||`notmatch`|Retourne vrai si la chaine ne correspond pas à l'expression régulière
-|||`$match`contient la chaîne correspondant à l'expression régulière|
-|Contenant|`-contains`|Retourne vrai quand le motif de référence est contenu dans  le motif|
-||`-notcontains`|Retourne vrai quand le motif de référence n'est pas contenu dans  le motif|
-||`-in`|Retourne vrai quand la valeur testée est contenue dans le motif|
-||`-notin`|Retourne vrai quand la valeur testée n'est pas contenue dans le motif|
-|Type|`-is`|Retourne vrai si les deux objets sont de même type|
-||`-isnot`|Retourne vrai si les objets ne sont pas de même type|
+| Type                                                              | Opérateur                                                                  | Description                                                          |
+| ----------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| Egalité                                                           | `-eq`                                                                      | égal à                                                               |
+| `-ne`                                                             | n'est pas égal à                                                           |
+| `-gt`                                                             | plus grand que                                                             |
+| `-ge`                                                             | plus grand ou égal                                                         |
+| `-lt`                                                             | plus petit que                                                             |
+| `-le`                                                             | plus petit ou égal                                                         |
+| `-c`                                                              | placé devant l'opérateur, active la sensibilité à la casse ex : `-ceq`     |
+| `-i`                                                              | placé devant l'opérateur, explicite l'insensibilité à la casse ex : `-ieq` |
+| Correspondance                                                    | `-like`                                                                    | Retourne Vrai si la chaine est semblable au motif                    |
+| `notlike`                                                         | Retourne Vrai si la chaine n'est pas semblable au motif                    |
+| `match`                                                           | Retourne vrai si la chaine correspond à l'expression régulière             |
+| `notmatch`                                                        | Retourne vrai si la chaine ne correspond pas à l'expression régulière      |
+| `$match`contient la chaîne correspondant à l'expression régulière |
+| Contenant                                                         | `-contains`                                                                | Retourne vrai quand le motif de référence est contenu dans  le motif |
+| `-notcontains`                                                    | Retourne vrai quand le motif de référence n'est pas contenu dans  le motif |
+| `-in`                                                             | Retourne vrai quand la valeur testée est contenue dans le motif            |
+| `-notin`                                                          | Retourne vrai quand la valeur testée n'est pas contenue dans le motif      |
+| Type                                                              | `-is`                                                                      | Retourne vrai si les deux objets sont de même type                   |
+| `-isnot`                                                          | Retourne vrai si les objets ne sont pas de même type                       |
 
 ## if then else elsif
 
@@ -85,11 +85,11 @@ Faire quelque chose
 
 L'élément peut être une dénomination de votre choix.
 $element vaut l'item de la liste d'element traité au niveau de la boucle:
-|liste|tour de boucle| valeur de `$element`|
-|----|----------------|----------------------|
-|toto|1|toto|
-|tata|2|tata|
-|titi|3|titi|
+| liste | tour de boucle | valeur de `$element` |
+| ----- | -------------- | -------------------- |
+| toto  | 1              | toto                 |
+| tata  | 2              | tata                 |
+| titi  | 3              | titi                 |
 Liste element vient d'une source, par exemple récupérée lrs d'une autre commande.
 Exemple:
 
