@@ -112,3 +112,13 @@ Les organisation individuelles utilisent généralement des connexions via un r�
 > **WAN** : <span style="color:red">W</span>ide <span style="color:red">A</span>rea <span style="color:red">N</span>etwork.
 Bien que l'organisation gère l'ensemble des stratégies et de l'administration des réseaux locaux aux deux extrémités de la connexion, les stratégies au sein du réseau du fournisseur de services de communications sont gérées par lui-même.
 Les réseaux étendus utilisent des périphériques réseau spécialement conçus pour effectuer les interconnexions entre les réseaux locaux : les <span style="color:red">routeurs</span>.
+
+## Interréseau
+La plupart d'entre nous devons communiquer avec une ressource sur un autre réseau, en dehors de notre organisation locale. Parmi les exmples de ce type de communication, citons:
+* l'envoi d'un courriel à un ami se trouvant dans un autre pays,
+* l'accès à des informations ou à des produits sur un site Web,
+* l'obtention d'un fichier à partir de l'ordinateur d'un voisin,
+* la messagerie instantanéee avec une connaissance qui se trouve dans une autre ville,
+* le suivi des résultats sportifs de son équipe favorite sur un téléphone portable.
+
+Pour répondre à ces besoins humains en matière de communication il faut interconnecter une multitude de réseaux. L'interréseau public le plus connu et dont l'utilisation est la plus répandue est *Internet*.
