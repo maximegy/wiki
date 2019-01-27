@@ -134,13 +134,13 @@ Les principaux symboles utilisés en réseau sont:
 
 <center>
 
-| Icône | Description             | Icône | Description                |
-| :---: | :---------------------: | :---: | :------------------------: |
-|![Routeur](/uploads/communication-sur-un-reseau/routeur.png "Routeur")| Routeur                 |![Commutateur](/uploads/communication-sur-un-reseau/commutateur.png "Commutateur")| Commutateur                |
-|![Routeur Sans Fil](/uploads/communication-sur-un-reseau/routeur-sans-fil.png "Routeur Sans Fil")| Routeur Wi-Fi           |![Pare Feu](/uploads/communication-sur-un-reseau/pare-feu.png "Pare Feu")| Pare-feu                   |
-|![Ordinateur](/uploads/communication-sur-un-reseau/ordinateur.png "Ordinateur")| Ordinateur de bureau    |![Ordinateur Portable](/uploads/communication-sur-un-reseau/ordinateur-portable.png "Ordinateur Portable")| Ordinateur Portable        |
-|![Serveur](/uploads/communication-sur-un-reseau/serveur.png "Serveur")| Serveur                 |![Sans Fil](/uploads/communication-sur-un-reseau/sans-fil.png "Sans Fil")| Support de réseau sans fil |
-|![Reseau Local](/uploads/communication-sur-un-reseau/reseau-local.png "Reseau Local")| Support de réseau local |![Etendu](/uploads/communication-sur-un-reseau/etendu.png "Etendu")| Support de réseau étendu   |
+|                                               Icône                                               |       Description       |                                                   Icône                                                    |        Description         |
+| :-----------------------------------------------------------------------------------------------: | :---------------------: | :--------------------------------------------------------------------------------------------------------: | :------------------------: |
+|              ![Routeur](/uploads/communication-sur-un-reseau/routeur.png "Routeur")               |         Routeur         |             ![Commutateur](/uploads/communication-sur-un-reseau/commutateur.png "Commutateur")             |        Commutateur         |
+| ![Routeur Sans Fil](/uploads/communication-sur-un-reseau/routeur-sans-fil.png "Routeur Sans Fil") |      Routeur Wi-Fi      |                 ![Pare Feu](/uploads/communication-sur-un-reseau/pare-feu.png "Pare Feu")                  |          Pare-feu          |
+|          ![Ordinateur](/uploads/communication-sur-un-reseau/ordinateur.png "Ordinateur")          |  Ordinateur de bureau   | ![Ordinateur Portable](/uploads/communication-sur-un-reseau/ordinateur-portable.png "Ordinateur Portable") |    Ordinateur Portable     |
+|              ![Serveur](/uploads/communication-sur-un-reseau/serveur.png "Serveur")               |         Serveur         |                 ![Sans Fil](/uploads/communication-sur-un-reseau/sans-fil.png "Sans Fil")                  | Support de réseau sans fil |
+|       ![Reseau Local](/uploads/communication-sur-un-reseau/reseau-local.png "Reseau Local")       | Support de réseau local |                    ![Etendu](/uploads/communication-sur-un-reseau/etendu.png "Etendu")                     |  Support de réseau étendu  |
 
 </center>
 
@@ -167,3 +167,12 @@ Une suite de protocoles réseau doit décrire des exigences et des interactions 
 * La configuration et l'arrêt des sessions de transfert de données.
 
 Certains protocoles peuvent être spécifiques à un fournisseur. il en est le propriétaire. <span style="color:red">Propriétaire</span>, dans ce contexte, signifie qu'une société ou qu'un <span style="color:red">*fournisseur contrôle la définition du protocole* et *la manière dont il fonctionne*</span>. Certains protocoles propriétaires peuvent être utilisés par différentes organisations avec l'autorisation du propriétaire. D'autres peuvent uniquement être implémentés sur du matériel fabriqué par le fournisseur propriétaire.
+
+## Protocoles et normes de l'industrie
+Souvent, de nombreux protocoles qui comprennent une suite de protocoles font référence à d'autres protocoles largement utilisés ou normes de l'industrie. Une <span style="color:red">norme</span> est un processus ou un protocole reconnu par l'industrie du réseau et ratifié par une organisation de normes, telle que l'Institute of Electrical and Electronics Engineers (<span style="color:red">IEEE</span>) ou le groupe de travail <span style="color:red">IUTF</span>.
+
+L'utilisation de normes dans le développement et l'implémentation de protocoles garantit que les produits provenant de différents fabricants peuvent fonctionner ensemble (interopérabilité) pour créer des communications efficaces. Si un fabricant spécifique n'adhère pas strictement à un protocole, son équipement ou ses logiciels risquent de ne pas communiquer avec les produits d'autres fabricants.
+
+Dans les communications de données, par exemple, si les extrémités d'une conversation utilisent des protocoles différents pour gérer une communication, en toute probabilité, aucune information ne peut être échangée.
+
+## Interaction des protocoles
