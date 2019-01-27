@@ -35,9 +35,20 @@ Les <span style="color:red">services</span> et les <span style="color:red">proce
 * Un service réseau fournit des informations en réponse à une demande. Les services incluent de nombreuses applications réseau courantes et les services d'hébergement Web.
 * Les processus fournissent les fonctionnalités qui dirigent et déplacent les messages à travers le réseau. Les processus nous semblent moins évidents, mais ils sont essentiels au fonctionnement des réseaux.
 
-
 ## Périphériques finaux et leur rôle sur le réseau
+Les péripériques réseau auxquels les personnes sont le plus habituées sont appelés <span style="color:red">périphériques finaux</span>. Ces périphériques forment l'interface entre le réseau humain et le réseau de communication sous-jacent. Certains de ces périphériques finaux sont les suivants:
+* Ordinateurs (stations de travail, portables, serveurs, ...),
+* Imprimantes réseaux,
+* Téléphones IP,
+* Caméras de surveillance,
+* Périphériques portables mobiles (lecteurs de code barres, smartphone, ...),
+* ...
 
+Dans le cas d'un réseau, les périphériques finaux sont appelés <span style="color:red">hôtes</span>. Un hôte constitue soit la source, soit la destination d'un message transmis à travers le réseau. Pour qu'il soit possible de faire une distinction entre les hôtes, chaque hôte sur un réseau est identifié par une <span style="color:red">adresse</span>. Lorsqu'un hôte démarre une communication, il utilise l'adresse de l'hôte de destination pour indiquer où le message doit être envoyé.
+
+Dans les réseaux actuels, un hôte peut jouer le rôle de <span style="color:red">client</span>, de <span style="color:red">serveur</span> ou les deux. Le logiciel installé sur l'hôte détermine son rôle sur le réseau:
+* Les <span style="color:red">serveurs</span> sont des hôtes équipés de logiciels leur permettant de fournir des informations et des services, commes les emails, des pages web, à d'autres hôtes sur le réseau.
+* Les <span style="color:red">clients</span> sont des hôtes équipés d'un logiciel qui leur permet de demander des informations auprès du serveur et de les traiter et/ou les afficher.
 
 ## Périphériques intermédiaires et leur rôle sur le réseau
 
