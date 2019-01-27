@@ -64,8 +64,8 @@ Un exemple : convertir 230<SUB>10</SUB> en base 2:
     <tr><td>De</td><td>2</td><td>on peut retirer</td><td>2 (2<SUP>1</SUP>)</td><td>reste</td><td>0</td><td>==></td><td>1</td></tr>
     <tr><td>De</td><td>0</td><td>on ne peut pas retirer</td><td>1 (2<SUP>0</SUP>)</td><td>reste</td><td>0</td><td>==></td><td>0</td></tr>
 </table>
+Le résultat est 230<SUB>10</SUB> => 11100110<SUB>2</SUB>.
 
-Le résultat est 230<SUB>10</SUB> => 11100110<SUB>2</SUB>
 
 ## Binaire vers Décimal
 Chaque bit d'un octet n'a pas le même poids. Le bit le plus à droite est le `LSB` (*Least Significant Bit* - *bit de poids faible*), il peut prendre la valeur **0** ou **2<SUP>0</SUP>=1**.
