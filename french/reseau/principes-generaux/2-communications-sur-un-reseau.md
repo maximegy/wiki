@@ -67,3 +67,20 @@ Les processus qui s'exécutent sur les périphériques du réseau intermédiaire
 - autoriser ou refuser le flux de données, selon des paramètres de sécurité.
 
 ## Supports réseau
+La communication à travers un réseau s'effectue sur un support. Ce support fournit le canal via lequel le message se déplace de la source à la destination.
+
+Les réseaux modernes utilisent principalement trois types de supports pour interconnecter des périphériques et fournir le chemin par lequel des données peuvent être transmises. Ces supports sont les suivants:
+* Fils métailliques dans des câbles,
+* Câbles en fibres optiques (Fibres de verre ou optiques de plastiques),
+* Transmission sans fil.
+
+Le codage du signal qui doit se produire afin de transmettre le message diffère selon le type de support. Sur des <span style="color:red">fils métalliques</span>, les données sont coddées en <span style="color:red">impulsions électriques</span> qui correspondent à des modèles spécifiques. Les transmissions par <span style="color:red">fibre optique</span> s'effectuent via des <span style="color:red">impulsion de lumière</span>, dans des plages de lumières infrarouges ou visibles. Dans les <span style="color:red">transmissions sans fil</span>, des modèles d'<span style="color:red">ondes electromagnétiques</span> illustrent les différentes valeurs de bit.
+
+Les différents types de supports réseau possèdent divers avantages et fonctionnalités. Tous les supports rréeau ne possèdent pas les mêmes caractéristiques et ne conviennent pas pour les mêmes objectifs.
+Les critères de choix d'un support réseau sont:
+* La distance sur laquelle les supports peuvent transporter correctement un signal,
+* L'environnement dans lequel les supports doivent être installés,
+* La quantité de données et le débit de la transmission,
+* Le coût des supports et de l'installation.
+
+# Réseaux locaux, réseau métropolitain, réeaux étendus et interréseaux
