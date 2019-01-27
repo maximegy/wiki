@@ -11,7 +11,7 @@ https://github.com/charlax/professional-programming
 https://web.stanford.edu/class/msande91si/www-spr04/readings/week1/InternetWhitepaper.htm
 https://github.com/vasanthk/how-web-works
 ## Principes Généraux
-* [Systèmes de Numérations](http://wiki.maximegy.ovh/french/reseau/principes-generaux/systemes-de-numeration)
+* :wrench:[Systèmes de Numérations](http://wiki.maximegy.ovh/french/reseau/principes-generaux/systemes-de-numeration)
 
 ## Supervision
 * [Introduction](http://wiki.maximegy.ovh/french/reseau/supervision)
