@@ -83,7 +83,7 @@ Les critères de choix d'un support réseau sont:
 * La quantité de données et le débit de la transmission,
 * Le coût des supports et de l'installation.
 
-# Réseaux locaux, réseau métropolitain, réseaux étendus et interréseaux
+# Réseaux locaux, métropolitain, étendus et interréseaux
 Les infrastructures réseau peuvent considérablement varier selon:
 - la taille de la zone couverte,
 - le nombre d'utilisateurs connectés,
@@ -93,16 +93,22 @@ Le type de réseau local (local, métropolitain, étendu) dépendra donc de ces 
 ## Réseaux locaux
 Un réseau individuel s'étend généralement sur une zone géographique unique et fournit des services et des applications aux personnes au sein d'une structure organisationnelle commune, telle qu'une entreprise, un campus, une région ou une maison.
 Ce tpe de réseau est appelé <span style="color:red">réseau local</span>: 
-<center>
-**LAN** : <span style="color:red">L</span>ocal <span style="color:red">A</span>rea <span style="color:red">N</span>etwork
-**RLE** : <span style="color:red">R</span>éseau <span style="color:red">L</span>ocal d'<span style="color:red">E</span>ntreprise
-</center>
+> **LAN** : <span style="color:red">L</span>ocal <span style="color:red">A</span>rea <span style="color:red">N</span>etwork
+> **RLE** : <span style="color:red">R</span>éseau <span style="color:red">L</span>ocal d'<span style="color:red">E</span>ntreprise
+
 En règle général, un réseau local est <span style="color:red">*administré par une organisation unique*</span>. Le contrôle administratif qui gère les stratégies de sécurité et de contrôle d'accès s'applique au niveau du réseau.
 
 ## Réseaux métropolitains
 Certaines organisations (un campus, une ville) doivent gérer des sites distants les uns des autres de quelques kilomètres. Ces différents sites regroupent un ensemble d'ordinateurs et fournissent deifférents services.
-Ce type de réseau est appelé <span style="color:red">réseau métropolitain</span>:
-<center>**MAN** : <span style="color:red">M</span>etropolitan <span style="color:red">A</span>rea <span style="color:red">N</span>etwork</center>
+Ce type de réseau est appelé <span style="color:red">réseau métropolitain</span>: **MAN** : <span style="color:red">M</span>etropolitan <span style="color:red">A</span>rea <span style="color:red">N</span>etwork
 
 Ces réseaux utilisent généralement des fibres optiques pour relier les différents sites. Certaines technologies  utilisées dans ce but sont l'ATM ou le FDDI. Ces anciennes technollogies sont en passe d'être remplacées par le Gigabit Ethernet utilisé dans de nombreux MAN, comme dans les LAN.
 Comme pour les réseaux locaux, les réseaux métropolitains sont <span style="color:red">*administrés par une organisation unique*</span>.
+
+## Réseaux étendus
+Lorsqu'une entreprise ou une organisation dispose d'emplacements (sites) séparés par d'importantes distances géographiques, il peut être nécessaire d'utiliser un fournisseur de services de télécommunications pour interconnecter les réseaux locaux à ces différents emplacements. Les fournisseurs de services de télécommunications utilisent d'importants réseaux régionaux pouvant parcourir de longues distances.
+
+Les organisation individuelles utilisent généralement des connexions via un réseau de fournisseurs de services de télécommunications. Ces réseaux qui connectent des réseaux locaux à des emplacements géographiquement séparés sont appelés <span style="color:red">réseaux étendus</span>:
+> **WAN** : <span style="color:red">W</span>ide <span style="color:red">A</span>rea <span style="color:red">N</span>etwork.
+Bien que l'organisation gère l'ensemble des stratégies et de l'administration des réseaux locaux aux deux extrémités de la connexion, les stratégies au sein du réseau du fournisseur de services de communications sont gérées par lui-même.
+Les réseaux étendus utilisent des périphériques réseau spécialement conçus pour effectuer les interconnexions entre les réseaux locaux : les <span style="color:red">routeurs</span>.
