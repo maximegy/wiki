@@ -3,5 +3,5 @@
 
 # Le conteneur
 Un conteneur :
-* ![Agnostique](https://fr.wiktionary.org/wiki/agnostique) sur le contenu et le transporteur,
+* [Agnostique](https://fr.wiktionary.org/wiki/agnostique) sur le contenu et le transporteur,
 * 
