@@ -12,8 +12,14 @@ https://github.com/charlax/professional-programming
 https://web.stanford.edu/class/msande91si/www-spr04/readings/week1/InternetWhitepaper.htm
 https://github.com/vasanthk/how-web-works
 ## Principes Généraux
-* :1234:[Systèmes de Numérations](http://wiki.maximegy.ovh/french/reseau/principes-generaux/1-systemes-de-numeration)
-	* [Communications sur un réseau - Notions de base et vocabulaire](http://wiki.maximegy.ovh/french/reseau/principes-generaux/2-communications-sur-un-reseau)
+* [Systèmes de Numérations](http://wiki.maximegy.ovh/french/reseau/principes-generaux/1-systemes-de-numeration)
+* [Communications sur un réseau - Notions de base et vocabulaire](http://wiki.maximegy.ovh/french/reseau/principes-generaux/2-communications-sur-un-reseau)
+* [Modèle OSI et TCP/IP](http://wiki.maximegy.ovh/french/reseau/principes-generaux/3-modele-osi-et-tcp-ip)
+* [Elements d'interconnexion réseaux](http://wiki.maximegy.ovh/french/reseau/principes-generaux/4-elements-interconnexion-reseau)
+* [Adressage IPv4](http://wiki.maximegy.ovh/french/reseau/principes-generaux/5-adressage-ipv4)
+* [Systèmes de nommage](http://wiki.maximegy.ovh/french/reseau/principes-generaux/6-systemes-de-nommage)
+* [Adressage Dynamique](http://wiki.maximegy.ovh/french/reseau/principes-generaux/7-adressage-dynamique)
+* [Routage et Protocoles de routage](http://wiki.maximegy.ovh/french/reseau/principes-generaux/8-routage-et-protocoles-de-routage)
 
 ## Supervision
 * [Introduction](http://wiki.maximegy.ovh/french/reseau/supervision)
