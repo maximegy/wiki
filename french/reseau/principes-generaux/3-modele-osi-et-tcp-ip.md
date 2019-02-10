@@ -28,3 +28,13 @@ Le **modèle OSI** (Open System Interconnection) constitue le *modèle de réfé
 Bien que les modèles TCP/IP et OSI soient les principaux modèles utlisés lorsqu'il s'agit de fonctionnalités réseau, les concepteurs de protocoles, de services ou de périphériques réseau peuvent créer leurs propres modèlespour représenter leurs produits. Enfin, les concepteurs doivent communiquer avec l'industrie en associant leurs produits ou leurs services aux modèles OSI ou TCP/IP ou aux deux.
 
 # Le modèle de protocole TCP/IP
+Le premier modèle de protocole en couches pour les communications interréseau fut créé au début des <span style="color:red">années 70</span> et est appelé modèle Internet. Il définit 4 catégories de fonctions qui doivent s'exécuter pour que les communications réussissent. L'architecture et la suite de protocoles TCP/IP suit la structure de ce modèle. Pour cette raison, le modèle Internet est généralement appelé "**modèle TCP/IP**".
+
+La plupart des modèles de protocole décrivent une pile de protocoles spécifiques au fournisseur. Cependant, puisque le modèle TCP/IP est une **norme ouverte**, aucune entreprise ne contrôle la définition du modèle. Les définitions de la norme et des protocoles TCP/IP sont traités dans un forum public et définies dans un ensemble de documents disponibles au public. Ces documents sont appelés **documents RFC** (Request For Comments). Ils contiennent les spécifications formelles des protocoles ainsi que des ressources ui décrivent l'utilisation des protocoles.
+
+|  N°   |    Couche    | Description                                                                                                                                                       |
+| :---: | :----------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|   4   | Application  | La couche 4 regroupe tous les aspects liés aux applications. Les question de représentation et de codage des données, le contrôle du dialogue avec l'utilisateur. |
+|   3   |  Transport   | La couche 3 prend en charge la communication entre différents périphériques à travers divers réseaux.                                                             |
+|   2   |   Internet   | La couche 2 Détermine le meilleur chemin que les données doivent emprunter sur les divers réseaux.                                                                |
+|   1   | Accès réseau | La couche 1 contrôle les périphériques matériels (carte réseau) et les supports (câble, fibre optique, etc.) qui constituent le réseau.                           |
