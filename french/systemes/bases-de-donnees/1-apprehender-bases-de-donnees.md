@@ -108,6 +108,3 @@ Tant qu'il n'y a pas eu de commit.
 - Transactionnelle (OLTP: Online Transaction Processing), elle se caractérise par une forte activité de mise à jour (insert/update), un nombre plus ou moins important d'utilisateurs, une exigence de temps de réponse court (support, ERP, ticket)
 - Décisionnelle (DSS: Decision Support Systems) Elle se caractérise par une forte activité d'interrogation (SELECT) généralement sur de grosvolumes de données, une mise à jour périodique avec de gros traitements, une exigence de temps de réponse relativement court
 - Mixt elle est à la fois transactionnelle et décisionnnelle, le pods respectif de chaque activité étant variable.
-
-# Histoire MDR
-Histoire Oracle
