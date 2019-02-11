@@ -103,9 +103,6 @@ une fois connecté ne passe plus par le listener
 Mémoire avec données propres à l'utilisateur.
 
 
-### 
-
-
 ## La base de données
 Fichiers de donnés, c'est dans ces fichiers que les données proprement dites sont stockées,(tablespace.dbf)
 Fichiers de contrôle, qui contient des informations de contrôle sur la BDDD (control.ctl)
@@ -122,3 +119,8 @@ Tablespace
 
 ###Fichiers de journalisation
 
+
+
+# Vidéo
+
+rond processus d'arrière plan
