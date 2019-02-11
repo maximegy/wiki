@@ -103,3 +103,35 @@ L'adresse physique identifie de manière unique les périphériques sur le rése
 Enfin, les *bits* sont codés et envoyés sur le support Ethernet par la carte réseau du serveur.
 
 Le processus de réception est inversé sur l'hôte de destination. Les données sont décapsulées au fur et à mesure qu'elles se déplacent vers la partie supérieure de la pie et l'application d'utilisateur final.
+
+# Comparaison du modèle OSI et du modèle TCP/IP
+Même si le modèle de référence OSI est universellement reconnu, historiquement et techniquement, la norme ouvert d'Internet est <span style="color:red">le protocole TCP/IP</span>.
+
+Le *modèle de référence* TCP/IP et la *pile de protocoles* TCP/IP rendent possible l'échange de données entre deux ordinateurs partout dans le monde. Le modèle TCP/IP présente une importance historique semblable aux normes qui ont permis l'essor des industries du téléphone, de l'electricité, du chemin de fer, de la télévision et de la vidéo.
+
+[ Image a faire ]
+
+En comparant le modèle OSI au modèle TCP/IP, vous remarquerez des similitudes et des différences:
+
+**Similitudes**
+    - Tous deux comportent des couches,
+    - Tous deux comportent une couche application, bien que chacune fournisse des services très differents,
+    - Tous deux comportent des couches réseau et transport comparables,
+    - Tous deux supposent l'utilisation de la technologie de commutation de paquets,
+    - Les professionnels des réseaux doivent connaître les deux modèles.
+
+**Différences**
+    - TCP/IP intègre la couche présentation et la couche session dans sa couche application,
+    - TCP/IP regroupe les couches physiques et liaison de données du modèle OSI au sein d'une seule couche.
+    - TCP/IP semble plus simple car il comporte moins de couche,
+    - Les protocolesTCP/IP constituent la norme sur laquelle s'est développé Internet. Aussi, le modèle TCP/IP a bâti la réputation de ses protocoles. En revanche, les réseaux ne sont généralement pas architecturés autour du protocole OSI, bien que le modèle OSI puisse être utilisé comme guide.
+
+Bien que les protocoles TCP/IP constituent les normes sur lesquelles repose Internet, le modèle OSI a été choisi pour les raisons suivantes:
+- Il s'agit d'une norme universelle, générique et indépendant.
+- Ce modèle comporte davantage de détails, ce qui le rend plus utile pour l'enseignement et l'étude,
+- Cette richesse de détails peut également s'avérer fort utile au moment du dépannage.
+
+L'opinion de nombreux professionnels des réseaux diffère quant au modèle à utiliser. Vous devez vous familiariser avec les deux modèles. Vous utiliserez le modèle OSI comme microscoper pour l'analyse des réseaux, mais vous utiliserez également les protocoles TCP/IP tout au long du programme d'études.
+Souvenez-vous qu'il existe une différence entre un modèle, les couches, interfaces et spécifications de protocole, et un protocole réel utilisé dans les réseaux.
+
+Ainsi on utilise le **modèle OSI** et les **protocoles TCP/IP**
