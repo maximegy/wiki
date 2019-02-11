@@ -13,18 +13,20 @@ différence entre nommés ou simultannés: 10 licences simultannés > 10 personn
 a partir  du 51e user c'est mieux de prendre licence processeur.
 
 1. Licence en mode "Named User Plus"
+
 | Edition oracle       | Prix public licence/user | Prix maintenance Oracle /user/an | Nb mini licences |
 | :------------------- | :----------------------: | :------------------------------: | :--------------: |
 | Standard Edition Two |          304 €           |             66,85 €              |        10        |
 | entreprise           |          825 €           |             181,45 €             |        25        |
 
-2. Licence en mode "Processor Licence"
+1. Licence en mode "Processor Licence"
+
 | Edition oracle       | Prix public licence/proc | Prix maintenance Oracle /proc/an | Nb maxi proc |
 | :------------------- | :----------------------: | :------------------------------: | :----------: |
 | Standard Edition Two |         15 194 €         |            3 342,57 €            |      2       |
 | Enterprise           |         41 240 €         |            9 072,69 €            |   illimité   |
 
-3. Personal Edition
+1. Personal Edition
 Version pour les devs ou pour réaliser des tests sur une app. Prix à partir de 80€ pour une année, 280€ pour 5 ans et 399€ en licence perpétuelle.
 
 4. Express Edition
