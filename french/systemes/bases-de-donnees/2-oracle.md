@@ -1,9 +1,38 @@
 <!-- TITLE: Bases de données - Oracle -->
 <!-- SUBTITLE: A quick summary of Introduction -->
 
-# Histoire MDR
-Histoire Oracle
+# Définition
+Base de données : (BDD ou DB en anglais) C’est un lot d'informations stockées dans un dispositif informatique. Les technologies existantes permettent d'organiser et de structurer la base de données de manière à pouvoir facilement manipuler le contenu et stocker efficacement de très grandes quantités d'informations.
+* Base de données relationnelle : C’est un stock d'informations décomposées et organisées dans des matrices (tableaux à deux dimensions) appelées tables.
+* Système de gestion de base de données : (SGBD ou DBMS en anglais) C’est un ensemble de logiciels qui sert à la manipulation des bases de données. Il sert à effectuer des opérations ordinaires telles que consulter, modifier, construire, organiser, transformer, copier, sauvegarder ou restaurer des bases de données. La majorité des SGBD du marché manipulent des bases de données relationnelles.
+* Système de gestion de base de données relationnelle : (SGBDR ou RDBMS Relational DataBase Management System en anglais). C’est un ensemble de logiciels qui sert à la manipulation des bases de données relationnelles.
 
+# Les différents types de BDDR
+Les différents types de bases de données sont :
+* Transactionnelle (OLTP : OnLine Transaction Processing) : Elle se caractérise par une forte activité de mise à jour (INSERT/UPDATE), un nombre plus ou moins important d’utilisateurs, une exigence de temps de réponse court.
+* Décisionnelle (DSS : Decision Support Systems) : Elle se caractérise par une forte activité d’interrogation (SELECT) généralement sur de gros volumes de données, une mise à jour périodique avec de gros traitements, une exigence de temps de réponse relativement court.
+* Mixte : Elle est à la transactionnelle et décisionnelle, le poids respectif de chaque activité étant variable.
+
+
+# Histoire MDR
+Oracle Database est un Système de Gestion de Bases de Données Relationnel (SGDBR) édité par la société du même nom (Oracle Corporation - http://www.oracle.com), leader mondial des bases de données.
+En 1977, Oracle Corporation a été créée par Lawrence Ellison, Bob Miner, et Ed Oates. Elle s'appelle alors Relational Software Incorporated (RSI) et commercialise un Système de gestion de bases de données relationnelles nommé Oracle.
+En 1979, RSI introduit son produit Oracle V2 comme base de données relationnelle. La version 2 ne supportait pas les transactions mais implémentait les fonctionnalités SQL basiques de requête et jointure. Il n'y a jamais eu de version 1, pour des raisons de marketing, la première version a été la version 2.
+En 1983, RSI devient Oracle Corporation pour être plus représentative de son produit phare. La version 3 d'Oracle, entièrement réécrite en langage de programmation C, est publiée. Celle-ci supportait les transactions grâce aux fonctionnalités de commit et rollback. C'est aussi à partir de cette version que la plate-forme Unix est supportée.
+En 1984, la première version d'Oracle (Oracle 4) est commercialisée sur les machines IBM.
+En 1985, Oracle 5 permet une utilisation client-serveur.
+En 1986, Oracle a été porté sur la plateforme 8086.
+En 1988, Oracle 6 supporte le PL/SQL et les sauvegardes à chaud (lorsque la base de données est ouverte).
+En 1992, Oracle 7 supporte les contraintes d'intégrité, les procédures stockées et les déclencheurs (triggers).
+En 1995, Oracle sort sur plates-formes Windows.
+En 1997, Oracle 8 introduit le développement orienté objet. Oracle depuis la version 8.0.5 est disponible sous Linux.
+En 2001, Oracle 9i ajoute 400 nouvelles fonctionnalités et permet de lire et d'écrire des documents XML.
+En 2003, Oracle 10g est publiée. Le g signifie « grid » ; un des atouts marketing de la 10g est en effet qu'elle supporte le « grid computing » (infrastructure virtuelle constituée d'un ensemble de ressources informatiques potentiellement partagées, distribuées, hétérogènes, délocalisées et autonomes).
+En 2005, une version complètement gratuite est publiée, « Oracle Database 10g Express Edition » (Oracle XE).
+En 2007, Oracle 11gR1 est publié.
+En 2009, Oracle 11gR2 est publié. Oracle rachète Sun Microsystems pour 7.4milliards dollars.
+En 2013, Oracle 12cR1 est publié. Le « c » signifie « cloud » ; un des atouts marketing de la 12c est qu’elle à été pensé pour le « cloud ».
+En 2015, Changement des tarifs, suppression des éditions standard et standard one au profit d’une nouvelle édition, la standard two.
 Lawrence Ellison, comparé à Iron Man, il a financé le film, c'est un fou furieux, il fait de la voile, du F1, il apparait dans le film.
 
 # Tarifs
