@@ -1,5 +1,4 @@
 <!-- TITLE: Systemes De Numeration -->
-<!-- SUBTITLE: A quick summary of Systemes De Numeration -->
 
 # Introduction
 L'ordinateur travaille seulement avec un langage binaire. Ce langage ne comprend que deux symboles: **0** et **1**.

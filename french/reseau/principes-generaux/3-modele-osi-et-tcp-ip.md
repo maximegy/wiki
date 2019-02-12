@@ -1,5 +1,5 @@
 <!-- TITLE: Modèle OSI et TCP/IP -->
-<!-- SUBTITLE: A quick summary of Systemes De Numeration -->
+<!-- SUBTITLE: Présentation et Terminologie -->
 
 # Besoins et utilisation d'un modèle par couche
 Précédemment, nous avons parlé de **protocoles** et **suites de protocoles**. Dans ces suites, ou piles, chaque protocole à un rôle précis. Le résultat produit par un protocole sert ensuite à un autre protocole et ainsi de suite.
