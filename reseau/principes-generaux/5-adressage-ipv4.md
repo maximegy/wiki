@@ -162,4 +162,30 @@ Il faut donc déterminer le nombre de bits (que nous noterons *x*) qui permet d'
 > Trouver *x* tel que $$2^x >= 3$$ : $$2^1 = 2$$, $$2^2 = 4$$. Il faut donc 2 bits pour obtenir les 3 sous réseaux.
 
 Le masque des sous réseaux sera alors **/(22+2)** = <span style="color:red">**/24**</span>,
-    soit en binaire 1111 1111 1111 1111 1111 11<span style="color:red">11</span> 0000 0000. Il reste alors 8 bits pour identifier les hôtes.
+    soit en binaire 1111 1111 1111 1111 1111 11<span style="color:red">11</span> 0000 0000. Il reste alors 8 bits pour identifier les hôtes. 8 bits => $$2^8 -2 = 256 -2 = 254$$ hôtes par sous réseau soit 1016 hôtes au total.
+
+Il faut maintenant définir les adresses de chaque sous réseau.
+Adresse IP entreprise   150.10.4.0      1001 0110 0000 1010 0000 0100 0000 0000
+Masque                  /22             1111 1111 1111 1111 1111 11<span style="color:red">00 0000 0000</span>
+
+Puisqu'on veut créer des sous réseaux, il faut utiliser le __*nouveau masque /24*__
+Adresse IP entreprise   150.10.4.0      1001 0110 0000 1010 0000 0100 0000 0000
+Masque                  /24             1111 1111 1111 1111 1111 11<span style="color:red">**11** 0000 0000</span>
+
+Pour obtenir les adresses IP des sous réseaux, il faut déterminer toutes les combinaisons possibles que peuvent prendre les 2 bits réservés aux sous réseaux et les intégrer dans l'adresse IP d'origine:
+Puisqu'on a 2 bits, les différentes combinaisons de ces 2 bits sont 0 0; 0 1; 1 0 et 1 1.
+
+Ce qui donne les adresses IP de sous réseau en binaire suivantes:
+* Sous réseau 1: 1001 0110 0000 1010 0000 01<span style="color:red">00</span> 0000 0000,
+* Sous réseau 2: 1001 0110 0000 1010 0000 01<span style="color:red">01</span> 0000 0000,
+* Sous réseau 3: 1001 0110 0000 1010 0000 01<span style="color:red">10</span> 0000 0000,
+* Sous réseau 4: 1001 0110 0000 1010 0000 01<span style="color:red">11</span> 0000 0000.
+
+On obtient alors les adresses IP de sous réseau en décimal pointé suivantes:
+* Sous réseau 1: 150.10.4.0 (octet 0000 01<span style="color:red">00</span> = <span style="color:red">4</span>)
+* Sous réseau 2: 150.10.5.0 (octet 0000 01<span style="color:red">01</span> = <span style="color:red">5</span>)
+* Sous réseau 3: 150.10.6.0 (octet 0000 01<span style="color:red">10</span> = <span style="color:red">6</span>)
+* Sous réseau 4: 150.10.7.0 (octet 0000 01<span style="color:red">11</span> = <span style="color:red">7</span>)
+
+Attention !
+> Le réseau de l'entreprise ainsi que le réseau 1 ont pour adresse 150.10.4.0. Ces deux adresses sont techniquement différentes car elles n'ont pas le même masque (/22 et /24).
