@@ -153,3 +153,48 @@ Un routeur peut avoir plusieurs types différents de port d'interface:
 
 IMAGE
 
+# Les notions de bases sur les flux de donénes dans les LAN
+## Rappels sur l'encapsulation
+Ce procédé a été décrit au chapitre "Modèle OSI". Chaque couche est en relation avec la couche supérieure et inférieure. La couche N travaille avec la couche N+1 et N-1. L'ensemble des informations que s'échangent deux couches s'appelle: <span style="color:red">**PDU (Protocol Data Unit - Unité de données de protocole)**</span>.
+* Les trois couches supérieures (*application*,*présentation* et *session*) préparent les donnés pour la transmission en créant un format commun.
+* La couche *transport* divise les données en portions plus petites et le PDU transmis à la couche réseau est le **segment**. La numérotation des segments permet à l'hôte récepteur de replacer les données dans le bon ordre.
+* La couche *réseau* encapsule ensuite le segment en ajoutant une adresse réseau d'origine et une adresse destination, habituellement appelée une adresse IP et transmet le PDU nommé **paquet** à la couche 2.
+* La couche *liaison de données* poursuit l'encapsulation en ajoutant l'adresse locale (MAC) d'origine et celle de destination du paquet. Elle transmet ensuite le PDU nommé **trame** à la couche Physique qui convertit les données en vits et les envoie sur le média.
+
+## La circulation des paquets dans les unités de couche 1
+Certaines unités fonctionnent uniquement au niveau de la couche 1. Le flux des paquets à travers les unités de couche 1 est simple. Les médias physiques sont considérés comme des composants de couche 1.
+Si les unités de couche 1 sont passives (par exemple, les connecteurs, les prises, les tableaux de connexions et les médias physiques), les bits traversent simplement avec le moins de distortion (déformation) possible.
+Si les unités de couche 1 sont actives (par exemple, les répéteurs ou les concentrateurs qui possèdent une alimentation electrique), les bits sont régénérés et resynchonisés.
+Les équipements de couche 1 n'examinent ni les en-têtes, ni les données des paquets encapsulés. Ils ne transmettent que des bits (impulsions électriques ou impulsions lumineuses pour fibre optique par exemple).
+
+## La circulation des paquets dans les unités de couche 2
+Il est important de ne pas oublier que les segments sont contenus dans les paquets et que les paquets sont eux-mêmes contenus dans des trames. Les trames circulent ensuite sur le réseau.
+
+Certaines unités appartiennent en fait aux couches 1 et 2 du modèle OSI. Ainsi, les cartes réseau (NIC), les ponts et les commutateurs se basent sur les adresses MAC pour diriger les paquets, c'est pourquoi on les considère comme des équipements de couche 2. L'adresse MAC unique réside sur la carte réseau et est utilisée pour créer la trame.
+Ces équipements fournissent également la connectique (prise RJ45) pour le raccordement au réseau. De ce fait, ils appartiennent aussi à la couche physique (couche 1).
+
+Le rôle des ponts et des commutateurs est d'examiner l'adresse MAC de destination des paquets entrants. Le commutateur fonctionne de la façon suivante:
+> Le commutateur accepte une trame de données (couche 1), il désencapsule la trame (couche 2) puis il la lit en examinant l'adresse MAC de destination s'il connait l'adresse MAC il réencapsule la trame (couche 2) et achemine la trame (il la commute) vers le port approrié et la transmet (travail de la couche 1). S'il ne connait pas l'adresse MAC, il rejette la trame.
+
+## La circulation des paquets dans les unités de couche 3
+Le routeur est le principal équipement de couche réseau traité dans le cadre de ce chapitre. Le routeur fonctionne en réalité au niveau de la couche 1 (bits achemindé sur le média aux interfaces du routeur), au niveau de la couche 2 (trames commutées d'une interface à une autre)) selon les informations du paquet et au niveau de la couche 3 (décisions de routage).
+Le flux des paquets à travers les routeurs (c'est à dire la sélection du meilleur chemin et la cimmutation au port ou inteface de sortie approprié) repose sur les adresses réseau de couche 3 (Adresse IP).
+
+Une fois le bon port sélectionné, le routeur encapsule de nouveau le paquet dans une trame pour l'acheminer vers sa prochaine destination. Ce processus se produit à chaque routeur rencontré sur le chemin entre l'hôte source et l'hôte de destination.
+
+# Aspects techniques complémentaires
+Les équipements réseaux peuvent proposer des aspects techniques complémentaires.
+
+* Equipements empliables:
+  Matériels que l'on peut emplier les uns sur les autres. Ils disposent, entre autres, d'un port permettant de le relier à d'autres équipements. Plusieurs équipements empilés apparaissent comme une seule unité.
+  Par exemple: 3 commutateurs de 24 ports empilés ) 1 commutateur de 72 ports.
+* Equipements cascadables:
+  Equipements qui peuvent être reliés entre eux par un câble et éventuellement situés dans des locaux différents. Ils disposent d'un port appelé UPLINK.
+* Equipements rackables:
+  Equipements se présentant sous forme d'un châssis que l'on peut insérer dans une baie ou armoire.
+* Equipements manageables:
+  Equipements qui peuvent être administrés par un logiciel et accessible de l'extérieur, via le réseau et très souvent par l'intermédiaire d'un simple navigateur (interface Web).
+* Techniques de commutation:
+  * commutation **à la volée** (on the fly) qui consiste à retransmettre la trame reçue vers le port de destination avant même qu'elle soit entièrement lue,
+  * commutation **par validation** (buffered ou store and forward) qui consiste à "bufferiser" ou stocker la trame en mémoire puis à la vérifier avant de la retransmettre.
+  La première technique est plus rapide mais peut laisser passer des trames non valides. Le seconde bloque les mauvaises trames mais introduit une **latence** (temps de retard) supplémentaire.
