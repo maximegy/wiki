@@ -32,7 +32,7 @@ Chaque classe d'adresses (A,B et C) possède une plage d'adresse réservée aux 
 C'est à dire que les routeurs qui gèrent l'acheminement des trames ne savent pas traiter les adresses privées ce qui est normal puisque deux ou plusieurs organisations peuvent utiliser les mêmes adresses privées. Un routeur ne peut donc savoir à qui correspond une adresse privée.
 
 | Classe | Adresses IPv4 sur 32 bits                                                                                                                                                                       | Description                                                                                                                                                                                                                          |
-|--------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | A      | De <span style="color:red">0</span>0000000 . 00000000 . 00000000 . 00000001<br />A <span style="color:red">0</span>1111111 . 11111111 . 11111111 . 11111110<br />De 0.0.0.1 à 126.255.255.254   | 1 bit Id_classe<br />7 bits Id_réseau<br />24 bits Id_machine<br />126 ($$2^7$$) adresses réseau<br />16 777 214 ($$2^24 - 2$$) adresses machines<br />réseaux locaux: 10.0.0.0 à 10.255.255.255                                     |
 | B      | De <span style="color:red">10</span>000000 . 00000000 . 00000000 . 00000001<br />A <span style="color:red">10</span>111111 . 11111111 . 11111111 . 11111110<br />De 128.0.0.1 à 191.255.255.254 | 2 bits Id_classe<br />14 bits Id_réseau<br />16 bits Id_machine<br />16 384 ($$2^14$$) adresses réseau<br />65 534 ($$2^16 - 2$$) adresses machines<br />réseaux locaux: 172.16.0.0 à 172.31.255.255                                 |
 | C      | De <span style="color:red">110</span>00000 . 00000000 . 00000000 . 00000001<br />A <span style="color:red">110</span>11111 . 11111111 . 11111111 . 11111110<br />De 192.0.0.1 à 223.255.255.254 | 3 bits Id_classe<br />21 bits Id_réseau<br />8 bits Id_machine<br />2 097 152 ($$2^21$$) adresses réseau<br />254 ($$2^8 - 2$$) adresses machines<br />réseaux locaux: 192.168.0.0 à 192.168.255.255                                 |
@@ -53,3 +53,72 @@ Enfin l'adresse <span style="color:red">**127.0.0.1**</span> est appelée <span 
 Le processus <span style="color:red">**APIPA**</span> (<span style="color:red">A</span>utomatic <span style="color:red">P</span>rivate <span style="color:red">I</span>nternet <span style="color:red">P</span>rotocol <span style="color:red">A</span>ddressing) ou *IPv4LL* permet à un système d'exploitation de s'attribuer automatiquement une adresse IP, lorsque le serveur **DHCP** est hors service.
 APIPA utilise la plage d'adresses IP *169.254.0.0/16* (qu'on peut également noter 169.254.0.0/255.255.0.0), c'est à dire la plage dont les adresses vont de *169.254.0.0 à 169.254.255.255*.
 Dans certaines situations, il est préférable de désactiver APIPA afin d'empêcher l'attribution automatique d'une adresse IP par le système. Ceci pour éviter de penser qu'un serveur DHCP est bien actif.
+
+# Masque de sous réseau
+## Utilisation des classes standards
+La lecture d'une adresse IP ne permet pas de faire la distincion entre la partie *Id_réseau* et la partie *Id-machine*. Le seul moyen pour cela est d'utiliser le masque de sous réseau. Ce dernier utilise la même notation qu'une adresse IP (décimale pointée). Si l'on convertit les décimales en binaire, on obtient alors une suite de "1" et de "0".
+Les bits du masque de sous réseau qui sont à 1 identifient la partie Id-réseau de l'adresse IP et ceux qui sont à 0 identifient la partie Id-machine.
+
+Si l'on n'utilise pas de sous réseaux, les masques de sous réseau des classes d'adresses A, B et C sont respectivement:
+- 255.0.0.0
+- 255.255.0.0
+- 255.255.255.0
+  Où les "255" correspondent aux octets Id-réseau, les "0" correspondent aux octets Id_machine.
+
+Exemples:
+* Adresse IP de classe B: 172.16.10.20 => masque de sous réseau 255.255.0.0
+  Adresse IP en décimal :   172         16          10          20
+  Masque en décimal     :   255         255         0           0
+            en binaire  :   1111 1111   1111 1111   0000 0000   0000 0000
+  L'adresse du réseau est **172.16.0.0**,
+  L'identifiant de la machine dans le réseau ci-dessous est **10.20**
+
+  Dans ce cas simple, on arrive facilement à déterminer l'adresse du réseau. On devrait faire la même chose mais de façon plus rigoureuse, comme le fait une carte réseau. Pour cela, il faut faire un *ET Logique* entre l'adresse IP et le masque en ayant au préalable convertit l'adresse IP et le masque en binaire.
+
+  | IP 172.16.10.20    | 1010 1100 | 0001 0000 | 0000 1010 | 0001 0100 |
+  | ------------------ | :-------: | :-------: | :-------: | :-------: |
+  | Masque 255.255.0.0 | 1111 1111 | 1111 1111 | 0000 0000 | 0000 0000 |
+  | ET logique         | 1010 1100 | 0001 0000 | 0000 0000 | 0000 0000 |
+  | Adresse            |    172    |    16     |     0     |     0     |
+
+* Adresse IP de classe C: 192.168.14.22 => masque de sous réseau 255.255.255.0
+  Adresse IP en décimal :   192         168         14          22
+  Masque en décimal     :   255         255         255         0
+            en binaire  :   1111 1111   1111 1111   1111 1111   0000 0000
+  L'adresse du réseau est **192.168.14.0**,
+  L'identifiant de la machine dans le réseau ci-dessous est **22**.
+
+  | IP 192.168.14.22   | 1100 0000 | 1010 1000 | 0000 1110 | 0001 0110 |
+  | ------------------ | :-------: | :-------: | :-------: | :-------: |
+  | Masque 255.255.0.0 | 1111 1111 | 1111 1111 | 1111 1111 | 0000 0000 |
+  | ET logique         | 1100 0000 | 1010 1000 | 0000 1110 | 0000 0000 |
+  | Adresse            |    192    |    168    |    14     |     0     |
+
+## Mise en oeuvre de sous réseaux
+Comme on l'a vu précédemment, l'utilisation des classes d'adresses est devenue inapproprié avec la généralisation d'Internet. Par exemple, une adresse de classe A (16 777 214 hôtes possibles dans un réseau) n'est jamais utilisée en pratique. L'idée de découper un réseau en sous réseaux de tailles plus petites et surtout adaptés aux besoins les plus courant est donc apparue.
+
+Pour mettre en oeuvre des sous réseaux, il faut utiliser un certain nombre de bits initialement prévus pour l'Id-machine et les affecter à l'identification des sous réseaux.
+Cela a donc pour effet de __modifier le masque de sous réseau__ dans lequel un ou plusieurs "0" vont être remplacés par des "1" en fonction du nombre de sous réseaux que l'on veut mettre en place.
+
+<span style="color:red">Attention!</span> L'identification des hôtes doit respecter la règle suivante:
+> Si **n** représente le nombre de bits utilisés pour l'identification des hôtes, toutes les combinaisons de ces **n** bits sont possibles sauf deux:
+> * L'une où tous les **n** bits sont à 1: il s'agit de l'adresse de diffusion,
+> * L'autre où tous les *n* bits sont à 0: il s'agit de l'adresse de réseau.
+> Par conséquent, le nombre de possibilités offertes pour **n** bits est de $$2^n -2$$.
+Par contre, pour l'identification des sous réseaux toutes les combinaisons sont autorisées. Ainsi, si **x** représente le nombre de bits affectés aux sous réseaux, le nombre de possibilités sera de <span style="color:red">$$2^x$$</span>.
+
+### Exemple
+Dans un réseau de classe B, 16 bits sont normalement utilisés pour l'identification des machines (65 534 hôtes possibles). Ces possibilités n'étant jamais utilisées, on peut alors choisir d'utiliser:
+* 8 bits pour réaliser des sous réseaux et 8 bits pour les adresses machines
+  |  2 bits   |  14 bits  |   16 bits   |  =>   |  2 bits   |  14 bits  |     8 bits     |         8 bits         |
+  | :-------: | :-------: | :---------: | :---: | :-------: | :-------: | :------------: | :--------------------: |
+  | Id_classe | Id_réseau | Id_machines |  =>   | Id_classe | Id_réseau | SR bits 9 à 16 | Id_machines bits 1 à 8 |
+  Le masque de sous réseau d'une classe B (sans sous réseau) est 255.255.0.0 (0.0 => 2 octects pour Id_machines).
+  Ici on souhaite utiliser 8 bits pour les adresses machines (bit 1 à 8) et 8 bits pour les sous réseaux (bit 9 à 16). Dans ces conditions, les bits 1 à 8 du masque restent à "0" et les bits 9 à 16 passent à "1".
+
+  Le nouveau masque de sous réseau devient: 1111 1111 . 1111 1111 . <span style="color:red">1111 1111</span> . 0000 0000 soit la valeur décimale 255.255.255.0 au lieu de 255.255.0.0.
+  Ce masque permettra donc d'obtenir:
+  * $$2^8 = 256$$ sous réseaux,
+  * $$2^8 - 2 = 254$$ machines (hôtes par sous réseaux).
+
+# Moyens mis en oeuvre pour palier aux limites d'IPv4
