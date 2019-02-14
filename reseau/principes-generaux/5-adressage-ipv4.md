@@ -189,3 +189,35 @@ On obtient alors les adresses IP de sous réseau en décimal pointé suivantes:
 
 Attention !
 > Le réseau de l'entreprise ainsi que le réseau 1 ont pour adresse 150.10.4.0. Ces deux adresses sont techniquement différentes car elles n'ont pas le même masque (/22 et /24).
+
+Le système CIDR permet de créer des sous réseaux pouvant tous accueillir le même nombre d'hôtes. Dans l'exemple précédent, nous avons vu que l'on pouvait créer 4 sous réseaux pouvant accueillir chacun 254 hôtes. Dans la réalité, les besoins des différents sous réseaux sont rarement identiques. Au contraire, certains sous réseaux ont des besoins en hôtes beaucoup plus importants que d'autres.
+
+L'idéal serait donc de pouvoir adapter la taille des sous réseaux en fonction du nombre d'hôtes utilisés. Cela permettrait de ne pas réserver inutilement des adresses IP. C'est ce que permet de faire la technique VLSM.
+
+## La technique VLSM
+La technique <span style="color:red">**VLSM**</span> (<span style="color:red">***Variable-Length Subnet Mask***, *masque de longueur variable*) permet le découpage de l'espace d'adressage en blocs de tailles variables, permettant une utilisation plus efficace de l'espace d'adressage.
+
+## Nouveau protocole d'adressage IPv6
+Les spécifications du nouveau protocole IPv6 sont apparues en décembre 1995 (RFC 1883).
+Une adresse IPv6 est longue de 128 bits, soit 16 octets, contre 32 bits (4 octets) pour le protocole IPv4.
+
+### Notation d'une adresse IPv6
+La notation décimale pointée employée pour les adresses IPv4 est abandonnées au profit d'une écriture hexadecimale dans laquelle 8 groupes de 2 octets (soit 16 bits par groupe) sont séparés par le signe "**:**".
+Par exemple **2001:0db8:0000:0000:0000:85a3:ac1f:8001**.
+
+Dans cette notation il est permis d'omettre les *zéros non significatifs* situés à gauche de chaque groupe de 4 chiffres hexadécimaux.
+Par exemple **2001:0db8<span style="color:red">:0:0:0:</span>85a3:ac1f:8001**.
+
+De plus, une suite de un ou plusieurs groupes consécutifs valant zéro peut être omise (seulement ***une seule fois***). Ainsi, l'adresse va être encore raccourcie en retirant la suite "0:0:0".
+Par exemple **2001:0db8<span style="color:red">::</span>85a3:ac1f:8001**.
+
+### Catégories d'adresses et préfixes associés
+Une adresse IPv6 se compose de deux parties:
+* Les 64 premiers bits de l'adresse IPv6 (<span style="color:red">**préfixe**</span>) servent généralement à l'adresse de sous réseau.
+* Les 64 bits suivants identifient l'hôte à l'intérieur du sous réseau: ce découpage joue un rôle un peu similaire aux masques de sous réseau IPv4.
+
+IMAGE
+
+IPv6 prévoit différentes catégories d'adresses prédéfinies telles que les **adresses globales point à point (unicast)**, les **adresses locales uniques** (préfixe fc00::/7), les **adresses de lien local** (*link-local*, préfixe fe80::/10) et les **adresses de multidiffusion** (*multicast*, préfixe ff00::/8).
+
+Enfin, les adresses IPv4 peuvent être écrites en utilisant la représentation de l'adresse en notation décimale pointée précédée d'un double deux-points, comme par exemple : "**::ffff:172.31.254.46**" ou la représentation normale d'une adresse IPv6 "**::ffff:ac1f:fe2e**".
