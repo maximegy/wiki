@@ -56,14 +56,14 @@ Dans certaines situations, il est préférable de désactiver APIPA afin d'empê
 
 # Masque de sous réseau
 ## Utilisation des classes standards
-La lecture d'une adresse IP ne permet pas de faire la distincion entre la partie *Id_réseau* et la partie *Id-machine*. Le seul moyen pour cela est d'utiliser le masque de sous réseau. Ce dernier utilise la même notation qu'une adresse IP (décimale pointée). Si l'on convertit les décimales en binaire, on obtient alors une suite de "1" et de "0".
-Les bits du masque de sous réseau qui sont à 1 identifient la partie Id-réseau de l'adresse IP et ceux qui sont à 0 identifient la partie Id-machine.
+La lecture d'une adresse IP ne permet pas de faire la distincion entre la partie *Id_réseau* et la partie *id_machine*. Le seul moyen pour cela est d'utiliser le masque de sous réseau. Ce dernier utilise la même notation qu'une adresse IP (décimale pointée). Si l'on convertit les décimales en binaire, on obtient alors une suite de "1" et de "0".
+Les bits du masque de sous réseau qui sont à 1 identifient la partie id_réseau de l'adresse IP et ceux qui sont à 0 identifient la partie id_machine.
 
 Si l'on n'utilise pas de sous réseaux, les masques de sous réseau des classes d'adresses A, B et C sont respectivement:
 - 255.0.0.0
 - 255.255.0.0
 - 255.255.255.0
-  Où les "255" correspondent aux octets Id-réseau, les "0" correspondent aux octets Id_machine.
+  Où les "255" correspondent aux octets id_réseau, les "0" correspondent aux octets Id_machine.
 
 Exemples:
 * Adresse IP de classe B: 172.16.10.20 => masque de sous réseau 255.255.0.0
@@ -97,7 +97,7 @@ Exemples:
 ## Mise en oeuvre de sous réseaux
 Comme on l'a vu précédemment, l'utilisation des classes d'adresses est devenue inapproprié avec la généralisation d'Internet. Par exemple, une adresse de classe A (16 777 214 hôtes possibles dans un réseau) n'est jamais utilisée en pratique. L'idée de découper un réseau en sous réseaux de tailles plus petites et surtout adaptés aux besoins les plus courant est donc apparue.
 
-Pour mettre en oeuvre des sous réseaux, il faut utiliser un certain nombre de bits initialement prévus pour l'Id-machine et les affecter à l'identification des sous réseaux.
+Pour mettre en oeuvre des sous réseaux, il faut utiliser un certain nombre de bits initialement prévus pour l'id_machine et les affecter à l'identification des sous réseaux.
 Cela a donc pour effet de __modifier le masque de sous réseau__ dans lequel un ou plusieurs "0" vont être remplacés par des "1" en fonction du nombre de sous réseaux que l'on veut mettre en place.
 
 <span style="color:red">Attention!</span> L'identification des hôtes doit respecter la règle suivante:
@@ -122,3 +122,44 @@ Dans un réseau de classe B, 16 bits sont normalement utilisés pour l'identific
   * $$2^8 - 2 = 254$$ machines (hôtes par sous réseaux).
 
 # Moyens mis en oeuvre pour palier aux limites d'IPv4
+L'essor fulgurant d'Internet a engendré une très forte demande d'adresse IP. La répartition des adresses en classes est alors devenue mal adaptée à cette forte demande. Il a donc fallu faire face à une pénurie d'adresse IPv4.
+Le nombre d'adresses publiques IPv4 est arrivé officiellement àà saturation le 3 février 2011.
+Pour remédier à cela, plusieurs techniques ont été élaborées afin d'utiliser au mieux toutes les adresses disponibles.
+
+## Réduction du nombre d'adresses IP utilisées
+### NAT
+Le manque d'adresses IPv4 (RFC 791 de 1981) a été dans un premier temps contourné grâce à l'utilisation de la technique de traduction d'adresses (NAT : Network Address Translation).
+Avant l'apparition de la NAT, toutes les machines qui souhaitaient se connecter à Internet devaient avoir, chacune, une adresse IP publique.
+
+IMAGE
+
+Avec la NAT, c'est l'équipement qui est raccordé à Internet (routeur) qui détient une adresse publique. Tous les hôtes internes utilisent des adresses privées (qui ne sont pas routées sur Internet). Pour accéder à Internet, ils utilisent tous l'adresse publique du routeur. La fonction NAT installée sur le routeur permet alors de faire la correspondance entre les adresses privées internes et l'adresse publique qui permet d'accéder à Internet.
+
+IMAGE
+
+
+Cette technique a donc permis d'économiser un grans nombre d'adresses publiques.
+
+### DHCP
+L'autre technique qui a permis de mieux gérer les adresses est le DHCP (Dynamic Host Configuration Protocol).
+Ce protocole permet d'attribuer automatiquement une configuration IP à un hôte. Ainsi, on utilise des adresses uniquement lorsqu'on en a besoin.
+
+De cette façon, une même adresse peut être affectée à un hôte pendant une durée très courte (une journée) puis réaffectée à d'autres hôtes les jours suivants.
+
+## Les classes d'adresses deviennent obsolètes avec l'apparition du système CIDR
+En 1992, la RFC 1338 propose d'abolir la notion de classe qui n'était plus adaptée à la taille d'Internet.
+Le <span style="color:red">*Classless Inter-Domain Routing*</span> est mis au point en 1993 (RFC1518) afin de diminuer la taille des tables de routage des routeurs. Ce but est atteint en agrégreant (regroupant) plusieurs entrées de cette table en une seule.
+La distinction entre les adresses de classe A, B ou C a été ainsi rendue obsolète, de sorte que la totalité de l'espace d'adressage unicast puisse être gérée comme une collection unique de sous-réseaux indépendamment de la notion de classe. Le masque de sous-réseau ne peut plus être déduit de l'adresse IP elle-même.
+Le masque de sous réseau est donné sous la forme "**/x** où **x** représente le nombre de bits identifiant le réseau.
+
+### Exemple
+Une entreprise a obtenu l'adresse IP *150.10.4.0/22*. Cette entreprise dispose de 3 agences réparties en France et souhaite créer un sous réseau pour chaque agence en ayant le maximum d'adresses IP disponibles.
+> <span style="color:red">Important</span>: Pour créer des sous réseaux, le principe est toujours le même : on utilise des bits initialement prévus pour l'identification des hôtes. Celà implique donc une __modification du masque de sous réseau__ !
+
+/22 signifie que l'on a un masque de 22 bits, soit en binaire 1111 1111 1111 1111 1111 1100 0000 0000.
+Pour créer des sous réseaux, il faut utiliser des bits initialement prévus pour l'identification des hôtes (ici 10 bits)
+Il faut donc déterminer le nombre de bits (que nous noterons *x*) qui permet d'avoir au moins 3 sous réseaux.
+> Trouver *x* tel que $$2^x >= 3$$ : $$2^1 = 2$$, $$2^2 = 4$$. Il faut donc 2 bits pour obtenir les 3 sous réseaux.
+
+Le masque des sous réseaux sera alors **/(22+2)** = <span style="color:red">**/24**</span>,
+    soit en binaire 1111 1111 1111 1111 1111 11<span style="color:red">11</span> 0000 0000. Il reste alors 8 bits pour identifier les hôtes.
