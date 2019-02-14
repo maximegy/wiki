@@ -38,3 +38,18 @@ C'est à dire que les routeurs qui gèrent l'acheminement des trames ne savent p
 | C      | De <span style="color:red">110</span>00000 . 00000000 . 00000000 . 00000001<br />A <span style="color:red">110</span>11111 . 11111111 . 11111111 . 11111110<br />De 192.0.0.1 à 223.255.255.254 | 3 bits Id_classe<br />21 bits Id_réseau<br />8 bits Id_machine<br />2 097 152 ($$2^21$$) adresses réseau<br />254 ($$2^8 - 2$$) adresses machines<br />réseaux locaux: 192.168.0.0 à 192.168.255.255                                 |
 | D      | De 224.0.0.0 à 239.255.255.255                                                                                                                                                                  | 4 bits Id_classe<br />28 bits Id_réseau<br />De 224.0.0.0 à 239.255.255.255<br />Adresses réservées<br />Adresses **MULTICAST** (adressage simultané de plusieurs machines utilisant une zone spéciale de l'en-tête d'un paquet IP). |
 | E      | De 240.0.0.0 à 255.255.255.255                                                                                                                                                                  | 4 bits Id_classe<br />28 bits Id_réseau<br />De 240.0.0.0 à 255.255.255.255<br />Adresses **INUTILISEES**                                                                                                                            |
+
+
+# Adresses particulières
+Une adresse IP est donc constituée d'un *Id_réseau* et *Id_machine*, le tout sur 32 bits (Ex **192.168.1.41).
+Lorsqu'on annule la partie Id_machine, c'est à dire lorsqu'on remplace les bits réservés aux machines du réseau *par des zéros* (exemple: 192.168.1.<span style="color:red">0</span>), on obtient ce que l'on appelle l'<span style="color:red">**adresse réseau**</span>.
+
+Lorsqu'on remplace les bits réservés aux machines *par des 1* (par exemple 192.168.1.255), on obtient ce que l'on appelle l'<span style="color:red">**adresse de diffusion** ou de **broadcast**</span>.
+Il s'agit d'une adresse spécifique, permettant d'envoyer un message à toutes les machines situées sur le réseau spécifié par *Id_réseau*.
+
+Ces 2 adresses (que des "0" ou que des "1" pour a partie *Id_machine*) ne peuvent pas être attribuées à un hôte du réseau.
+Enfin l'adresse <span style="color:red">**127.0.0.1**</span> est appelée <span style="color:red">adresse de rebouclage</span> (<span style="color:red">loopback</span>) car elle désigne la <span style="color:red">machine locale</span> (<span style="color:red">LocalHost</span>).
+
+Le processus <span style="color:red">**APIPA**</span> (<span style="color:red">A</span>utomatic <span style="color:red">P</span>rivate <span style="color:red">I</span>nternet <span style="color:red">P</span>rotocol <span style="color:red">A</span>ddressing) ou *IPv4LL* permet à un système d'exploitation de s'attribuer automatiquement une adresse IP, lorsque le serveur **DHCP** est hors service.
+APIPA utilise la plage d'adresses IP *169.254.0.0/16* (qu'on peut également noter 169.254.0.0/255.255.0.0), c'est à dire la plage dont les adresses vont de *169.254.0.0 à 169.254.255.255*.
+Dans certaines situations, il est préférable de désactiver APIPA afin d'empêcher l'attribution automatique d'une adresse IP par le système. Ceci pour éviter de penser qu'un serveur DHCP est bien actif.
