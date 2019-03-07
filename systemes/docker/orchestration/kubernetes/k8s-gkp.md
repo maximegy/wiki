@@ -152,4 +152,22 @@ spec:
 ```
 
 
-## 
+## Création du Deployment
+```bash
+kubectl create -f mywebapp-deploy.yaml
+kubectl get deployment
+kubectl get pods
+```
+
+## Création du Service
+```bash
+kubectl create -f mywebapp-service.yaml
+kubectl get service
+```
+
+kubectl logs <pod>
+
+
+# Mise à jour de l'appliation
+Le code source va être mis à jour:
+* Pour afficher plus de détails sur l'instance de Tomcat
