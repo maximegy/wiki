@@ -17,16 +17,17 @@ cd kubejava
 on prépare le servlet, on le compile et on l'exporte en tant que war
 webTestApp.java:
 ```java
-protected void doGet(HttpServletRequest request, HttpServletResponse response)
-        throws ServletException, IOException {
-            String name=request.getParameter("name");
-            if (name==null)
-                name="unknown";
-            PrintWriter writer = response.getWriter();
-            writer.print("Hello "+name+" it's "+new Date());
-            System.out.println("got call from "+name);
-            writer.flush();
-        }
+// (...)
+protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    String name=request.getParameter("name");
+    if (name==null)
+        name="unknown";
+    PrintWriter writer = response.getWriter();
+    writer.print("Hello "+name+" it's "+new Date());
+    System.out.println("got call from "+name);
+    writer.flush();
+}
+// (...)
 ```
 
 ## Creation des containers
@@ -163,11 +164,36 @@ kubectl get pods
 ```bash
 kubectl create -f mywebapp-service.yaml
 kubectl get service
+kubectl logs <pod>
 ```
 
-kubectl logs <pod>
+
 
 
 # Mise à jour de l'appliation
 Le code source va être mis à jour:
 * Pour afficher plus de détails sur l'instance de Tomcat
+* Pour utiliser log4j pour le logging avec un fichier log4j.properties externe
+* Pour utiliser un fichier de configuration externe WebTestApp.properties
+* Les fichiers externes de configuration seront placés dans:
+  Config.CONFIG_LOCATION_PROD="/config/WebTestApp/"
+
+Ces fichiers de configuration seront gardés en dehors du war afin de rendre plus facile la gestion de configurations multiples (dev, test, prod...)
+
+```java
+public void init(ServletConfig config) throws ServletException {
+    super.init(config);
+    boolean log4jfile = false;
+}
+// (...)
+try {
+    File linux = new File(Config.CONFIG_LOCATION_PROD+"log4j.properties");
+    if(linux.exists() && !linux.isDirectory()) {
+        log4jfile=true;
+        PropertyConfigurator.configure(Config.CONFIG_LOCATION_PROD+"log4j.properties");
+    } catch(NullPointerException npe) {
+        log.error("File not found at Prod location!");
+    }
+// (...)
+}
+```

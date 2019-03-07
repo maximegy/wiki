@@ -41,12 +41,12 @@ https://github.com/vasanthk/how-web-works
 * [Mettre en place un VPN OpenVPN](http://wiki.maximegy.ovh/reseau/pfsense/mettre-en-place-un-vpn-openvpn)
 * [Mettre en place un VPN IPSec](http://wiki.maximegy.ovh/reseau/pfsense/mettre-en-place-un-vpn-ipsec)
 # Systèmes
-## Windows
+[//]: # "## Windows"
 [//]: # "### Standard"
 [//]: # "### Server"
 
-### Autres
-* [Installer Windows sur une clé](https://www.01net.com/astuces/comment-installer-windows-sur-une-cle-usb-pour-l-utiliser-sur-n-importe-quel-pc-1587476.html?fbclid=IwAR1cQzHJGLFwcwxGshLsVfojqEDK5zZNcZhYaKcC5m5DzBV1yqN6UXU0Kow#utm_medium=Social&Xtor=CS2-123463&utm_source=Facebook&Echobox=1545235848)
+[//]: # "### Autres"
+[//]: # "* [Installer Windows sur une clé](https://www.01net.com/astuces/comment-installer-windows-sur-une-cle-usb-pour-l-utiliser-sur-n-importe-quel-pc-1587476.html?fbclid=IwAR1cQzHJGLFwcwxGshLsVfojqEDK5zZNcZhYaKcC5m5DzBV1yqN6UXU0Kow#utm_medium=Social&Xtor=CS2-123463&utm_source=Facebook&Echobox=1545235848)"
 
 [//]: # "## Linux"
 
@@ -56,6 +56,11 @@ https://github.com/vasanthk/how-web-works
 ### Orchestration
 #### kubernetes
 * [Introduction](http://wiki.maximegy.ovh/systemes/docker/orchestration/kubernetes/1-introduction)
+
+#### Swarm
+* [Introduction](http://wiki.maximegy.ovh/systemes/docker/orchestration/swarm/1-introduction)
+##### Raft
+* [Introduction](http://wiki.maximegy.ovh/systemes/docker/orchestration/swarm/raft/1-introduction)
 
 
 ### Docker for Windows
