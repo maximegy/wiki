@@ -91,4 +91,82 @@ status:
     - ip: 104.154.32.162
 ```
 
+## Secret et ConfigMap
+Composants Kubernetes
+Passer des informations sensibles ou de configuration au Pod,
+Trop de développeurs mettent des détails de configuration ou même des passwords dans un conteneur et le publient sur dockerhub
 
+Utilise rdes Secret et des ConfigMap qui seront montés dans le container en tant que volumes au démarrage
+
+### Config map
+Créer un dossier et mettre les fichiers de propriétés et créer la configmap
+```bash
+mkdir config-webtestapp
+cd config-webtestapp
+kubectl create configmap myconfigmap --from-file=config-webtestapp
+```
+
+modifier le deployment config et ajouter en volume:
+```yaml
+spec:
+template:
+    spec:
+      containers:
+      (...)
+      - image : toto/hello-worl:1
+        name: toto
+        volumeMounts:
+          - mountPath: /usr/local/tomcat/webapps
+            name: app-volume
+          - mountPath: /config/WebTestApp
+            name: config-volume
+        ports:
+          - containerPort: 8080
+      volumes:
+      - name: app-volume
+        emptyDir: {}
+      - name: config-volume
+        configMap:
+          name: myconfigmap
+```
+
+en les fichiers seront donc mis à disposition dans le conteneur dans /config/WebTestApp
+
+## Requêtes et limitations de resources
+
+```yaml
+(...)
+    containers:
+    - image: toto/apache:1
+      name: webapps
+      resources:
+        requests:
+          cpu: 10m
+    - image: toto/tomcat:2
+      name: tomcat
+      resources:
+        limits:
+          cpu: 250m
+          memory: 250Mi
+(...)
+```
+
+## Montée en charge
+
+Manuel:
+```bash
+kubectl scale deployment mywebapp-deploy --replicas=2
+```
+Automatique:
+
+
+
+
+Automatisation de tout ça avec HELM, Jenkins etc.
+
+
+
+## dashboard
+
+gcloud container clusters describe ksmall
+kubectl proxy --port=8081
