@@ -48,7 +48,9 @@ hello world
 > 'Hello World'.ToUpper()
 HELLO WORLD
 ```
-		
+
+* Les Cmdlets sont fournis par Microsoft,
+* Les Cmdlets créés sont des Cmdlets-like,		
 * Les applets de commande peuvent obtenir des données à analyser ou transférer des données vers une autre applet de commande à l'aide de canaux,
 * Les cmdlets sont insensibles à la casse, par exemple `Get-Aduser`, `get-aduser` ou encore `GeT-ADUseR` fonctionnent,
 * Dans une chaine, si on veut utiliser plusieurs cmdlets, il faut les séparer par un point-virgule (`;`).
@@ -89,6 +91,12 @@ Start-Process .\processes.txt
 Rappel d'objet avec le pipe: le pipe permet d'utiliser un objet récupéré dans une commande précédente (`Select-Objet`, `Out-File`...)
 Un exemple pratique pour agir sur une machine: `Get-Process notepad | Stop-Process`
 
+( ) > comparaison t paramètres
+{ } > Block d'instruction
+" " > Litéral
+' ' > string pur
+\` \` > paramètre d'échappement pour les `' '`
+
 ## Paramètres
 Chaque CMDlet possède de nombreux paramètres permettant de personnaliser son fonctionnement. PowerShell ISE et Visual Studio Code suggèrent tous les paramètres et leur types après avoir écrit la commande suivi d'un tiret.  
 
@@ -103,6 +111,7 @@ Il est possible d'utiliser plusieurs pipes par exemple:
 `Get-Service | WHERE {$_.status -eq "Running"} | SELECT displayname`
 La commande liste les services, exclue les services arrêtés et affiche seulement leur nom.
 Pour information : `$_` defini l'element  actuellement dans le pipe.
+
 
 
 ## Alias

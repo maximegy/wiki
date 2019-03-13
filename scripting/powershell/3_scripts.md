@@ -13,13 +13,16 @@ lignes #>
 ```
 
 
------
+---
+
 ## Write
 
 `Write-Host` : sert à présenter de la donnée lisible sous forme de texte.
 Utilie pour suivre le déroulement d'un script et présenter des menus
 `Write-Output` : set à envoyer des objets dans le 'pipeline' Ce qui veut dire que le prochain objet dans le shell/script sera lisible.
 `Write-Verbose` : Permet d'afficher ou non le texte associé avec l'argument -Verbose
+
+---
 
 ## Variables
 | Types     | Description                                             |
@@ -66,15 +69,16 @@ Les comparateurs permettent de specifier les conditions de comparaison des valeu
 | Type                                                              | `-is`                                                                      | Retourne vrai si les deux objets sont de même type                   |
 | `-isnot`                                                          | Retourne vrai si les objets ne sont pas de même type                       |
 
-## if then else elsif
 
-## switch
+### if then else elsif
+
+### switch
 Case = switch > conditions, aiguillage indexé
 
 
-## Les boucles
+### Les boucles
 Il y a plusieurs types de boucles en Powershell. Plusieurs peuvent servir le même but, mais il y a souvent une plus adaptée qu'une autre par cas.
-### La boucle ForEach
+#### La boucle ForEach
 Cette boucle permet de parcourir un tableau ou une collection composée de 0 à n éléments sans se préocuper du nombre.
 
 ```powershell
@@ -103,7 +107,7 @@ ForEach ($proc in $process)
 ```
 
 
- ### La boucle For
+ #### La boucle For
  
  for (valeur de départ;test ou condition;nombre d'itération) {
  FaireQuelquechose
@@ -127,17 +131,20 @@ for () { Write-Host "Wheeeeeeeeeeee!"}
 
 On privilégiera les boucles For lorsqu'on veut exécuter un même ensemble de code plusieurs fois, pour une raison ou une autre.
 
-### La boucle While
+#### La boucle While
 les boucles While continuent tant qu'une condition est vraie
 
 While (condition)
 
 on peut par exemple ouvrir plusieurs instances d'un programme
+```powershell
 $notepad = Get-Process Notepad
-While ($notepad.Count -le 5)
+While ($notepad.Count -le 5) {
+	block de condition
+}
+```
 
-
-### La boucle Do
+#### La boucle Do
 La différence avec la boucle While, l'action se fera systématiquement au moins une fois.
 La condition peut être traitée par "until" ou "while", selon l'opération de comparaison et l'évaluation.
 
@@ -147,8 +154,111 @@ do {
   Write-Host $valeur
 } until | while ($valeur –ge | –le 10)
 ```
+---
+
+## Blocks d'instruction
+Il existe plusieurs blocks {} permettant de traiter des 
+
+---
+
+## Gestion des strings
+Un string est un objet powershell qui dispose de ce 'type'.
+Par exemple
+```powershell
+$MyPath = Get-Location
+$MyPath | Get-Member
+```
+
+A l'instant T, on voit qu `$MyPath`est un objet avec un type:
+```Powershell
+$MyPath | Get-Member
+   TypeName : System.Management.Automation.PathInfo
+```
+
+Pour récupérer le sting du chemin, on utilisera donc:
+`$MyPath.Path`
+
+Désormais, on constate que le TypeName change
+```Powershell
+$MyPath.Path | Get-Member
+	TypeName : System.String
+```
+
+### Manipulation
+Il est désormais possible de manipuler le résultat obtenu en tant que string.
+`$ourPath = (GetLocation).Path`
+#### Method : Substring
+
+Qu'affiche `$ourPath.Substring(0,8)`
+-> les 8 premiers caractères
+et `$ourPath.Substring(5,5)`
+-> les 5 caractères à partir du 5e caractère
+
+#### Method: LastIndexOf
+A qoi correspond le résultat de `$ourPath.lastIndexOf('\')`
+-> la position du dernier `\`
+A quoi correspond alors le résultat de `$ourPath.Substring($ourPath.LastIndexOf('\')+1)`
+->ce qui suit le dernier `\`
+
+La commande à suivre permet d'obtenir les noms des dossiers dans le dossier courant:
+```Powershell
+Get-ChildItem C:\ -Directory | Select-Object -ExpandProperty Name
+```
+
+Avec les commandes vues précédemment, on obtient le même résultat:
+```Powershell
+$var = Get-ChildItem C:\
+foreach($element in $var)
+{
+    if ($element.mode -match "-")
+    {
+        $element.FullName.Substring($element.FullName.LastIndexOf('\')+1)
+    }
+}
+```
+
+Les strings étendus permettent d'écrire la valeur d'une variable à l'intérieur d'un string aavant qu'il soit exéécuté et affiché. Ces dernières sont entourées de guillements
+```Powershell
+$test = Ceci est un test
+Write-Host "Test : [$test]"
+$process = Get-Process
+```
+Les strings littéraux, intégrés entre simples guillemets `'` permettent d'intégrer tous les caractères de la chaine.
 
 
+L'opérateur `-F` permet de mettre en forme des strings dans de manières diverses en se vasant sur leurs prédéfinitions:
+```Powershell
+$user = (Get-ChildItem Env:\USERNAME).value
+$date = get-date
+"your user is {0}, and the time is [{1:HH}:{1:mm}:{1:ss}]" -f $user,$date
+```
 
+Les conversions vers un string se font avec l'appel de la méthode associée (GM)
+```Powershell
+[int]$number = 10
+$number | gm
+$numberString = $number.ToString()
+$numberString | gm
+```
 
------
+Comme vu précédemment il est également possible de forcer le type de contenu d'une variable
+```Powershell
+[int]$number
+[string]$number
+```
+
+Construire un *ScriptBlock*
+Il est possible de construire un block de script dont on pourra ensuite faire usage dans d'autres commandes
+En premier lieu, il faut déclarer la variable et l'expression
+```Powershell
+$findprocess = 'chrom'
+$expression = [scriptblock]::Create("Get-Process $findProcess | Select-Object ProcessName, CPU, Path | Format-List")
+```
+
+Et le lancer:
+
+```Powershell
+Start-Job -Name "$findProcess`Process" -ScriptBlock $expression
+Receive-Job "$findProcess`Process"
+Get-Job "$findProcess`Process" | Remove-Job
+```

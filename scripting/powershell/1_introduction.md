@@ -6,6 +6,7 @@ Mettre un utilisateur dans un groupe:
 
 ![Algorithmique](/uploads/powershell/algorithmique.png "Algorithmique"){.align-center}
 
+Traduction d'une série d'action pour obtenir un résultat en définition systématique.
 
 -----
 
