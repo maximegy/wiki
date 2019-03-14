@@ -262,3 +262,10 @@ Start-Job -Name "$findProcess`Process" -ScriptBlock $expression
 Receive-Job "$findProcess`Process"
 Get-Job "$findProcess`Process" | Remove-Job
 ```
+
+```$x = 1
+while ($x -ne 25)
+New-AdUser -Name "risr$x" -AccountPassword $password -ChangePasswordAtLogon $false
+Set-1ADUser risr$x 
+$x++
+}```
