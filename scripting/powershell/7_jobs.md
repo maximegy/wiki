@@ -17,3 +17,9 @@ $ourOutput | Get-Member
 
 $ourOutput.ChildJobs[0] [ Get-Member]
 ```
+
+Afin de nettoyer les résiduts de Jobs terminés, on utilisera Remove-Job
+Get-Job | Remove-Job ou $Job | Remove-Job
+
+L'une des force des Jobs Powershelle est de pouoir exécuter plusiurs commandes en parallèle.
+Travailler sur ce script:
